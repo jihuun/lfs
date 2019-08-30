@@ -1,0 +1,723 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3. Packages and Patches · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="4_Final_Preparations.html" />
+    
+    
+    <link rel="prev" href="2_Preparing_a_New_Partition.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">* Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="0_Preface.html">
+            
+                <a href="0_Preface.html">
+            
+                    
+                    0. Preface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="1_Introduction.html">
+            
+                <a href="1_Introduction.html">
+            
+                    
+                    1. Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="2_Preparing_a_New_Partition.html">
+            
+                <a href="2_Preparing_a_New_Partition.html">
+            
+                    
+                    2. Preparing a New Partition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="3_Packages_and_Patches.html">
+            
+                <a href="3_Packages_and_Patches.html">
+            
+                    
+                    3. Packages and Patches
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="4_Final_Preparations.html">
+            
+                <a href="4_Final_Preparations.html">
+            
+                    
+                    4. Final Preparations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="5_Constructing_a_Temporary_System.html">
+            
+                <a href="5_Constructing_a_Temporary_System.html">
+            
+                    
+                    5. Constructing a Temporary System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="6_1_Installing_Basic_System_Software.html">
+            
+                <a href="6_1_Installing_Basic_System_Software.html">
+            
+                    
+                    6.1. Installing Basic System Software
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="6_2_Installing_Basic_System_Software.html">
+            
+                <a href="6_2_Installing_Basic_System_Software.html">
+            
+                    
+                    6.2. Installing Basic System Software
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="6_3_Installing_Basic_System_Software.html">
+            
+                <a href="6_3_Installing_Basic_System_Software.html">
+            
+                    
+                    6.3. Installing Basic System Software
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="6_4_Installing_Basic_System_Software.html">
+            
+                <a href="6_4_Installing_Basic_System_Software.html">
+            
+                    
+                    6.4. Installing Basic System Software
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="7_System_Configuration_and_Bootscripts.html">
+            
+                <a href="7_System_Configuration_and_Bootscripts.html">
+            
+                    
+                    7. System Configuration and Bootscripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="8_Making_the_LFS_System_Bootable.html">
+            
+                <a href="8_Making_the_LFS_System_Bootable.html">
+            
+                    
+                    8. Making the LFS System Bootable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="9_The_End.html">
+            
+                <a href="9_The_End.html">
+            
+                    
+                    9. The End
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="pakages.html">
+            
+                <a href="pakages.html">
+            
+                    
+                    pakages.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3. Packages and Patches</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="3-packages-and-patches">3 Packages and Patches</h1>
+<!-- toc -->
+<ul>
+<li><a href="#31-introduction">3.1. Introduction</a></li>
+<li><a href="#32-all-packages">3.2. All Packages</a></li>
+</ul>
+<!-- tocstop -->
+<h2 id="31-introduction">3.1. Introduction</h2>
+<p>$LFS/sources &#xB514;&#xB809;&#xD130;&#xB9AC;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4; &#xC774;&#xBD80;&#xBD84;&#xC5D0; LFS&#xC2DC;&#xC2A4;&#xD15C;&#xC5D0;&#xC11C; &#xD544;&#xC694;&#xD55C; &#xC720;&#xD2F8;&#xB9AC;&#xD2F0;&#xC18C;&#xC2A4;&#xB97C; &#xC800;&#xC7A5;&#xD574;&#xB193;&#xC74C;.<br>&#xB098;&#xC911;&#xC5D0; &#xBE4C;&#xB4DC;&#xD574;&#xC11C; &#xC0AC;&#xC6A9;. LFS &#xC2DC;&#xC2A4;&#xD15C;&#xC758; &#xB8E8;&#xD2B8; &#xD30C;&#xD2F0;&#xC158;&#xC5D0; &#xC800;&#xC7A5;&#xB418;&#xB294; &#xC18C;&#xC2A4;&#xC784;.  </p>
+<ul>
+<li><strong>source&#xB514;&#xB809;&#xD1A0;&#xB9AC; &#xC0DD;&#xC131;</strong>  </li>
+</ul>
+<pre><code class="lang-sh"> $ mkdir -v <span class="hljs-variable">$LFS</span>/sources
+</code></pre>
+<blockquote>
+<p>-v &#xC635;&#xC158;&#xC740; &#xB300;&#xBD80;&#xBD84; -verbose &#xC635;&#xC158;&#xC774;&#xACE0; &#xC2E4;&#xD589; &#xC0C1;&#xD0DC;&#xC758; &#xBA54;&#xC2DC;&#xC9C0;&#xB97C; &#xCD9C;&#xB825;&#xD574;&#xC900;&#xB2E4;&#xB294; &#xC758;&#xBBF8;&#xC774;&#xB2E4;.  </p>
+</blockquote>
+<ul>
+<li><strong>source &#xB514;&#xB809;&#xD1A0;&#xB9AC; &#xAD8C;&#xD55C; &#xC124;&#xC815;</strong>  </li>
+</ul>
+<pre><code class="lang-sh"> $ chmod -v a+wt <span class="hljs-variable">$LFS</span>/sources
+</code></pre>
+<blockquote>
+<p>$LFS/sources &#xB97C; Sticky&#xBE44;&#xD2B8;&#xB85C; &#xC124;&#xC815;&#xD568;.<br>Sticky&#xBE44;&#xD2B8;&#xB294; &#xBA40;&#xD2F0;&#xC720;&#xC838;&#xAC00; &#xD574;&#xB2F9; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xC5D0; &#xC4F0;&#xAE30;&#xAD8C;&#xD55C;&#xC744; &#xAC00;&#xC838;&#xB3C4;, &#xC624;&#xC9C1; &#xC18C;&#xC720;&#xC790;&#xB9CC;&#xC774; &#xD30C;&#xC77C;&#xC744; &#xC0AD;&#xC81C;&#xD560;&#xC218; &#xC788;&#xB294; &#xD37C;&#xBBF8;&#xC158;&#xC774;&#xB2E4;.<br>chmod a+wt &#xC758;&#xBBF8;  </p>
+<blockquote>
+<p>a : all user<br>+ : 766 &#xC774;&#xB7F0; &#xC22B;&#xC790;&#xAC00; &#xC544;&#xB2CC; &#xBB38;&#xC790;&#xB85C; &#xAD8C;&#xD55C;&#xC124;&#xC815;&#xD558;&#xB294; &#xC2EC;&#xBCFC;<br>w : write<br>t : sticky bit  </p>
+</blockquote>
+</blockquote>
+<ul>
+<li><strong>&#xD328;&#xD0A4;&#xC9C0;&#xC640; &#xD328;&#xCE58; &#xC18C;&#xC2A4; &#xBC1B;&#xAE30;.</strong>  </li>
+</ul>
+<pre><code class="lang-sh"> $ wget http://linuxfromscratch.org/lfs/view/stable/wget-list
+ $ wget --input-file=wget-list --continue --directory-prefix=<span class="hljs-variable">$LFS</span>/sources
+</code></pre>
+<blockquote>
+<p>&#xD328;&#xD0A4;&#xC9C0;&#xAC00; &#xC0C1;&#xB2F9;&#xD788; &#xB9CE;&#xC544; &#xC77C;&#xC77C;&#xC774; &#xBC1B;&#xAE30; &#xC5B4;&#xB835;&#xB2E4;. LFS&#xAC00;&#xC774;&#xB4DC;&#xC5D0; &#xB2E4;&#xC6B4;&#xBC1B;&#xB294; &#xC8FC;&#xC18C; &#xB9AC;&#xC2A4;&#xD2B8;&#xAC00; &#xB098;&#xC640;&#xC788;&#xC73C;&#xBA70;<br>(<a href="http://linuxfromscratch.org/lfs/view/stable/wget-list" target="_blank">http://linuxfromscratch.org/lfs/view/stable/wget-list</a>)<br>&#xC774;&#xC8FC;&#xC18C;&#xB97C; wget&#xD558;&#xBA74; wget-list &#xD30C;&#xC77C;&#xC774; &#xC0DD;&#xC131;&#xB418;&#xACE0; &#xD398;&#xC774;&#xC9C0;&#xB0B4;&#xC6A9;&#xC774; &#xB4E4;&#xC5B4;&#xC788;&#xB2E4;.<br>&#xC774; wget-list&#xB85C; &#xC190;&#xC27D;&#xAC8C; &#xD30C;&#xC77C;&#xB4E4;&#xC744; wget &#xC774;&#xC6A9;&#xD574; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC; &#xD560;&#xC218; &#xC788;&#xB2E4;.<br>wget --input-file=wget-list --continue --directory-prefix=$LFS/sources  </p>
+</blockquote>
+<ul>
+<li><strong>&#xC815;&#xC0C1; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC; &#xD655;&#xC778;</strong>  </li>
+</ul>
+<pre><code class="lang-sh"> $ <span class="hljs-built_in">pushd</span> <span class="hljs-variable">$LFS</span>/sources
+ $ md5sum -c md5sums
+ $ <span class="hljs-built_in">popd</span>
+</code></pre>
+<blockquote>
+<p>md5sum &#xBA85;&#xB839; : &#xC62C;&#xBC14;&#xB978; &#xD328;&#xD0A4;&#xC9C0;&#xB97C; &#xBC1B;&#xC558;&#xACE0; &#xB2E4;&#xC74C;&#xC9C4;&#xD589;&#xD558;&#xAE30;&#xC804;&#xC5D0; &#xC0AC;&#xC6A9;&#xAC00;&#xB2A5;&#xD55C;&#xC9C0; &#xD655;&#xC778;&#xD558;&#xB294; &#xC6A9;&#xB3C4;&#xB85C; &#xC0AC;&#xC6A9;.  </p>
+<blockquote>
+<p><code>(&#xCC3E;&#xC544;&#xBCF4;&#xAE30;)</code> md5&#xB780;?<br>@&#xADDC;&#xC6D0; : (Message-Digest algorithm 5) 128bit &#xC554;&#xD638;&#xD654; &#xD574;&#xC2DC; &#xD568;&#xC218; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC774; &#xC6D0;&#xBCF8;
+&#xADF8;&#xB300;&#xB85C;&#xC778;&#xC9C0; &#xD655;&#xC778;&#xD558;&#xB294; &#xBB34;&#xACB0;&#xC131; &#xAC80;&#xC0AC; 1996&#xB144; MD5d&#xC758; &#xC124;&#xACC4;&#xC0C1; &#xACB0;&#xD568;&#xC774; &#xBC1C;&#xACAC;&#xB418;&#xC5B4;
+&#xC554;&#xD638;&#xD559;&#xC790;&#xB4E4;&#xC740; ShA-1&#xC640; &#xAC19;&#xC774; &#xC548;&#xC804;&#xD55C; &#xC54C;&#xACE0;&#xB9AC;&#xC998; &#xC0AC;&#xC6A9; &#xAD8C;&#xC7A5;</p>
+</blockquote>
+</blockquote>
+<h2 id="32-all-packages">3.2. All Packages</h2>
+<p>&#xBAA8;&#xB4E0; &#xD328;&#xD0A4;&#xC9C0;(version)&#xC758; &#xBAA9;&#xB85D;<br><a href="http://linuxfromscratch.org/lfs/view/stable/chapter03/packages.html" target="_blank">http://linuxfromscratch.org/lfs/view/stable/chapter03/packages.html</a><br>&#xD328;&#xCE58;&#xB294;<br><a href="http://linuxfromscratch.org/lfs/view/stable/chapter03/patches.html" target="_blank">http://linuxfromscratch.org/lfs/view/stable/chapter03/patches.html</a>  </p>
+<pre><code>Attr (2.4.47) 
+Autoconf (2.69) 
+Automake (1.15) 
+Bash (4.3.30) 
+Bc (1.06.95) 
+Binutils (2.25) 
+Bison (3.0.4) 
+Bzip2 (1.0.6) 
+Check (0.9.14) 
+Coreutils (8.23) 
+DejaGNU (1.5.2) 
+Diffutils (3.3) 
+Eudev (2.1.1) 
+Eudev-manpages (2.1.1) 
+E2fsprogs (1.42.12) 
+Expat (2.1.0) 
+Expect (5.45) 
+File (5.22) 
+Findutils (4.4.2) 
+Flex (2.5.39) 
+Gawk (4.1.1) 
+GCC (4.9.2) 
+GDBM (1.11) 
+Gettext (0.19.4) 
+Glibc (2.21) 
+GMP (6.0.0a) 
+Gperf (3.0.4) 
+Grep (2.21) 
+Groff (1.22.3) 
+GRUB (2.02~beta2) 
+Gzip (1.6) 
+Iana-Etc (2.30) 
+Inetutils (1.9.2) 
+Intltool (0.50.2) 
+IPRoute2 (3.19.0) 
+Kbd (2.0.2) 
+Kmod (19) 
+Less (458) 
+LFS-Bootscripts (20150222) 
+Libcap (2.24) 
+Libpipeline (1.4.0) 
+Libtool (2.4.6) 
+Linux (3.19) 
+M4 (1.4.17) 
+Make (4.1) 
+Man-DB (2.7.1) 
+Man-pages (3.79) 
+MPC (1.0.2) 
+MPFR (3.1.2) 
+Ncurses (5.9) 
+Patch (2.7.4) 
+Perl (5.20.2) 
+Pkg-config (0.28) 
+Procps (3.3.10) 
+Psmisc (22.21) 
+Readline (6.3) 
+Sed (4.2.2) 
+Shadow (4.2.1) 
+Sysklogd (1.5.1) 
+Sysvinit (2.88dsf) 
+Tar (1.28) 
+Tcl (8.6.3) 
+Texinfo (5.2) 
+Time Zone Data (2015a) 
+Udev-lfs Tarball (udev-lfs-20140408)
+Util-linux (2.26)
+Vim (7.4) 
+XML::Parser (2.44) 
+Xz Utils (5.2.0) 
+Zlib (1.2.8)
+</code></pre><pre><code class="lang-md">&#x2022; ACL
+&#xB514; &#xB809;&#xD1A0;&#xB9AC; &#xBC0F; &#xD30C;&#xC77C;&#xC5D0; &#xD2B9;&#xC815; &#xC0AC;&#xC6A9;&#xC790;, &#xADF8;&#xB8F9;&#xC5D0; &#xD2B9;&#xC815; &#xAD8C;&#xD55C;&#xC744; &#xB123;&#xC5B4; &#xC904; &#xC218; &#xC788;&#xB294; &#xAE30;&#xB2A5;
+&#x2022; Attr
+&#xD30C;&#xC77C; &#xC2DC;&#xC2A4;&#xD15C; &#xAC1C;&#xCCB4;&#xC5D0; &#xB300;&#xD55C; &#xD655;&#xC7A5; &#xB41C; &#xC18D;&#xC131;&#xC744; &#xAD00;&#xB9AC;&#xD558;&#xAE30; &#xC704;&#xD55C; &#xD504;&#xB85C;&#xADF8;&#xB7A8;
+&#x2022; Autoconf
+&#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xC18C;&#xC2A4; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC744; &#xC124;&#xC815;&#xD558;&#xB294; &#xC258; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;. &#xC644;&#xB8CC; &#xD6C4; &#xC7AC;&#xC124;&#xCE58; &#xC694;&#xB9DD;
+&#x2022; Automake
+ Gnu &#xCF54;&#xB529; &#xD45C;&#xC911;&#xC5D0; &#xC900;&#xD558;&#xB294; Makefile&#xC744; &#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xC0DD;&#xC131;&#xD574;&#xC8FC;&#xB294; &#xD504;&#xB85C;&#xADF8;&#xB798;
+&#x2022; Bash
+&#xCEE4;&#xB9E8;&#xB4DC; &#xC178;&#xC758; &#xC77C;&#xC885;&#xC73C;&#xB85C; Gnu &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xB97C; &#xC704;&#xD574; &#xD0DC;&#xC5B4;&#xB0A8;
+&#x2022; Bc
+&#xB9AC;&#xB205;&#xC2A4; &#xACC4;&#xC0B0;&#xAE30; &#xC815;&#xBC00;&#xB3C4;&#xACC4;&#xC0B0;&#xAE30;.
+&#x2022; Binutils
+&#xC624;&#xBE0C;&#xC81D;&#xD2B8; &#xD30C;&#xC77C;&#xC744; &#xCC98;&#xB9AC;&#xD558;&#xAE30;&#xC704;&#xD55C; &#xB9C1;&#xCEE4;, &#xC5B4;&#xC148;&#xBE14;&#xB7EC;, &#xBC0F; &#xAE30;&#xD0C0; &#xB3C4;&#xAD6C;&#xAC00; &#xD3EC;&#xD568;. &#xBC14;&#xC774;&#xB108;&#xB9AC; &#xC870;&#xC791;
+&#xB610;&#xB294; &#xC815;&#xBCF4;&#xB97C; &#xBCF4;&#xAE30; &#xC704;&#xD55C; &#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xBAA8;&#xC74C;
+&#x2022; Bison
+yacc&#xC744; &#xCEF4;&#xD30C;&#xC77C; &#xD558;&#xAE30;&#xC704;&#xD55C; &#xCEF4;&#xD30C;&#xC77C;&#xB7EC;. yacc &#xB294; &#xCEF4;&#xD30C;&#xC77C;&#xB7EC; &#xAD6C;&#xC131;&#xC744; &#xB3C4;&#xC640;&#xC8FC;&#xB294;
+&#xC18C;&#xD504;&#xD2B8;&#xC6E8;&#xC5B4;&#xB3C4;&#xAD6C;
+&#x2022; Bzip2
+&#xC555;&#xCD95; &#xD574;&#xC81C;&#xD504;&#xB85C;&#xADF8;&#xB7A8;
+&#x2022; Check
+&#xB2E4;&#xB978; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC758; &#xC704;&#xD5D8;&#xC744; &#xD14C;&#xC2A4;&#xD2B8; &#xD558;&#xAE30;&#xC704;&#xD55C; &#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xD234;&#xCCB4;&#xC778;&#xC5D0;&#xB9CC; &#xD544;&#xC694;
+&#x2022;Coreutils
+&#xAE30;&#xBCF8;&#xC801;&#xC778; &#xD234;&#xB4E4;&#xC744; &#xD3EC;&#xD568;&#xD558;&#xACE0; &#xC788;&#xB294; &#xD504;&#xB85C;&#xADF8;&#xB7A8; Ex)cat , ls ,rm etc..
+&#x2022; DejaGNU
+&#xB2E4;&#xB978; &#xC5B4;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;&#xC744; &#xD14C;&#xC2A4;&#xD2B8; &#xD558;&#xAE30; &#xC704;&#xD55C; &#xD504;&#xB808;&#xC784;&#xC6CC;&#xD06C;. &#xC784;&#xC2DC; &#xD234;&#xCCB4;&#xC778;&#xC5D0;&#xB9CC; &#xC0AC;&#xC6A9;
+&#x2022; Diffutils
+diff &#xBA85;&#xB839;&#xC5B4;&#xB97C; &#xC704;&#xD55C; &#xD504;&#xB85C;&#xADF8;&#xB7A8;
+&#x2022; E2fsprogs
+EXT2, EXT3 &#xBC0F; ext4 &#xD30C;&#xC77C; &#xC2DC;&#xC2A4;&#xD15C;&#xC744; &#xCC98;&#xB9AC;&#xD558;&#xAE30; &#xC704;&#xD55C; &#xC720;&#xD2F8;&#xB9AC;&#xD2F0; 
+&#x2022; Eudev
+&#xC7A5;&#xCE58; &#xAD00;&#xB9AC;&#xC790; &#xD504;&#xB85C;&#xADF8;&#xB7A8;. Udev&#xAC00; &#xBB34;&#xAC81;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC0DD;&#xAE34; &#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xB514;&#xBC14;&#xC774;&#xC2A4;&#xAC00; &#xCD94;&#xAC00;&#xB418;&#xAC70;&#xB098;
+&#xC2DC;&#xC2A4;&#xD15C;&#xC73C;&#xB85C;&#xBD80;&#xD130; &#xC81C;&#xAC70; &#xB420; &#xB54C; &#xB3D9;&#xC801;&#xC73C;&#xB85C; / dev&#xC5D0; &#xB514;&#xB809;&#xD1A0;&#xB9AC; &#xC5D4;&#xD2B8;&#xB9AC;&#xB97C; &#xC81C;&#xC5B4;
+&#x2022; Expat
+XML parser  XML :: &#xD30C;&#xC11C; &#xD384; &#xBAA8;&#xB4C8;&#xC774; &#xD544;&#xC694;&#xD569;&#xB2C8;&#xB2E4;.
+&#x2022; Expect
+telnet&#xC774;&#xB098; ftp&#xC640; &#xAC19;&#xC774; interactive&#xD55C; &#xD658;&#xACBD;&#xC774; &#xD544;&#xC694;&#xD55C; &#xACF3;&#xC5D0;&#xC11C; &#xD2B9;&#xC815; &#xBB38;&#xC790;&#xC5F4;&#xC744;
+&#xAE30;&#xB2E4;&#xB9AC;&#xACE0;(expect), &#xC815;&#xD574;&#xC9C4; &#xBB38;&#xC790;&#xC5F4;&#xC744; &#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xBCF4;&#xB0B4;&#xB294;(send)&#xB4F1;&#xC758; &#xCC98;&#xB9AC;&#xB97C; &#xD558;&#xB294;
+&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xC5B8;&#xC5B4;. &#xD234;&#xCCB4;&#xC778; &#xC2DC;&#xB9CC; &#xD544;&#xC694;
+&#x2022; File
+file &#xBA85;&#xB839;&#xC5B4; &#xC9C0;&#xC815;&#xB41C; &#xD30C;&#xC77C;&#xC758; &#xC885;&#xB958; &#xD655;&#xC778;&#xD558;&#xB294; &#xBA85;&#xB839;&#xC5B4;.
+&#x2022; Findutils
+find &#xBA85;&#xB839;&#xC5B4; &#xBE4C;&#xB4DC; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;
+&#x2022; Flex
+lex&#xC744; &#xCEF4;&#xD30C;&#xC77C;&#xD558;&#xAE30; &#xCEF4;&#xD30C;&#xC77C;&#xB7EC;. lex &#xCEF4;&#xD30C;&#xC77C;&#xB7EC;&#xC758; &#xAD6C;&#xC131;&#xC744; &#xB3C4;&#xC640;&#xC8FC;&#xB294; &#xC18C;&#xD504;&#xD2B8;&#xC6E8;&#xC5B4; &#xB3C4;&#xAD6C;
+&#x2022; Gawk
+&#xD2B9;&#xC815; &#xBB38;&#xC790;&#xC5F4;&#xC5D0;&#xC11C; &#xD544;&#xC694;&#xD55C; &#xC815;&#xBCF4;&#xB97C; &#xCC3E;&#xAE30; &#xC704;&#xD55C; &#xD234;. &#xBE4C;&#xB4DC;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;
+&#x2022; GCC
+GNU &#xCEF4;&#xD321;&#xC77C;&#xB7EC;
+&#x2022; GDBM
+&#xB0B4;&#xBD80;&#xC801;&#xC73C;&#xB85C; DB&#xB97C; &#xC804;&#xBB38;&#xC801;&#xC73C;&#xB85C; &#xCC98;&#xB9AC;&#xD558;&#xB294; &#xC5EC;&#xB7EC; &#xD568;&#xC218;&#xB85C; &#xAD6C;&#xC131;&#xB41C; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;
+&#x2022; Gettext
+&#xAD6D;&#xC81C;&#xD654; &#xBC0F; &#xB2E4;&#xC591;&#xD55C; &#xD328;&#xD0A4;&#xC9C0;&#xC758; &#xD604;&#xC9C0;&#xD654;&#xB97C; &#xC704;&#xD55C; &#xC720;&#xD2F8;&#xB9AC;&#xD2F0;&#xC640; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC; &#xD3EC;&#xD568;
+&#x2022; Glibc
+GNU C &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;
+&#x2022; GMP
+&#xC784;&#xC758;&#xC758; &#xD06C;&#xAE30;&#xB97C; &#xAC00;&#xC9C4; &#xC218;&#xCE58;&#xB97C; &#xACC4;&#xC0B0;&#xD558;&#xAE30; &#xC704;&#xD55C; &#xC790;&#xC720; &#xC18C;&#xD504;&#xD2B8;&#xC6E8;&#xC5B4; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;
+&#x2022; Gperf
+&#xC644;&#xBCBD;&#xD55C;  &#xD574;&#xC26C; &#xD568;&#xC218;&#xB97C; &#xC0DD;&#xC131; &#xBA85;&#xB839;&#xC5B4; Eudev&#xC5D0; &#xD544;&#xC694;
+&#x2022; Grep
+&#xD2B9;&#xC815;&#xD55C; &#xD328;&#xD134;&#xC744; &#xCC3E;&#xB294; &#xBA85;&#xB839;&#xC5B4;
+&#x2022; Groff
+&#xCC98;&#xB9AC; &#xBC0F; &#xC11C;&#xC2DD; &#xD14D;&#xC2A4;&#xD2B8; &#xD504;&#xB85C;&#xADF8;&#xB7A8;. Man page &#xC791;&#xC131;&#xD544;&#xC2DC; &#xD544;&#xC694;
+&#x2022; GRUB
+&#xBD80;&#xD2B8;&#xB85C;&#xB354;
+&#x2022; Gzip
+&#xC555;&#xCD95;&#xD504;&#xB85C;&#xADF8;&#xB7A8;
+&#x2022; Iana-etc
+&#xB124;&#xD2B8;&#xC6CC;&#xD06C; &#xC11C;&#xBE44;&#xC2A4;&#xC640; &#xD504;&#xB85C;&#xD1A0;&#xCF5C;&#xC5D0; &#xB300;&#xD55C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC81C;&#xACF5;&#xD504;&#xB85C;&#xADF8;&#xB7A8;
+&#x2022; Inetutils
+&#xAE30;&#xBCF8; &#xB124;&#xD2B8;&#xC6CC;&#xD06C; &#xAD00;&#xB9AC;&#xB97C; &#xC704;&#xD55C; &#xD504;&#xB85C;&#xADF8;&#xB7A8;
+&#x2022; Intltool
+&#xC18C;&#xC2A4; &#xD30C;&#xC77C;&#xC5D0;&#xC11C; &#xBC88;&#xC5ED; &#xBB38;&#xC790;&#xC5F4;&#xC744; &#xCD94;&#xCD9C;&#xD558;&#xAE30; &#xC704;&#xD55C; &#xD504;&#xB85C;&#xADF8;&#xB7A8;. &#xB2E4;&#xC591;&#xD55C; &#xC885;&#xB958;&#xC758; &#xB370;&#xC774;&#xD130;
+&#xD30C;&#xC77C;&#xB4E4;&#xC744; &#xAD6D;&#xC81C;&#xD654;&#xC2DC;&#xD0A4;&#xB294;&#xB370; &#xC0AC;&#xC6A9;&#xB418;&#xB294; &#xC720;&#xD2F8;&#xB9AC;&#xD2F0;.
+&#x2022; IProute2
+&#xAE30;&#xC874; &#xB9AC;&#xB205;&#xC2A4; &#xC2DC;&#xC2A4;&#xD15C;&#xC5D0; &#xC0AC;&#xC6A9;&#xD558;&#xB358; &#xB124;&#xD2B8;&#xC6CD; &#xAD00;&#xB828; &#xD234;&#xB4E4;&#xC744; &#xD558;&#xB098;&#xB85C; &#xBB36;&#xC5B4; &#xB193;&#xC740; &#xC720;&#xD2F8;&#xB9AC;&#xD2F0;
+&#x2022; KBD
+&#xD0A4; &#xD14C;&#xC774;&#xBE14; &#xD30C;&#xC77C;, &#xBBF8;&#xAD6D; &#xC774;&#xC678;&#xC758; &#xD0A4;&#xBCF4;&#xB4DC;&#xB97C; &#xD0A4;&#xBCF4;&#xB4DC; &#xC720;&#xD2F8;&#xB9AC;&#xD2F0; &#xBC0F; &#xCF58;&#xC194; &#xAE00;&#xAF34;&#xC758; &#xC218;&#xB97C;
+&#xD3EC;&#xD568;&#xD558;&#xB294; &#xD504;&#xB85C;&#xADF8;&#xB7A8;
+&#x2022; KMOD (kernel drive module)
+&#xB9AC;&#xB205;&#xC2A4; &#xCEE4;&#xB110; &#xBAA8;&#xB4C8;&#xC744; &#xAD00;&#xB9AC; &#xD504;&#xB85C;&#xADF8;&#xB7A8;
+&#x2022; Less
+&#xB9AC;&#xB205;&#xC2A4;&#xC6A9; &#xD14D;&#xC2A4;&#xD2B8; &#xD30C;&#xC77C; &#xBDF0;&#xC5B4;. Vi&#xC640; &#xC720;&#xC0AC;&#xD558;&#xC9C0;&#xB9CC; &#xC77D;&#xAE30;&#xC804;&#xC6A9;
+&#x2022; Libcap
+&#xB9AC;&#xB205;&#xC2A4; &#xCEE4;&#xB110;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB294; POSIX 1003.1e &#xAE30;&#xB2A5;&#xC5D0; &#xB300;&#xD55C; &#xC0AC;&#xC6A9;&#xC790; &#xACF5;&#xAC04;
+&#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB97C; &#xAD6C;&#xD604;
+&#x2022; Libpipeline
+Libpipeline &#xD328;&#xD0A4;&#xC9C0;&#xB294; &#xC720;&#xC5F0;&#xD558;&#xACE0; &#xD3B8;&#xB9AC;&#xD55C; &#xBC29;&#xBC95;&#xC73C;&#xB85C; &#xC11C;&#xBE0C; &#xD504;&#xB85C;&#xC138;&#xC2A4;&#xC758; &#xD30C;&#xC774;&#xD504; &#xB77C;&#xC778;&#xC744;
+&#xC870;&#xC791;&#xD558;&#xAE30; &#xC704;&#xD55C; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;
+&#x2022; Libtool
+GNU&#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D; &#xB3C4;&#xAD6C;&#xC774;&#xBA70; &#xCEF4;&#xD30C;&#xC77C;&#xB41C; &#xD3EC;&#xD130;&#xBE14; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xB97C; &#xB9CC;&#xB4DC;&#xB294;&#xB370; &#xC774;&#xC6A9;
+&#x2022; LinuxKernel
+&#xCEE4;&#xB110;
+&#x2022; M4
+&#xB9E4;&#xD06C;&#xB85C; &#xCC98;&#xB9AC; &#xC5B8;&#xC5B4;.
+&#x2022; Make
+&#xD30C;&#xC77C; &#xAD00;&#xB9AC; &#xC720;&#xD2F8;&#xB9AC;&#xD2F0;
+&#x2022; Man-DB
+&#xC124;&#xBA85;&#xC11C; &#xD398;&#xC774;&#xC9C0;&#xB97C; &#xCC3E;&#xC544; &#xBCFC; &#xC218;&#xC788;&#xB294; &#xD504;&#xB85C;&#xADF8;&#xB7A8;
+&#x2022; Man-page
+man page
+&#x2022; MPC
+&#xBCF5;&#xC18C;&#xC218;&#xC5F0;&#xC0B0; &#xD504;&#xB85C;&#xADF8;&#xB7A8;
+&#x2022; MPFR
+multiple-precision floating-pint &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;
+&#x2022; Ncurses
+&#xC77C;&#xBC18; &#xD130;&#xBBF8;&#xB110;&#xC758; &#xCF58;&#xC194; &#xD654;&#xBA74;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xC790; &#xCE5C;&#xD654;&#xC801;&#xC778; Consol &#xC708;&#xB3C4;&#xC6B0; &#xD658;&#xACBD;&#xC744; &#xB9CC;&#xB4E4; &#xC218; &#xC788;&#xB3C4;&#xB85D;
+&#xB3C4;&#xC640;&#xC8FC;&#xB294; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC; 
+&#x2022; Patch
+&#xD30C;&#xC77C;&#xC744; &#xC218;&#xC815;&#xD558;&#xAC70;&#xB098; &#xC77C;&#xBC18;&#xC801;&#xC73C;&#xB85C; diff &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC5D0; &#xC758;&#xD574; &#xC0DD;&#xC131; &#xB41C; &#xD328;&#xCE58; &#xD30C;&#xC77C;&#xC744; &#xC801;&#xC6A9;&#xD558;&#xC5EC;
+&#xD30C;&#xC77C;&#xC744; &#xC0DD;&#xC131;&#xD558;&#xB294; &#xD504;&#xB85C;&#xADF8;&#xB7A8;.
+&#x2022; Perl
+&#xB7F0;&#xD0C0;&#xC784; &#xC5B8;&#xC5B4; &#xD384; &#xC778;&#xD130;&#xD504;&#xB9AC;&#xD130;
+&#x2022; Pkg-config
+&#xC18C;&#xC2A4; &#xCF54;&#xB4DC;&#xB85C;&#xBD80;&#xD130; &#xC18C;&#xD504;&#xD2B8;&#xC6E8;&#xC5B4;&#xB97C; &#xCEF4;&#xD30C;&#xC77C;&#xD560; &#xBAA9;&#xC801;&#xC73C;&#xB85C; &#xC124;&#xCE58;&#xB41C; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xB97C; &#xC870;&#xD68C;&#xD558;&#xAE30;
+&#xC704;&#xD574; &#xD1B5;&#xC77C;&#xB41C; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB97C; &#xC81C;&#xACF5;&#xD558;&#xB294; &#xCEF4;&#xD4E8;&#xD130; &#xC18C;&#xD504;&#xD2B8;&#xC6E8;&#xC5B4;
+&#x2022; Procps-NG
+&#xBAA8;&#xB2C8;&#xD130;&#xB9C1; &#xD504;&#xB85C;&#xC138;&#xC2A4;&#xC5D0; &#xB300;&#xD55C; &#xD504;&#xB85C;&#xADF8;&#xB7A8;.
+&#x2022; Psmisc
+&#xC2E4;&#xD589;&#xC911;&#xC778; &#xD504;&#xB85C;&#xC138;&#xC2A4;&#xC5D0; &#xB300;&#xD55C; &#xC815;&#xBCF4;&#xB97C; &#xD45C;&#xC2DC;&#xD558;&#xB294; &#xD504;&#xB85C;&#xADF8;&#xB7A8;. 
+&#x2022; Readline
+&#xBA85;&#xB839; &#xC904; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xC5D0;&#xC11C; &#xC904; &#xD3B8;&#xC9D1; &#xBC0F; &#xC785;&#xB825; &#xAE30;&#xB85D; &#xC800;&#xC7A5; &#xB4F1;&#xC758; &#xC5ED;&#xD560;&#xC744; &#xD558;&#xB294; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;
+&#x2022; Sed
+&#xBE44;&#xB300;&#xD654;&#xD615;&#xBAA8;&#xB4DC;&#xC758; &#xC904; &#xB2E8;&#xC704; &#xD3B8;&#xC9D1;&#xAE30;. Bash &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC5D0; &#xD544;&#xC694;
+&#x2022; Shadow
+&#xC548;&#xC804;&#xD55C; &#xBC29;&#xBC95;&#xC73C;&#xB85C; &#xC554;&#xD638;&#xB97C; &#xCC98;&#xB9AC;&#xD558;&#xAE30; &#xD55C; &#xD504;&#xB85C;&#xADF8;&#xB7A8;.
+&#x2022; Sysklogd
+&#xB85C;&#xADF8; &#xD30C;&#xC77C; &#xB9CC;&#xB4E4;&#xAE30; &#xC704;&#xD55C; &#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xC2DC;&#xC2A4;&#xD15C; &#xB85C;&#xADF8; &#xB370;&#xBAAC;
+&#x2022; Sysvinit
+&#xB9AC;&#xB205;&#xC2A4; &#xC2DC;&#xC2A4;&#xD15C;&#xC758; &#xB2E4;&#xB978; &#xBAA8;&#xB4E0; &#xD504;&#xB85C;&#xC138;&#xC2A4;&#xC758; &#xBD80;&#xBAA8; init &#xD504;&#xB85C;&#xADF8;&#xB7A8;.
+&#x2022; Tar
+&#xC555;&#xCD95;/&#xD574;&#xC81C; &#xD504;&#xB85C;&#xADF8;&#xB7A8;
+&#x2022; Tcl
+&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xC5B8;&#xC5B4;
+&#x2022;Texinfo
+&#xC77D;&#xAE30;, &#xC4F0;&#xAE30;, &#xBC0F; &#xC815;&#xBCF4; &#xD398;&#xC774;&#xC9C0;&#xB97C; &#xBCC0;&#xD658;&#xD558;&#xB294; &#xD504;&#xB85C;&#xADF8;&#xB7A8;
+&#x2022; Util - linux  
+&#xB2E4;&#xC591;&#xD55C; &#xC720;&#xD2F8;&#xB9AC;&#xD2F0; &#xD504;&#xB85C;&#xADF8;&#xB7A8;. &#xC2DC;&#xC2A4;&#xD15C;, &#xCF58;&#xC194;, &#xD30C;&#xD2F0;&#xC158; &#xBC0F; &#xBA54;&#xC2DC;&#xC9C0;&#xB97C; &#xCC98;&#xB9AC;&#xD558;&#xAE30; &#xC704;&#xD55C;
+&#xC720;&#xD2F8;&#xB9AC;&#xD2F0;.
+&#x2022; Vim
+&#xD3B8;&#xC9D1;&#xAE30;
+&#x2022; XML :: Parser
+Expat&#xB294;&#xC640; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4; Perl &#xBAA8;&#xB4C8;
+&#x2022; XZ Utils    
+&#xC555;&#xCD95; &#xD30C;&#xC77C;&#xC744; &#xC555;&#xCD95; &#xD574;&#xC81C; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC774; &#xD3EC;&#xD568;&#xB418;&#xC5B4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xADF8;&#xAC83;&#xC740; &#xAC00;&#xC7A5; &#xB192;&#xC740; &#xC555;&#xCD95;&#xC740;
+&#xC77C;&#xBC18;&#xC801;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC81C;&#xACF5;&#xD558;&#xACE0; XZ &#xB610;&#xB294; LZMA &#xD615;&#xC2DD;&#xC73C;&#xB85C; &#xD328;&#xD0A4;&#xC9C0;&#xB97C; &#xC555;&#xCD95; &#xD574;&#xC81C;&#xD558;&#xB294; &#xB370;
+&#xC720;&#xC6A9;
+&#x2022; Zlib  
+&#xC77C;&#xBD80; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xC555;&#xCD95; &#xBC0F; &#xC555;&#xCD95; &#xD574;&#xC81C; &#xB8E8;&#xD2F4;&#xC744; &#xD3EC;&#xD568;
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="2_Preparing_a_New_Partition.html" class="navigation navigation-prev " aria-label="Previous page: 2. Preparing a New Partition">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="4_Final_Preparations.html" class="navigation navigation-next " aria-label="Next page: 4. Final Preparations">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3. Packages and Patches","level":"1.5","depth":1,"next":{"title":"4. Final Preparations","level":"1.6","depth":1,"path":"markdowns/4_Final_Preparations.md","ref":"markdowns/4_Final_Preparations.md","articles":[]},"previous":{"title":"2. Preparing a New Partition","level":"1.4","depth":1,"path":"markdowns/2_Preparing_a_New_Partition.md","ref":"markdowns/2_Preparing_a_New_Partition.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"http://soopsaram.com/lfs"},"plugins":["ga","simple-page-toc","disqus","back-to-top-button","edit-link","github","livereload"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"jihuun"},"github":{"url":"https://github.com/jihuun/lfs"},"livereload":{},"simple-page-toc":{"maxDepth":2,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"ga":{"configuration":"auto","token":""},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit","base":"https://github.com/jihuun/lfs/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"markdowns/3_Packages_and_Patches.md","mtime":"2019-08-30T12:28:41.160Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-30T12:25:12.496Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
