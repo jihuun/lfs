@@ -339,37 +339,26 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <hr>
-<h2 id="">{}</h2>
-<hr>
-<p>&#xBAA9;&#xCC28;</p>
+                                <h1 id="8-making-the-lfs-system-bootable">8. Making the LFS System Bootable</h1>
 <!-- toc -->
 <ul>
 <li><a href="#81-introduction">8.1. Introduction</a></li>
 <li><a href="#82-creating-the-etcfstab-file">8.2. Creating the /etc/fstab File</a></li>
-<li><a href="#83-linux-319">8.3. Linux-3.19</a><ul>
-<li><a href="#831-installation-of-the-kernel">8.3.1. Installation of the kernel</a></li>
-<li><a href="#832-configuring-linux-module-load-order">8.3.2. Configuring Linux Module Load Order</a></li>
-</ul>
-</li>
+<li><a href="#83-linux-319">8.3. Linux-3.19</a></li>
 <li><a href="#84-using-grub-to-set-up-the-boot-process">8.4. Using GRUB to Set Up the Boot Process</a></li>
 </ul>
 <!-- tocstop -->
-<hr>
-<p><a href="#81-introduction">8.1. Introduction  </a><br><a href="#82-creating-the-etcfstab-file">8.2. Creating the /etc/fstab File  </a><br><a href="#83-linux-319">8.3. Linux-3.19  </a><br><a href="#84-using-grub-to-set-up-the-boot-process">8.4. Using GRUB to Set Up the Boot Process  </a>  </p>
-<h2 id="-----------------------">--------------------    </h2>
-<h1 id="81-introduction">8.1. Introduction</h1>
+<h2 id="81-introduction">8.1. Introduction</h2>
 <p>&#xC774;&#xBC88;&#xC7A5;&#xC5D0;&#xC11C; LFS&#xC2DC;&#xC2A4;&#xD15C;&#xC744; &#xBD80;&#xD305;&#xAC00;&#xB2A5;&#xD558;&#xAC8C; &#xB9CC;&#xB4E0;&#xB2E4;.<br>fstab&#xD30C;&#xC77C;&#xC744; &#xB9CC;&#xB4E4;&#xACE0;, kernel&#xC744; &#xBE4C;&#xB4DC; &#xD560; &#xAC83;&#xC774;&#xB2E4;.<br>&#xADF8;&#xB9AC;&#xACE0; GRUB&#xBD80;&#xD2B8;&#xB85C;&#xB354;&#xB97C; &#xC124;&#xCE58;&#xD560;&#xAC83;&#xC774;&#xB2E4;. &#xADF8;&#xB7EC;&#xBA74; &#xBD80;&#xD305;&#xC2DC;&#xC5D0; LFS system&#xC744; &#xC120;&#xD0DD;&#xD558;&#xC5EC; &#xBD80;&#xD305;&#xD560; &#xC218; &#xC788;&#xC744;&#xAC83;.  </p>
-<h2 id="-----------------------">--------------------    </h2>
-<h1 id="82-creating-the-etcfstab-file">8.2. Creating the /etc/fstab File</h1>
+<h2 id="82-creating-the-etcfstab-file">8.2. Creating the /etc/fstab File</h2>
 <p>&#xD30C;&#xC77C;&#xC2DC;&#xC2A4;&#xD15C;&#xC744; &#xAE30;&#xBCF8;&#xC73C;&#xB85C; &#xB9C8;&#xC6B4;&#xD2B8; &#xC2DC;&#xD0A4;&#xAE30; &#xC704;&#xD574;&#xC11C; /etc/fstab&#xD30C;&#xC77C;&#xC744; &#xC774;&#xC6A9;&#xD55C;&#xB2E4;.<br>(&#xC9C0;&#xB09C; &#xC7A5;&#xC5D0;&#xC11C;&#xB294; mount &#xBA85;&#xB839;&#xC5B4;&#xB85C; &#xC77C;&#xC77C;&#xC774; &#xD588;&#xC5C8;&#xC74C;.)  </p>
 <ul>
 <li><strong>/etc/fstab&#xD30C;&#xC77C; &#xC0DD;&#xC131;</strong>    </li>
 </ul>
-<pre><code class="lang-sh"><span class="hljs-comment"># Begin /etc/fstab  </span>
+<pre><code class="lang-sh"><span class="hljs-comment">## Begin /etc/fstab  </span>
 
-<span class="hljs-comment"># file system  mount-point  type     options             dump  fsck  </span>
-<span class="hljs-comment">#                                                              order  </span>
+<span class="hljs-comment">## file system  mount-point  type     options             dump  fsck  </span>
+<span class="hljs-comment">##                                                              order  </span>
 
 /dev/sdb5      /            ext4     defaults            1     1  
 proc           /proc        proc     nosuid,noexec,nodev 0     0  
@@ -378,16 +367,14 @@ devpts         /dev/pts     devpts   gid=5,mode=620      0     0
 tmpfs          /run         tmpfs    defaults            0     0  
 devtmpfs       /dev         devtmpfs mode=0755,nosuid    0     0  
 
-<span class="hljs-comment"># End /etc/fstab</span>
+<span class="hljs-comment">## End /etc/fstab</span>
 </code></pre>
 <blockquote>
 <p>&#xC6D0;&#xB798;&#xB294; &#xC544;&#xB798; &#xC904;&#xB3C4; &#xC788;&#xB294;&#xB370; swap &#xD30C;&#xD2F0;&#xC158; &#xC548;&#xB9CC;&#xB4E4;&#xC5B4;&#xC11C; &#xC81C;&#xAC70;&#xD568;.<br>/dev/<yyy>     swap         swap     pri=1               0     0  </yyy></p>
 </blockquote>
-<h2 id="-----------------------">--------------------    </h2>
-<h1 id="83-linux-319">8.3. Linux-3.19</h1>
+<h2 id="83-linux-319">8.3. Linux-3.19</h2>
 <p>&#xB4DC;&#xB514;&#xC5B4; &#xB9AC;&#xB205;&#xC2A4; &#xCEE4;&#xB110; &#xBE4C;&#xB4DC;.  </p>
-<hr>
-<h2 id="831-installation-of-the-kernel">8.3.1. Installation of the kernel</h2>
+<h3 id="831-installation-of-the-kernel">8.3.1. Installation of the kernel</h3>
 <p>&#xCEE4;&#xB110; &#xCEF4;&#xD30C;&#xC77C;&#xD558;&#xAE30;.  </p>
 <ul>
 <li><strong>&#xCEE4;&#xB110; &#xC18C;&#xC2A4; clean</strong>    </li>
@@ -444,24 +431,22 @@ MODPOST 16 modules
 <pre><code class="lang-sh">install <span class="hljs-_">-d</span> /usr/share/doc/linux-3.19  
 cp -r Documentation/* /usr/share/doc/linux-3.19
 </code></pre>
-<hr>
-<h2 id="832-configuring-linux-module-load-order">8.3.2. Configuring Linux Module Load Order</h2>
+<h3 id="832-configuring-linux-module-load-order">8.3.2. Configuring Linux Module Load Order</h3>
 <p>/etc/modprobe.d/&#xC548;&#xC5D0; &#xC788;&#xB294; &#xC124;&#xC815;&#xD30C;&#xC77C;&#xC744; &#xC218;&#xC815;&#xD558;&#xC5EC; &#xBAA8;&#xB4C8;&#xC744; &#xC21C;&#xC11C;&#xB300;&#xB85C; &#xB85C;&#xB4DC;&#xD560;&#xC218; &#xC788;&#xC74C;.<br>&#xC774; &#xC21C;&#xC11C;&#xB97C; &#xC798; &#xC870;&#xC815;&#xD558;&#xBA74; &#xC6D0;&#xD558;&#xB294; &#xC21C;&#xC11C;&#xB300;&#xB85C; &#xBAA8;&#xB4C8;&#xC744; &#xB85C;&#xB4DC;&#xD560; &#xC218; &#xC788;&#xC74C;.  </p>
 <ul>
 <li><strong>/etc/modprobe.d/usb.conf &#xC0DD;&#xC131;</strong>    </li>
 </ul>
 <pre><code class="lang-sh">install -v -m755 <span class="hljs-_">-d</span> /etc/modprobe.d  
 cat &gt; /etc/modprobe.d/usb.conf &lt;&lt; <span class="hljs-string">&quot;EOF&quot;</span>  
-<span class="hljs-comment"># Begin /etc/modprobe.d/usb.conf  </span>
+<span class="hljs-comment">## Begin /etc/modprobe.d/usb.conf  </span>
 
 install ohci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i ohci_hcd ; <span class="hljs-literal">true</span>  
 install uhci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i uhci_hcd ; <span class="hljs-literal">true</span>  
 
-<span class="hljs-comment"># End /etc/modprobe.d/usb.conf  </span>
+<span class="hljs-comment">## End /etc/modprobe.d/usb.conf  </span>
 EOF
 </code></pre>
-<h2 id="-----------------------">--------------------    </h2>
-<h1 id="84-using-grub-to-set-up-the-boot-process">8.4. Using GRUB to Set Up the Boot Process</h1>
+<h2 id="84-using-grub-to-set-up-the-boot-process">8.4. Using GRUB to Set Up the Boot Process</h2>
 <p>LFS&#xB300;&#xB85C; grub&#xC744; &#xB530;&#xB77C;&#xD588;&#xB2E4;&#xAC04; grub &#xC744; &#xC0C8;&#xB85C; &#xC124;&#xCE58;&#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0;  &#xCEF4;&#xD4E8;&#xD130;&#xAC00; &#xB0A0;&#xB77C;&#xAC08;&#xC9C0;&#xB3C4; &#xBAA8;&#xB978;&#xB2E4;.<br>&#xAE30;&#xC874; HOST&#xC2DC;&#xC2A4;&#xD15C; grub &#xC5D0; LFS &#xBA54;&#xB274;&#xB97C; &#xCD94;&#xAC00;&#xD558;&#xAE30;&#xB85C; &#xD55C;&#xB2E4;.  </p>
 <blockquote>
 <pre><code>grub &#xBC84;&#xC804; &#xCCB4;&#xD06C;   
@@ -525,7 +510,7 @@ grub-install --version
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"8. Making the LFS System Bootable","level":"1.13","depth":1,"next":{"title":"9. The End","level":"1.14","depth":1,"path":"markdowns/9_The_End.md","ref":"markdowns/9_The_End.md","articles":[]},"previous":{"title":"7. System Configuration and Bootscripts","level":"1.12","depth":1,"path":"markdowns/7_System_Configuration_and_Bootscripts.md","ref":"markdowns/7_System_Configuration_and_Bootscripts.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"http://soopsaram.com/lfs"},"plugins":["ga","simple-page-toc","disqus","back-to-top-button","edit-link","github","livereload"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"jihuun"},"github":{"url":"https://github.com/jihuun/lfs"},"livereload":{},"simple-page-toc":{"maxDepth":2,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"ga":{"configuration":"auto","token":""},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit","base":"https://github.com/jihuun/lfs/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"markdowns/8_Making_the_LFS_System_Bootable.md","mtime":"2019-08-30T12:24:31.272Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-30T12:25:12.496Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"8. Making the LFS System Bootable","level":"1.13","depth":1,"next":{"title":"9. The End","level":"1.14","depth":1,"path":"markdowns/9_The_End.md","ref":"markdowns/9_The_End.md","articles":[]},"previous":{"title":"7. System Configuration and Bootscripts","level":"1.12","depth":1,"path":"markdowns/7_System_Configuration_and_Bootscripts.md","ref":"markdowns/7_System_Configuration_and_Bootscripts.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"http://soopsaram.com/lfs"},"plugins":["ga","simple-page-toc","disqus","back-to-top-button","edit-link","github","livereload"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"jihuun"},"github":{"url":"https://github.com/jihuun/lfs"},"livereload":{},"simple-page-toc":{"maxDepth":2,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"ga":{"configuration":"auto","token":""},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit","base":"https://github.com/jihuun/lfs/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"markdowns/8_Making_the_LFS_System_Bootable.md","mtime":"2019-08-30T12:51:28.263Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-30T12:55:53.674Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

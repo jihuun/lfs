@@ -1,5 +1,5 @@
 
-# Preparing a New Partition
+# 2. Preparing a New Partition
 
 
 <!-- toc -->

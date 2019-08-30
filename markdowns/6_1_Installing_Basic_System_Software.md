@@ -1,19 +1,10 @@
-
---------------------  
-목차  
+# 6. Installing Basic System Software (1)
+  
 <!-- toc -->
---------------------  
-[6.1. Introduction  ](#61-introduction)  
-[6.2. Preparing Virtual Kernel File Systems  ](#62-preparing-virtual-kernel-file-systems)  
-[6.3. Package Management  ](#63-package-management)  
-[6.4. Entering the Chroot Environment  ](#64-entering-the-chroot-environment)  
-[6.4. Entering the Chroot Environment  ](#64-entering-the-chroot-environment)  
-[6.5. Creating Directories  ](#65-creating-directories)  
-[6.6. Creating Essential Files and Symlinks  ](#66-creating-essential-files-and-symlinks)  
-[6.7. Linux-3.19 API Headers  ](#67-linux-319-api-headers)  
+  
 
---------------------  
-# 6.1. Introduction  
+  
+## 6.1. Introduction  
   
 리눅스 시스템이 어떻게 동작하는가를 이해하는데 핵심요소는 바로  
 각 패키지의 사용목적과 왜 필요한지를 이해하는 것이다.    
@@ -32,21 +23,21 @@
 http://search.gmane.org/?query=msgunfmt-3&author=&group=gmane.linux.lfs.support&sort=relevance&DEFAULTOP=and&xP=fail%09msgunfmt%093&xFILTERS=Glinux.lfs.support---A   
 
   
---------------------  
-# 6.2. Preparing Virtual Kernel File Systems  
+  
+## 6.2. Preparing Virtual Kernel File Systems  
   
 파일시스템은 disk공간을 차지하지 않고 메모리에 상주한다.    
   
 - __파일시스템이 마운트 될 디렉토리들을 생성.__  
   
-````````````````````sh
+```sh
  $ mkdir -pv $LFS/{dev,proc,sys,run}  
-````````````````````
+```
   
   
   
---------------------  
-## 6.2.1. Creating Initial Device Nodes  
+  
+### 6.2.1. Creating Initial Device Nodes  
   
 커널이 시스템을 부팅할때 몇몇 디바이스 노드가 필요하다.  
 특히 console, null노드가 필요.   
@@ -56,25 +47,25 @@ http://search.gmane.org/?query=msgunfmt-3&author=&group=gmane.linux.lfs.support&
   
 - __mknod명령으로 디바이스 노드 생성__  
 
-````````````````````sh
+```sh
  $ mknod -m 600 $LFS/dev/console c 5 1  
  $ mknod -m 666 $LFS/dev/null c 1 3  
-````````````````````
+```
 ``(찾아보기)`` 디바이스 노드란? , 디바이스 파일과의 차이는?    
 ``(찾아보기)`` mknod 옵션 의미    
   
 - ls 해보면 아래와 같이 나옴.    
 
-````````````````````sh
+```sh
 root@jihuun:/mnt/lfs/dev# ls -al  
 crw------- 1 root root 5, 1  7월 31 13:51 console  
 crw-rw-rw- 1 root root 1, 3  7월 31 13:51 null  
-````````````````````
+```
   
   
   
---------------------  
-## 6.2.2. Mounting and Populating /dev  
+  
+### 6.2.2. Mounting and Populating /dev  
   
   
 일반적으로 부팅중 Udev에 의해 디바이스가 생성되지만,    
@@ -92,9 +83,9 @@ olddir를 newdir에서도 볼수 있게 해줌.
   
 - __$LFS/dev에 /dev를 미러링__    
 
-````````````````````sh
+```sh
  $ mount -v --bind /dev $LFS/dev  
-````````````````````
+```
 > 근데 ls $LFS/dev 했을때 바로 /dev 의 내용이 안보이고  
 터미널을 새로 열어야 보임.  
   
@@ -111,17 +102,17 @@ olddir를 newdir에서도 볼수 있게 해줌.
   
   
   
---------------------  
-## 6.2.3. Mounting Virtual Kernel File Systems  
+  
+### 6.2.3. Mounting Virtual Kernel File Systems  
   
 - __나머지 가상 파일시스템 마운트__  
 
-````````````````````sh
+```sh
  $ mount -vt devpts devpts $LFS/dev/pts -o gid=5,mode=620  
  $ mount -vt proc proc $LFS/proc  
  $ mount -vt sysfs sysfs $LFS/sys  
  $ mount -vt tmpfs tmpfs $LFS/run  
-````````````````````
+```
 > mode=620 and gid=5 makes "mesg y" the default on newly created PTYs  
 > HOST시스템의 /sys /proc /dev/pts가  $LFS/ 아래에 똑같이 마운트됨.  
 /run은 다르게 마운트되어있음.  
@@ -130,7 +121,7 @@ olddir를 newdir에서도 볼수 있게 해줌.
   
 - 현재 lfs관련 mount 된 내용들.  
 
-````````````````````sh
+```sh
  $ mount  
 /dev/sdb5 on /mnt/lfs type ext4 (rw)  
 /dev on /mnt/lfs/dev type none (rw,bind)  
@@ -139,7 +130,7 @@ devpts on /mnt/lfs/dev/pts type devpts (rw,gid=5,mode=620)
 proc on /mnt/lfs/proc type proc (rw)  
 sysfs on /mnt/lfs/sys type sysfs (rw)  
 tmpfs on /mnt/lfs/run type tmpfs (rw)  
-````````````````````
+```
   
   
 In some host systems, /dev/shm is a symbolic link to /run/shm. The /run tmpfs  
@@ -147,11 +138,11 @@ was mounted above so in this case only a directory needs to be created.
   
 - __$LFS/dev/shm 생성__  
 
-````````````````````sh
+```sh
  $ if [ -h $LFS/dev/shm ]; then  
  $ 	mkdir -pv $LFS/$(readlink $LFS/dev/shm)  
  $ fi  
-````````````````````
+```
 HOST 시스템에는 /dev/shm -> /run/shm/ 심볼릭 링크되어있음.    
   
   
@@ -159,8 +150,8 @@ HOST 시스템에는 /dev/shm -> /run/shm/ 심볼릭 링크되어있음.
   
   
   
---------------------  
-# 6.3. Package Management  
+  
+## 6.3. Package Management  
   
 LFS에서는 패키지 관리자를 설치하지 않는다.  
 아래 참고.  
@@ -174,11 +165,11 @@ adopt this style of package management for LFS systems is located at
 http://www.linuxfromscratch.org/hints/downloads/files/fakeroot.txt.  
   
   
---------------------  
-# 6.4. Entering the Chroot Environment  
+  
+## 6.4. Entering the Chroot Environment  
   
   
-# 6.4. Entering the Chroot Environment  
+## 6.4. Entering the Chroot Environment  
   
 이제 본격적으로 최종 LFS빌드, 설치 시작하기 위해 change root를 함.  
   
@@ -188,14 +179,14 @@ that is, at the moment, populated with only the temporary tools:
   
 - __루트계정으로 chroot 명령 실행__    
 
-````````````````````sh
+```sh
  $ chroot "$LFS" /tools/bin/env -i		\  
 	HOME=/root                  \  
 	TERM="$TERM"                \  
 	PS1='\u:\w\$ '              \  
 	PATH=/bin:/usr/bin:/sbin:/usr/sbin:/tools/bin \  
 	/tools/bin/bash --login +h  
-````````````````````
+```
 > ``(옵션)``    
 chroot [OPTION] NEWROOT [COMMAND [ARG]...]    
 "$LFS" : chroot이후에 $LFS/ 가 이제 / 디렉토리가 됨.(따라서 더이상 $LFS도 필요없음)    
@@ -209,13 +200,13 @@ mount 등 6.2.2.장  6.2.3.장 참고
   
   
   
---------------------  
-# 6.5. Creating Directories  
+  
+## 6.5. Creating Directories  
   
 LFS의 파일시스템 생성하기.  
 - __Unix 표준 디렉토리 구조로 생성__  
 
-````````````````````sh
+```sh
  $ mkdir -pv /{bin,boot,etc/{opt,sysconfig},home,lib/firmware,mnt,opt}  
  $ mkdir -pv /{media/{floppy,cdrom},sbin,srv,var}  
  $ install -dv -m 0750 /root  
@@ -236,35 +227,35 @@ LFS의 파일시스템 생성하기.
  $ ln -sv /run /var/run  
  $ ln -sv /run/lock /var/lock  
  $ mkdir -pv /var/{opt,cache,lib/{color,misc,locate},local}  
-````````````````````
+```
 [Filesystem Hierarchy Standard (FHS) 참고](https://wiki.linuxfoundation.org/en/FHS)    
   
   
   
   
   
---------------------  
-# 6.6. Creating Essential Files and Symlinks  
+  
+## 6.6. Creating Essential Files and Symlinks  
   
   
 - 몇몇 유틸리티 심볼릭 링크 생성  
 
-````````````````````sh
+```sh
  $ ln -sv /tools/bin/{bash,cat,echo,pwd,stty} /bin  
  $ ln -sv /tools/bin/perl /usr/bin  
  $ ln -sv /tools/lib/libgcc_s.so{,.1} /usr/lib  
  $ ln -sv /tools/lib/libstdc++.so{,.6} /usr/lib  
  $ sed 's/tools/usr/' /tools/lib/libstdc++.la > /usr/lib/libstdc++.la  
  $ ln -sv bash /bin/sh  
-````````````````````
+```
 몇몇 유틸리티에서 /bin/bash 이런식으로 hard-coding 되어있어서 심볼릭 링크 걸어줘야함.  
   
   
 - __/etc/mtab 으로 파일시스템 마운트 지정__  
 
-````````````````````sh
+```sh
  $ ln -sv /proc/self/mounts /etc/mtab  
-````````````````````
+```
 fstab 같은 역할일듯.  
   
 ``(찾아보기)`` mtab fstab 차이와 그 내용의 의미.  
@@ -275,7 +266,7 @@ fstab 같은 역할일듯.
   
 - __/etc/passwd 생성__  
 
-````````````````````sh
+```sh
  $ cat > /etc/passwd << "EOF"  
  $ root:x:0:0:root:/root:/bin/bash  
  $ bin:x:1:1:bin:/dev/null:/bin/false  
@@ -283,13 +274,13 @@ fstab 같은 역할일듯.
  $ messagebus:x:18:18:D-Bus Message Daemon User:/var/run/dbus:/bin/false  
  $ nobody:x:99:99:Unprivileged User:/dev/null:/bin/false  
  $ EOF  
-````````````````````
+```
 login시 이름을 이 파일에서 읽어옴.  
 실제 passwd는 나중에 설정함.    
   
 - __/etc/group 생성__  
 
-````````````````````sh
+```sh
  $ cat > /etc/group << "EOF"  
 root:x:0:  
 bin:x:1:daemon  
@@ -315,7 +306,7 @@ mail:x:34:
 nogroup:x:99:  
 users:x:999:  
 EOF  
-````````````````````
+```
 > 생성된 그룹들은 표준은 아님.    
 이번챕터의 Udev configuration을 위한 생성임.    
   
@@ -328,9 +319,9 @@ created, user name and group name resolution will now work:
   
 - __프롬프트에 "I have no name!" 제거__    
 
-````````````````````sh
+```sh
  $ exec /tools/bin/bash --login +h    
-````````````````````
+```
 > ``(찾아보기)`` bash가 새로 로그인할때  /etc/etc/passwd 와 /etc/group 참조 하는듯?    
   
   
@@ -338,12 +329,12 @@ created, user name and group name resolution will now work:
   
 - __log 파일 생성__    
 
-````````````````````sh
+```sh
  $ touch /var/log/{btmp,lastlog,wtmp}  
  $ chgrp -v utmp /var/log/lastlog  
  $ chmod -v 664  /var/log/lastlog  
  $ chmod -v 600  /var/log/btmp  
-````````````````````
+```
 > login, agetty, init 프로그램등리  log파일을 사용함.  
   
   
@@ -353,8 +344,8 @@ created, user name and group name resolution will now work:
   
   
   
---------------------  
-# 6.7. Linux-3.19 API Headers  
+  
+## 6.7. Linux-3.19 API Headers  
 다음 파일로  ..
   
   

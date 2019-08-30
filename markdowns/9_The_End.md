@@ -1,19 +1,11 @@
---------------------      
-목차  
+## 9. The End  
+
+      
 <!-- toc -->
---------------------      
+      
   
-[9.1. The End  ](#91-the-end)  
-[9.2. Get Counted  ](#92-get-counted)  
-[9.3. Rebooting the System  ](#93-rebooting-the-system)  
-[9.4. What Now? ](#94-what-now?)  
-[9.5. 추가 설정.](#95-추가-설정)  
-[9.6. 내가만든 LFS를 USB로 부팅하게 만들기.](#96-내가만든-LFS를-USB로-부팅가능하게-만들기)  
-[9.7. LFS 파일시스템 Ramdisk로 압축하여 부팅USB만들기.](#97-LFS파일시스템-Ramdisk로-압축하여-부팅USB만들기.)  
 
---------------------      
-
-# 9.1. The End  
+## 9.1. The End  
   
 이제 새로운 custom LFS시스템이 완전히 설치되었다.   
   
@@ -21,33 +13,33 @@
   
 - __release 노트 파일생성__    
   
-````````````````````sh  
+```sh  
 echo 7.7 > /etc/lfs-release  
-````````````````````  
+```  
   
 - __시스템 상태 보여주는 파일 생성__    
   
-````````````````````sh  
+```sh  
 cat > /etc/lsb-release << "EOF"  
 DISTRIB_ID="Linux From Scratch"  
 DISTRIB_RELEASE="7.7"  
 DISTRIB_CODENAME="<your name here>"  
 DISTRIB_DESCRIPTION="Linux From Scratch"  
 EOF  
-````````````````````  
+```  
   
   
   
   
   
---------------------      
---------------------      
-# 9.2. Get Counted  
+      
+      
+## 9.2. Get Counted  
   
 Register하기.  
 http://www.linuxfromscratch.org/cgi-bin/lfscounter.php   
   
-````````````````````  
+```  
 Records 101 – 200 of 177  
   
 LFS ID	Name			First LFS Version  
@@ -55,36 +47,36 @@ LFS ID	Name			First LFS Version
 25609	Moli			7.7  
 25610	Gerhard			7.7  
 25611	Ji-Hun Kim		7.7  
-````````````````````  
+```  
   
 Let`s reboot into LFS now.  
   
   
   
   
---------------------      
---------------------      
-# 9.3. Rebooting the System  
+      
+      
+## 9.3. Rebooting the System  
   
 shutdown -r now  
   
   
---------------------      
---------------------      
-# 9.4. What Now?  
+      
+      
+## 9.4. What Now?  
 BLFS or piLFS?  
 
 
 
 
 
---------------------      
---------------------      
-# 9.5. 추가 설정.
+      
+      
+## 9.5. 추가 설정.
 
 
---------------------      
-## bash 쉘 프롬프트 모양 바꾸기  
+      
+### bash 쉘 프롬프트 모양 바꾸기  
 
 현재 ``-bash-4.3.3 $`` 이렇게 되어있음.  
 echo $PS1 해보면 ``PS1="-\s-\v$ "`` 이렇게 나와서 그렇다  
@@ -98,9 +90,9 @@ PS1 환경변수를 수정해야한다.
 
 - __/root/.bashrc파일에 아래와같이 입력__  
 
-````````````````````sh
+```sh
 export PS1="\u@\h:\w\$ "
-````````````````````
+```
 > \u : user계정명  
 > \h : host name  
 > \w : full path  
@@ -108,18 +100,18 @@ export PS1="\u@\h:\w\$ "
 
 - __그 뒤 bashrc 적용__  
  
-````````````````````sh
+```sh
  $ source /root/.bashrc
-````````````````````
+```
 > 여기에하면 재부팅할때마다 적용해줘야함.  
 > /etc/profile 에 써주면  재부팅시 바로 적용됨.  
 
 
 
 
---------------------      
---------------------      
-# 9.6 내가만든 LFS를 USB로 부팅가능하게 만들기.  
+      
+      
+## 9.6 내가만든 LFS를 USB로 부팅가능하게 만들기.  
 
 
 ### 9.6.1. 배경 및 사전조사    
@@ -130,10 +122,10 @@ USB에 grub을 설치하고 MBR? 로 설정하여 부팅가능하게 하면 되�
 
 - __iso생성 및 mount테스트__  
 
-````````````````````sh
+```sh
  $ mkisofs -r -V "test ISO" -o iso_test_vimdic.iso ~/Downloads/vimdic-master
  $ sudo mount -o loop ~/Downloads/iso_test_vimdic.iso /mnt/test_iso/
-````````````````````
+```
 
 
 http://www.linuxquestions.org/questions/linux-from-scratch-13/booting-lfs-from-usb-stick-897465/  
@@ -161,28 +153,28 @@ http://www.pendrivelinux.com/boot-multiple-iso-from-usb-via-grub2-using-linux/
 > 
 > - __mkisofs 이용__   
 > 
-> ````````````````````sh
+> ```sh
 >  $ mount -v -t ext4 /dev/sdb5 /mnt/lfs
 >  $ mkisofs -r -V "test ISO" -o lfs-7-7.iso /mnt/lfs
-> ````````````````````
+> ```
 > 나중에 iso를 mount 할때는 mount -t ext4 옵션으로 mount가 안되고 -o loop로
 > mount 해야함.  
 > lfs iso이미지는 이렇게 만듦.  
 >
 > - __dd 이용__   
 > 
-> ````````````````````sh
+> ```sh
 >  $ dd if=/dev/sdb5 of=lfs-7-7.iso
-> ````````````````````
+> ```
 >
 > - __일반적인 iso 관련 사용법?__   
 >
-> ````````````````````
+> ```
 > files -> iso		$ mkisofs -o image.iso <pathlist>
 > view iso		$ mount image.iso -o loop <dirname>
 > iso -> CD		$ cdrecord -v -eject dev=<i,j,k> image.iso
 > CD -> iso		$ dd if=/dev/cdrom of=image.iso
-> ````````````````````
+> ```
 
 
 ### 9.6.3. 파일시스템 통째로 복사하여 USB 부팅 하기 
@@ -192,7 +184,7 @@ http://www.pendrivelinux.com/boot-multiple-iso-from-usb-via-grub2-using-linux/
 
 #### (1). Format your USB Flash Drive to use a Single Partition:
 
-````````````````````sh
+```sh
 
 Open a terminal and type sudo su
  $ fdisk -l (and note which device is your USB Drive)
@@ -208,22 +200,22 @@ Open a terminal and type sudo su
 	Type t (for partition type)
 	Type 83 (to use linux partition)
 	Type w (to write the changes and close fdisk)
-````````````````````
+```
 > ``(주의)``  fdisk /dev/sdx  sdx1 이 아니라 sdx 임.  
 
 
 
 #### (2). Create a ext4 filesystem on the USB flash drive:
 
-````````````````````sh
+```sh
 sudo umount /dev/sdc1 (or whatever your usb is)
 sudo mkfs.ext4 /dev/sdc1
-````````````````````
+```
 
 
 #### (3). Install Grub2 on the USB Flash Drive:
 
-````````````````````sh
+```sh
 mkdir /mnt/USB && mount /dev/sdx1 /mnt/USB (replacing x with your actual usb device)
 
 grub-install --force --no-floppy --boot-directory=/mnt/USB/boot /dev/sdx
@@ -232,28 +224,28 @@ grub-install --force --no-floppy --boot-directory=/mnt/USB/boot /dev/sdx
 cd /mnt/USB/boot/grub (to change directory)
 wget pendrivelinux.com/downloads/grub.cfg
 
-````````````````````
+```
 > ``(주의)`` grub-install 설치 옵션에  /dev/sdx 임을 주의
 > 이렇게하면 USB로 재부팅시 grub화면이 보임.  
 
 
 #### (4). LFS 루트파일시스템 USB로 통째로 복사
 
-````````````````````sh  
+```sh  
  $ mount /dev/sdc1 /mnt/USB
  $ mount /dev/sdb5 /mnt/lfs
  $ cd /mnt/lfs
  $ cp -avp bin/ dev/ etc/ home/ lib/ lib64 media/ mnt/ opt/ proc/ root/ run/ sbin/ sources/ srv/ sys/ tmp/ usr/ var/ /mnt/USB/
  $ cp boot/* /mnt/USB/boot/
-````````````````````
+```
 > iso로딩 대신 이방법 사용.  
 
 
 #### (5). grub.cfg 수정.
 
-````````````````````sh  
+```sh  
 cat > boot/grub/grub.cfg << "EOF"
-# Begin /boot/grub/grub.cfg
+## Begin /boot/grub/grub.cfg
 set default=0
 set timeout=5
 
@@ -264,7 +256,7 @@ menuentry "GNU/Linux, Linux 3.19-lfs-7.7" {
 	        linux   /boot/vmlinuz-3.19-lfs-7.7 root=/dev/sdc1 ro
 }
 EOF
-````````````````````
+```
 > (hd0,1) USB의 첫번째 파티션이므로 1임.  
 > root=/dev/sdc1 으로 수정  
 > 
@@ -278,19 +270,19 @@ EOF
 
 - initrd 이미지 HOST의 것으로 복사
 
-````````````````````sh  
+```sh  
 cp  /boot/initrd.img-3.8.0-42-generic  /mnt/USB/boot/
-````````````````````  
+```  
 > 실제로는 커널을 빌드할때 config 옵션으로 initrd를 줘서 생성한 initrd를 추가해줘야할듯  
 
 - grub.cfg 에 initrd추가  
 
-````````````````````patch  
+```patch  
 menuentry "GNU/Linux, Linux 3.19-lfs-7.7" {
 		linux   /boot/vmlinuz-3.19-lfs-7.7 root=/dev/sdc1 ro
 +		initrd 	/boot/initrd.img-3.8.0-42-generic
 }
-````````````````````  
+```  
 
 여기까지하면 HOST PC에서 USB로 부팅이 됨. 하지만 다른 PC에서 부팅안됨. 이유는
 다른 PC에서는 USB가 grub에 지정한 /dev/sdc1으로 마운트 되지 않을 수도 있기때문이다.  
@@ -319,7 +311,7 @@ initrd란 rd(ram disk)에 부팅에 필요한 커널이미지를 미리 설정�
 > http://icecreamie.tistory.com/m/post/13  
 
 
-#### (7) USB의 UUID 설정하기.
+##### (7) USB의 UUID 설정하기.
 
 모든 PC에서 부팅 가능해짐.
 
@@ -328,20 +320,20 @@ blkid 로 UUID확인
 
 - grub.cfg 수정.
 
-````````````````````patch  
+```patch  
 menuentry "GNU/Linux, Linux 3.19-lfs-7.7" {
 -	        linux   /boot/vmlinuz-3.19-lfs-7.7 root=/dev/sdc1 ro
 +	        linux   /boot/vmlinuz-3.19-lfs-7.7 root=UUID=c8124732-5693-4f0e-8dec-cff6508173df ro
 		initrd 	/boot/initrd.img-3.8.0-42-generic
 }
-````````````````````  
+```  
 
 - /etc/fstab 의 root파일 시스템의 mount point를 USB의 UUID로 수정   
 
-````````````````````patch  
+```patch  
 - /dev/sdb5      /            ext4     defaults            1     1
 + UUID=c8124732-5693-4f0e-8dec-cff6508173df      /	ext4     defaults 1     1
-````````````````````  
+```  
 > fstab은 부팅시 디폴트로 마운트할 파일시스템을 기술하는 파일이다.  
 > 루트(/)파일 시스템은 USB자체를 마운트 하여 사용하므로 USB의 경로로 지정해줘야함.  
 > /dev/sdx 로해도되지만 UUID로 변경  
@@ -349,7 +341,7 @@ menuentry "GNU/Linux, Linux 3.19-lfs-7.7" {
 
 
 
---------------------      
+      
 
 ### 9.6.4. 추가 확인해볼 사항들.  
 
@@ -366,7 +358,7 @@ http://www.normalesup.org/~george/comp/live_iso_usb/
 >   
 >  # fdisk -l 2015-05-05-raspbian-wheezy.img   
 >   
-> ````````````````````  
+> ```  
 > Disk 2015-05-05-raspbian-wheezy.img: 3276 MB, 3276800000 bytes  
 > 255 heads, 63 sectors/track, 398 cylinders, total 6400000 sectors  
 > Units = sectors of 1 * 512 = 512 bytes  
@@ -379,25 +371,25 @@ http://www.normalesup.org/~george/comp/live_iso_usb/
 > W95 FAT32 (LBA)  
 > 2015-05-05-raspbian-wheezy.img2          122880     6399999     3138560   83
 > Linux  
-> ````````````````````  
+> ```  
 >
 > - __loop로 마운트__  
 > 
-> ````````````````````  
+> ```  
 >  # mount 2015-05-05-raspbian-wheezy.img -o loop,offset=$((512 * 122880))
 >  /mnt/rasp/
 >  # mount 2015-05-05-raspbian-wheezy.img -o loop,offset=$((512 * 8192))
 >  /mnt/rasp0/
-> ````````````````````  
+> ```  
 > 아래것이 /boot/에 있어야할 바이너리인듯.?  
 
 
 ``(참고)`` raspbian sd card에 설치하기.  
 
-````````````````````sh
+```sh
  $ fdisk 및 mkfs.ext4 이용 sd card포맷.
  $ dd bs=4M if=2015-05-05-raspbian-wheezy.img of=/dev/sdx
-````````````````````
+```
 https://www.raspberrypi.org/documentation/installation/installing-images/linux.md  
 
 
@@ -426,12 +418,13 @@ http://webcache.googleusercontent.com/search?q=cache:7T2WBL5-1QgJ:cfile3.uf.tist
 ``(참고)`` initrd for LFS  
 http://www.linuxfromscratch.org/hints/downloads/files/OLD/initrd.txt  
 
---------------------
---------------------
-#  9.7 LFS 파일시스템 Ramdisk로 압축하여 부팅USB만들기.  
+
+
+##  9.7 LFS 파일시스템 Ramdisk로 압축하여 부팅USB만들기.  
 
 ### 9.7.1 파일 시스템 램디스크로 압축하기  
-````````````````````sh
+
+```sh
 $dd if=/dev/zero of=ramdisk bs=1k count=1048576
 $mkfs.ext4 ramdisk 
 $mkdir /mnt/mnt_ramdisk
@@ -453,47 +446,47 @@ https://wiki.kldp.org/HOWTO/html/Adv-Bash-Scr-HOWTO/zeros.html
 
 - 커널 .config 수정 (1GB 램디스크를 지원하기 위해서)
 
-````````````````````sh
+```sh
 CONFIG_BLK_DEV_RAM=y
 CONFIG_BLK_DEV_RAM_COUNT=16
 CONFIG_BLK_DEV_RAM_SIZE=1048576
-````````````````````
+```
 
 ``(참고)``menuconfig 이용 방법  
-````````````````````sh
+```sh
 $# make menuconfig
 Device Drivers --->
  'Block devices->' 선택
 <*> RAM block device support 에서 space bar x 2
 (16) Default number of RAM disks (NEW)
 (1048576) Default RAM disk size (kbytes) (NEW)
-````````````````````  
+```  
 
 - 커널 빌드
 
-````````````````````sh  
+```sh  
  $ make mrproper
  $ make menuconfig // 위 참고
  $ make
  $ cp -v arch/x86/boot/bzImage /mnt/USB/boot/vmlinuz-3.19-lfs-7.7
  $ cp -v System.map /boot/System.map-3.19
-````````````````````  
+```  
 
 
 ### 9.7.3 grub.cfg 수정 및 부팅  
 
 커널 이미지와 압축된 램디스크를 grub에 맞게 설정해줌  
-````````````````````sh
+```sh
 /boot/vmlinuz-3.19-lfs-7.7 root=/dev/ram0 ro quiet splash  
 initrd /boot/ramdisk.gz  
-````````````````````  
+```  
 
 ### 9.7.4 fstab수정 
 
-````````````````````patch  
+```patch  
 - /dev/sdb5      /            ext4     defaults            1     1
 + /dev/ram0      /            ext4     defaults            1     1
-````````````````````  
+```  
 
 이후 부팅완료  
 ``$ free -h`` 로 memory확인  

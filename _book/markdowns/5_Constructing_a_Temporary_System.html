@@ -339,80 +339,29 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <hr>
-<h2 id="">{}</h2>
-<hr>
-<p>&#xBAA9;&#xCC28;</p>
+                                <h1 id="5-constructing-a-temporary-system">5. Constructing a Temporary System</h1>
 <!-- toc -->
 <ul>
 <li><a href="#51-introduction">5.1. Introduction</a></li>
-<li><a href="#52-toolchain-technical-notes">5.2. Toolchain Technical Notes</a><ul>
-<li><a href="#521-bintutils">5.2.1. Bintutils</a></li>
-<li><a href="#522-gcc">5.2.2. GCC</a></li>
-<li><a href="#523-linux-header">5.2.3. Linux header</a></li>
-<li><a href="#524-glibc">5.2.4. Glibc</a></li>
-<li><a href="#525-binutils---pass-2">5.2.5. Binutils - Pass 2</a></li>
-<li><a href="#526-gcc---pass-2">5.2.6. GCC - Pass 2</a></li>
-</ul>
-</li>
+<li><a href="#52-toolchain-technical-notes">5.2. Toolchain Technical Notes</a></li>
 <li><a href="#53-general-compilation-instructions">5.3. General Compilation Instructions</a></li>
 <li><a href="#54-binutils-225---pass-1">5.4. Binutils-2.25 - Pass 1</a></li>
 <li><a href="#55-gcc-492---pass-1">5.5. GCC-4.9.2 - Pass 1</a></li>
-<li><a href="#56-linux-319-api-headers">5.6. Linux-3.19 API Headers</a><ul>
-<li><a href="#561-installation-of-linux-api-headers">5.6.1. Installation of Linux API Headers</a></li>
-</ul>
-</li>
-<li><a href="#57-glibc-221">5.7. Glibc-2.21</a><ul>
-<li><a href="#571-installation-of-glibc">5.7.1. Installation of Glibc</a></li>
-</ul>
-</li>
+<li><a href="#56-linux-319-api-headers">5.6. Linux-3.19 API Headers</a></li>
+<li><a href="#57-glibc-221">5.7. Glibc-2.21</a></li>
 <li><a href="#58-libstdc-492">5.8. Libstdc++-4.9.2</a></li>
 <li><a href="#59-binutils-225---pass-2">5.9. Binutils-2.25 - Pass 2</a></li>
 <li><a href="#510-gcc-492---pass-2">5.10. GCC-4.9.2 - Pass 2</a></li>
-<li><a href="#511-tcl-863">5.11. Tcl-8.6.3</a><ul>
-<li><a href="#5111-installation-of-tcl">5.11.1. Installation of Tcl</a></li>
-<li><a href="#5112-contents-of-tcl">5.11.2. Contents of Tcl</a></li>
-</ul>
-</li>
-<li><a href="#512-expect-545">5.12. Expect-5.45</a><ul>
-<li><a href="#5121-installation-of-expect">5.12.1. Installation of Expect</a></li>
-<li><a href="#5122-contents-of-expect">5.12.2. Contents of Expect</a></li>
-</ul>
-</li>
-<li><a href="#513-dejagnu-152">5.13. DejaGNU-1.5.2</a><ul>
-<li><a href="#5131-installation-of-dejagnu">5.13.1. Installation of DejaGNU</a></li>
-<li><a href="#5132-contents-of-dejagnu">5.13.2. Contents of DejaGNU</a></li>
-</ul>
-</li>
-<li><a href="#514-check-0914">5.14. Check-0.9.14</a><ul>
-<li><a href="#5141-installation-of-check">5.14.1. Installation of Check</a></li>
-<li><a href="#5142-contents-of-check">5.14.2. Contents of Check</a></li>
-</ul>
-</li>
-<li><a href="#515-ncurses-59">5.15. Ncurses-5.9</a><ul>
-<li><a href="#5151-installation-of-ncurses">5.15.1. Installation of Ncurses</a></li>
-</ul>
-</li>
-<li><a href="#516-bash-4330">5.16. Bash-4.3.30</a><ul>
-<li><a href="#5161-installation-of-bash">5.16.1. Installation of Bash</a></li>
-</ul>
-</li>
-<li><a href="#517-bzip2-106">5.17. Bzip2-1.0.6</a><ul>
-<li><a href="#5171-installation-of-bzip2">5.17.1. Installation of Bzip2</a></li>
-</ul>
-</li>
-<li><a href="#518-coreutils-823">5.18. Coreutils-8.23</a><ul>
-<li><a href="#5181-installation-of-coreutils">5.18.1. Installation of Coreutils</a></li>
-</ul>
-</li>
-<li><a href="#519-diffutils-33">5.19. Diffutils-3.3</a><ul>
-<li><a href="#5191-installation-of-diffutils">5.19.1. Installation of Diffutils</a></li>
-</ul>
-</li>
-<li><a href="#520-file-522">5.20. File-5.22</a><ul>
-<li><a href="#5201-installation-of-file">5.20.1. Installation of File</a></li>
-</ul>
-</li>
+<li><a href="#511-tcl-863">5.11. Tcl-8.6.3</a></li>
+<li><a href="#512-expect-545">5.12. Expect-5.45</a></li>
+<li><a href="#513-dejagnu-152">5.13. DejaGNU-1.5.2</a></li>
+<li><a href="#514-check-0914">5.14. Check-0.9.14</a></li>
+<li><a href="#515-ncurses-59">5.15. Ncurses-5.9</a></li>
+<li><a href="#516-bash-4330">5.16. Bash-4.3.30</a></li>
+<li><a href="#517-bzip2-106">5.17. Bzip2-1.0.6</a></li>
+<li><a href="#518-coreutils-823">5.18. Coreutils-8.23</a></li>
+<li><a href="#519-diffutils-33">5.19. Diffutils-3.3</a></li>
+<li><a href="#520-file-522">5.20. File-5.22</a></li>
 <li><a href="#521-findutils-442">5.21. Findutils-4.4.2</a></li>
 <li><a href="#522-gawk-411">5.22. Gawk-4.1.1</a></li>
 <li><a href="#523-gettext-0194">5.23. Gettext-0.19.4</a></li>
@@ -420,49 +369,39 @@
 <li><a href="#525-gzip-16">5.25. Gzip-1.6</a></li>
 <li><a href="#527-make-41">5.27. Make-4.1</a></li>
 <li><a href="#528-patch-274">5.28. Patch-2.7.4</a></li>
-<li><a href="#529-perl-5202">5.29. Perl-5.20.2</a><ul>
-<li><a href="#5291-installation-of-perl">5.29.1. Installation of Perl</a></li>
-</ul>
-</li>
+<li><a href="#529-perl-5202">5.29. Perl-5.20.2</a></li>
 <li><a href="#530-sed-422">5.30. Sed-4.2.2</a></li>
 <li><a href="#531-tar-128">5.31. Tar-1.28</a></li>
 <li><a href="#532-texinfo-52">5.32. Texinfo-5.2</a></li>
-<li><a href="#533-util-linux-226">5.33. Util-linux-2.26</a><ul>
-<li><a href="#5331-installation-of-util-linux">5.33.1. Installation of Util-linux</a></li>
-</ul>
-</li>
+<li><a href="#533-util-linux-226">5.33. Util-linux-2.26</a></li>
 <li><a href="#534-xz-520">5.34. Xz-5.2.0</a></li>
 <li><a href="#535-stripping">5.35. Stripping</a></li>
 <li><a href="#536-changing-ownership">5.36. Changing Ownership</a></li>
 </ul>
 <!-- tocstop -->
-<hr>
-<p><a href="#51-introduction">5.1. Introduction</a><br><a href="#52-toolchain-technical-notes">5.2. Toolchain Technical Notes</a><br><a href="#53-general-compilation-instructions">5.3. General Compilation Instructions</a><br><a href="#54-binutils-225-pass-1">5.4. Binutils-2.25 - Pass 1</a><br><a href="#55-gcc-492-pass-1">5.5. GCC-4.9.2 - Pass 1</a><br><a href="#56-linux-319-api-headers">5.6. Linux-3.19 API Headers</a><br><a href="#57-glibc-221">5.7. Glibc-2.21</a><br><a href="#58-libstdc-492">5.8. Libstdc++-4.9.2</a><br><a href="#59-binutils-225-pass-2">5.9. Binutils-2.25 - Pass 2</a><br><a href="#510-gcc-492-pass-2">5.10. GCC-4.9.2 - Pass 2</a><br><a href="#511-tcl-863">5.11. Tcl-8.6.3</a><br><a href="#512-expect-545">5.12. Expect-5.45</a><br><a href="#513-dejagnu-152">5.13. DejaGNU-1.5.2</a><br><a href="#514-check-0914">5.14. Check-0.9.14</a><br><a href="#515-ncurses-59">5.15. Ncurses-5.9</a><br><a href="#516-bash-4330">5.16. Bash-4.3.30</a><br><a href="#517-bzip2-106">5.17. Bzip2-1.0.6</a><br><a href="#518-coreutils-823">5.18. Coreutils-8.23</a><br><a href="#519-diffutils-33">5.19. Diffutils-3.3</a><br><a href="#520-file-522">5.20. File-5.22</a><br><a href="#521-findutils-442">5.21. Findutils-4.4.2</a><br><a href="#522-gawk-411">5.22. Gawk-4.1.1</a><br><a href="#523-gettext-0194">5.23. Gettext-0.19.4</a><br><a href="#524-grep-221">5.24. Grep-2.21</a><br><a href="#525-gzip-16">5.25. Gzip-1.6</a><br><a href="#526-m4-1417">5.26. M4-1.4.17</a><br><a href="#527-make-41">5.27. Make-4.1</a><br><a href="#528-patch-274">5.28. Patch-2.7.4</a><br><a href="#529-perl-5202">5.29. Perl-5.20.2</a><br><a href="#530-sed-422">5.30. Sed-4.2.2</a><br><a href="#531-tar-128">5.31. Tar-1.28</a><br><a href="#532-texinfo-52">5.32. Texinfo-5.2</a><br><a href="#533-util-linux-226">5.33. Util-linux-2.26</a><br><a href="#534-xz-520">5.34. Xz-5.2.0</a><br><a href="#535-stripping">5.35. Stripping</a><br><a href="#536-changing-ownership">5.36. Changing Ownership</a>  </p>
-<hr>
-<hr>
-<h1 id="51-introduction">5.1. Introduction</h1>
+<h2 id="51-introduction">5.1. Introduction</h2>
 <p>HOST &#xC2DC;&#xC2A4;&#xD15C;&#xC5D0;&#xC11C; lfs&#xC2DC;&#xC2A4;&#xD15C; &#xC81C;&#xC791;&#xC5D0; &#xC0AC;&#xC6A9;&#xD560; &#xD328;&#xD0A4;&#xC9C0; &#xBE4C;&#xB4DC;&#xD558;&#xAE30;.  </p>
-<h1 id="52-toolchain-technical-notes">5.2. Toolchain Technical Notes</h1>
+<h2 id="52-toolchain-technical-notes">5.2. Toolchain Technical Notes</h2>
 <p>&#xD328;&#xD0A4;&#xC9C0;&#xC758; &#xC124;&#xCE58; &#xAE30;&#xBCF8; &#xAD6C;&#xC870;&#xB294;
 &#xBA3C;&#xC800; configure &#xB97C; &#xC2E4;&#xD589;&#xD558;&#xC5EC;( --&#xC635;&#xC158;&#xB4E4;&#xC744; &#xD544;&#xC694;&#xC5D0; &#xB9DE;&#xAC8C; &#xC124;&#xC815;&#xD558;&#xC5EC;) Makefile&#xC744; &#xB9CC;&#xB4E4;&#xACE0;,<br>make &#xC2E4;&#xD589;&#xD558;&#xC5EC; &#xC18C;&#xC2A4;&#xCF54;&#xB4DC;&#xB97C; &#xBE4C;&#xB4DC;&#xD558;&#xACE0; make install &#xC744; &#xD558;&#xC5EC; &#xBE4C;&#xB4DC;&#xC0DD;&#xC131;&#xBB3C;&#xC744; $PATH/&#xB85C; &#xBCF5;&#xC0AC;&#xD55C;&#xB2E4;.<br>Binutils&#xC758; ./configure&#xB97C; &#xC2E4;&#xD589;&#xD558;&#xBA74; &#xB2E4;&#xC74C;&#xC758; &#xC21C;&#xC11C;&#xB300;&#xB85C; &#xC124;&#xCE58;.  </p>
-<h2 id="521-bintutils">5.2.1. Bintutils</h2>
+<h3 id="521-bintutils">5.2.1. Bintutils</h3>
 <p>&#xD604;&#xC7AC; &#xC2DC;&#xC2A4;&#xD15C;&#xC774; &#xC5B4;&#xB5A4;&#xAC74;&#xC9C0; &#xD655;&#xC778;&#xD558;&#xB294; &#xBC29;&#xBC95;.</p>
 <pre><code class="lang-sh"> $ ./config.quess
 </code></pre>
 <p>&#xC555;&#xCD95;&#xC774; &#xD480;&#xB9B0; Binutils &#xD328;&#xD0A4;&#xC9C0; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xC5D0; &#xC788;&#xB294; config.guess&#xB97C; &#xC2E4;&#xD589;&#xD558;&#xBA74; &#xD604;&#xC7AC; &#xC2DC;&#xC2A4;&#xD15C;&#xC758; &#xC815;&#xBCF4;&#xB2E4; &#xB098;&#xC628;&#xB2E4;.($LFS_TGT &#xC640;&#xB294; &#xC870;&#xAE08; &#xB2E4;&#xB974;&#xAC8C; &#xCD9C;&#xB825;&#xB428;)<br>&#xBC14;&#xC774;&#xB108;&#xB9AC;&#xB294; &#xADF8; &#xC2DC;&#xC2A4;&#xD15C;&#xC5D0;&#xC11C; &#xB3D9;&#xC791;&#xD558;&#xB3C4;&#xB85D; &#xBE4C;&#xB4DC;&#xB418;&#xC5B4;&#xC57C; &#xD558;&#xAE30; &#xB54C;&#xC5B4;&#xC57C; &#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC911;&#xC694;.<br>./configure &#xB97C; &#xD1B5;&#xD574;&#xC11C; &#xC2DC;&#xC2A4;&#xD15C;&#xC758; &#xC801;&#xD569;&#xD55C;  Makefile&#xC744; &#xB9CC;&#xB4DC;&#xB294;&#xB3D9;&#xC548; &#xC5B4;&#xC148;&#xBE14;&#xB7EC;&#xC640; &#xB9C1;&#xCEE4;&#xAC00; &#xC124;&#xCE58;&#xB41C;&#xB2E4;.<br>Binutils install&#xC740; &#xC5B4;&#xC148;&#xBE14;&#xB7EC;&#xC640; &#xB9C1;&#xCEE4;&#xB97C; /tools/bin &#xC640; /tools/$LFS_TGT/bin &#xB450; &#xACBD;&#xB85C;&#xC5D0; &#xC124;&#xCE58;&#xD55C;&#xB2E4;.<br>&#xAC01;&#xAC01;&#xC758; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xB294; &#xC11C;&#xB85C; hard link &#xB418;&#xC5B4;&#xC788;&#xB2E4;.  </p>
-<h2 id="522-gcc">5.2.2. GCC</h2>
+<h3 id="522-gcc">5.2.2. GCC</h3>
 <p>Binutils &#xB2E4;&#xC74C;&#xC5D0; &#xC124;&#xCE58;&#xD560; &#xD328;&#xD0A4;&#xC9C0;&#xB294; GCC&#xC774;&#xB2E4;.<br>configure&#xB97C; &#xC2E4;&#xD589;&#xD560;&#xB54C; &#xB2E4;&#xC74C;&#xC758; &#xBB38;&#xAD6C;&#xAC00; &#xB098;&#xC624;&#xB294;&#xAC83;&#xC744; &#xD655;&#xC778;.<br>&#xB354;&#xC774;&#xC0C1; $PATH &#xB97C; &#xCC38;&#xC870;&#xD558;&#xC9C0; &#xC54A;&#xACE0; /tools/ &#xC5D0;&#xC11C; &#xCC3E;&#xC544;&#xC11C; &#xC2E4;&#xD589;&#xD568;&#xC744; &#xD655;&#xC778;.  </p>
 <pre><code class="lang-sh"> $ checking what assembler to use... /tools/i686-pc-linux-gnu/bin/as
  $ checking what linker to use... /tools/i686-pc-linux-gnu/bin/ld
 </code></pre>
-<h2 id="523-linux-header">5.2.3. Linux header</h2>
-<h2 id="524-glibc">5.2.4. Glibc</h2>
+<h3 id="523-linux-header">5.2.3. Linux header</h3>
+<h3 id="524-glibc">5.2.4. Glibc</h3>
 <p>&#xADF8; &#xB2E4;&#xC74C;&#xC5D0; &#xC124;&#xCE58;&#xD560; &#xD328;&#xD0A4;&#xC9C0;&#xB294; Glibc&#xC774;&#xB2E4;.</p>
-<h2 id="525-binutils---pass-2">5.2.5. Binutils - Pass 2</h2>
+<h3 id="525-binutils---pass-2">5.2.5. Binutils - Pass 2</h3>
 <p>&#xBC14;&#xB010; ld&#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC; &#xC9C0;&#xC815;?</p>
-<h2 id="526-gcc---pass-2">5.2.6. GCC - Pass 2</h2>
+<h3 id="526-gcc---pass-2">5.2.6. GCC - Pass 2</h3>
 <p>gcc&#xC5D0;&#xAC8C; &#xC0C8;&#xB85C;&#xC6B4; dynamic linker&#xB97C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;&#xACE0; &#xC54C;&#xB824;&#xC90C;.</p>
-<h1 id="53-general-compilation-instructions">5.3. General Compilation Instructions</h1>
+<h2 id="53-general-compilation-instructions">5.3. General Compilation Instructions</h2>
 <ul>
 <li><strong>&#xAC01;&#xAC01;&#xC758; &#xD328;&#xD0A4;&#xC9C0; &#xBE4C;&#xB4DC;&#xB294; &#xB2E4;&#xC74C;&#xC758; &#xADDC;&#xCE59;&#xC744; &#xB530;&#xB978;&#xB2E4;.</strong>  </li>
 </ul>
@@ -479,7 +418,7 @@ d. /mnt/lfs/sources/ &#xB2E4;&#xC2DC; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xB85C; &
 e. $LFS/sources/&#xB0B4;&#xC758; &lt;&#xD328;&#xD0A4;&#xC9C0;&#xC774;&#xB984;&gt;-build/ &#xB514;&#xB809;&#xD1A0;&#xB9AC; &#xC81C;&#xAC70;</li>
 </ol>
 </blockquote>
-<h1 id="54-binutils-225---pass-1">5.4. Binutils-2.25 - Pass 1</h1>
+<h2 id="54-binutils-225---pass-1">5.4. Binutils-2.25 - Pass 1</h2>
 <p>Binutils &#xD328;&#xD0A4;&#xC9C0;&#xB294; build&#xC5D0; &#xD544;&#xC694;&#xD55C;
 linker, assembler, object&#xD30C;&#xC77C;&#xC744; &#xB2E4;&#xB8E8;&#xAE30; &#xC704;&#xD55C; &#xD234;&#xB4E4;&#xC774; &#xD3EC;&#xD568;&#xB41C; &#xD328;&#xD0A4;&#xC9C0;&#xC774;&#xB2E4;.</p>
 <ul>
@@ -532,7 +471,7 @@ mkdir: created directory &apos;/tools/lib&apos;
 <ul>
 <li><strong>binutils-build/ &#xC0AD;&#xC81C;</strong>  </li>
 </ul>
-<h1 id="55-gcc-492---pass-1">5.5. GCC-4.9.2 - Pass 1</h1>
+<h2 id="55-gcc-492---pass-1">5.5. GCC-4.9.2 - Pass 1</h2>
 <p>GNU &#xCEF4;&#xD30C;&#xC77C;&#xB7EC; &#xBAA8;&#xC74C;.</p>
 <p>gcc &#xC555;&#xCD95;&#xD574;&#xC81C; &#xD6C4; &#xC774;&#xB3D9;.</p>
 <pre><code class="lang-sh"> $ tar -jxvf gcc-4.9.2.tar.bz2
@@ -624,10 +563,10 @@ mkdir: created directory &apos;/tools/lib&apos;
 <pre><code>lfs@jihuun:/mnt/lfs/sources$ du -sh gcc-build/
 946M    gcc-build/
 </code></pre><p>&#xC774;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; gcc-build/ &#xB97C; &#xC9C0;&#xC6CC;&#xC57C;&#xD568;.</p>
-<h1 id="56-linux-319-api-headers">5.6. Linux-3.19 API Headers</h1>
+<h2 id="56-linux-319-api-headers">5.6. Linux-3.19 API Headers</h2>
 <p>&#xB9AC;&#xB205;&#xC2A4; &#xCEE4;&#xB110; &#xC804;&#xCCB4;?  or API&#xB9CC;? 
 &#xCEE4;&#xB110; API&#xB9CC; &#xCD94;&#xCD9C;&#xD558;&#xAE30;.</p>
-<h2 id="561-installation-of-linux-api-headers">5.6.1. Installation of Linux API Headers</h2>
+<h3 id="561-installation-of-linux-api-headers">5.6.1. Installation of Linux API Headers</h3>
 <p>Linux kernel tarball &#xB0B4;&#xC758; c &#xD5E4;&#xB354;&#xD30C;&#xC77C;&#xC744; &#xC0AC;&#xC6A9;&#xAC00;&#xB2A5;&#xD558;&#xB3C4;&#xB85D; &#xB9CC;&#xB4E4;&#xC5B4;
 &#xB9AC;&#xB205;&#xC2A4; &#xCEE4;&#xB110;&#xC758; API &#xCD94;&#xCD9C;</p>
 <ul>
@@ -658,9 +597,9 @@ $ tar -xf [&#xC555;&#xCD95;&#xD30C;&#xC77C;&#xBA85;.tar]
 <p>-&gt; /tools/include &#xB514;&#xB809;&#xD130;&#xB9AC;&#xC5D0; 
 &#xB9AC;&#xB205;&#xC2A4;&#xCEE4;&#xB110;&#xC758; /include/&#xC758; &#xC77C;&#xBD80; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xC758;  &#xD5E4;&#xB354;&#xD30C;&#xC77C;&#xC774; &#xBCF5;&#xC0AC;&#xB428;.  </p>
 <p><code>(&#xCC3E;&#xC544;&#xBCF4;&#xAE30;)</code> &#xC774;&#xAC8C; &#xBB50;&#xD558;&#xB294; &#xBA85;&#xB839;&#xC778;&#xC9C0; &#xC54C;&#xC544;&#xBCF4;&#xAE30;<br><code>(&#xCC3E;&#xC544;&#xBCF4;&#xAE30;)</code> linux API header&#xB780;?<br><code>(&#xCC3E;&#xC544;&#xBCF4;&#xAE30;)</code> &#xC65C; &#xB9AC;&#xB205;&#xC2A4; &#xCEE4;&#xB110;&#xC758; &#xD5E4;&#xB354;&#xD30C;&#xC77C;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xB294;&#xC9C0;?<br><code>(&#xCC3E;&#xC544;&#xBCF4;&#xAE30;)</code> /tools/include &#xC758; &#xC5ED;&#xD560;&#xC740;?  </p>
-<h1 id="57-glibc-221">5.7. Glibc-2.21</h1>
+<h2 id="57-glibc-221">5.7. Glibc-2.21</h2>
 <p>&#xBA54;&#xC778; C &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xB97C; &#xD3EC;&#xD568;&#xD558;&#xB294; &#xD328;&#xD0A4;&#xC9C0;.<br>&#xAE30;&#xBCF8;&#xC801;&#xC778; &#xBA54;&#xBAA8;&#xB9AC;&#xD560;&#xB2F9;, &#xB514;&#xB809;&#xD1A0;&#xB9AC; &#xD0D0;&#xC0C9;, &#xD30C;&#xC77C; open/close, &#xD30C;&#xC77C; read/write, &#xBB38;&#xC790;&#xC5F4; &#xCC98;&#xB9AC;, &#xD328;&#xD134; &#xB9E4;&#xCE6D;, &#xC0B0;&#xC220;&#xC5F0;&#xC0B0; &#xB4F1;&#xB4F1;&#xC744; &#xC218;&#xD589;. </p>
-<h2 id="571-installation-of-glibc">5.7.1. Installation of Glibc</h2>
+<h3 id="571-installation-of-glibc">5.7.1. Installation of Glibc</h3>
 <p>In some cases, particularly LFS 7.1, the rpc headers were not installed properly.<br> Test to see if they are installed in the host system and install if they are not.  </p>
 <ul>
 <li><strong>rpc header&#xAC00; &#xC124;&#xCE58;&#xB418;&#xC5B4;&#xC788;&#xB294;&#xC9C0; &#xD655;&#xC778;</strong>  </li>
@@ -731,7 +670,7 @@ $ tar -xf [&#xC555;&#xCD95;&#xD30C;&#xC77C;&#xBA85;.tar]
 </ul>
 <pre><code class="lang-sh"> $ rm -rf glibc-build/
 </code></pre>
-<h1 id="58-libstdc-492">5.8. Libstdc++-4.9.2</h1>
+<h2 id="58-libstdc-492">5.8. Libstdc++-4.9.2</h2>
 <p>&#xD45C;&#xC900; C++ &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;, g++ &#xCEF4;&#xD30C;&#xC77C;&#xB7EC;&#xC758; &#xD655;&#xC2E4;&#xD55C; &#xB3D9;&#xC791;&#xC744;  &#xC704;&#xD574; &#xD544;&#xC694;</p>
 <ul>
 <li><strong>Libstd++ &#xC740; gcc &#xC18C;&#xC2A4;&#xC758; &#xC77C;&#xBD80;&#xC774;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC774;&#xBBF8; &#xC555;&#xCD95;&#xD574;&#xC81C;&#xD588;&#xB358; gcc-4.9.2/ &#xB85C;&#xC774;&#xB3D9;</strong>  </li>
@@ -773,7 +712,7 @@ $ tar -xf [&#xC555;&#xCD95;&#xD30C;&#xC77C;&#xBA85;.tar]
 </ul>
 <pre><code class="lang-sh"> $ rm -rf gcc-build/
 </code></pre>
-<h1 id="59-binutils-225---pass-2">5.9. Binutils-2.25 - Pass 2</h1>
+<h2 id="59-binutils-225---pass-2">5.9. Binutils-2.25 - Pass 2</h2>
 <p><code>(&#xCC3E;&#xC544;&#xBCF4;&#xAE30;)</code> binurils&#xC758; pass1 &#xACFC; pass2&#xC758; &#xCC28;&#xC774;??  </p>
 <p>Create a separate build directory again:</p>
 <ul>
@@ -829,7 +768,7 @@ CC=$LFS_TGT-gcc AR=$LFS_TGT-ar RANLIB=$LFS_TGT-ranlib<br>&#xC774;&#xC81C;&#xBD80
 </code></pre>
 </li>
 </ul>
-<h1 id="510-gcc-492---pass-2">5.10. GCC-4.9.2 - Pass 2</h1>
+<h2 id="510-gcc-492---pass-2">5.10. GCC-4.9.2 - Pass 2</h2>
 <p><code>(&#xCC3E;&#xC544;&#xBCF4;&#xAE30;)</code> gcc&#xC758; pass1 &#xACFC; pass2&#xC758; &#xCC28;&#xC774;?? &#xC65C;&#xD568;?  </p>
 <p>pass 1 &#xC5D0;&#xC11C; GCC&#xB97C; &#xBE4C;&#xB4DC;&#xD560;&#xB54C;&#xB294; &#xB0B4;&#xBD80; &#xC2DC;&#xC2A4;&#xD15C; &#xD5E4;&#xB354;&#xAC00; &#xBA87;&#xAC1C;&#xBC16;&#xC5D0; &#xC124;&#xCE58;&#xAC00; &#xC548;&#xB410;&#xC5C8;&#xB2E4;.<br>&#xADF8;&#xC911; &#xD558;&#xB098;&#xB294; limits.h&#xC778;&#xB370;  /tools/include/limits.h&#xC5D0; &#xC874;&#xC7AC;&#xD558;&#xC9C0;&#xB9CC; pass 1 &#xB2F9;&#xC2DC;&#xC5D0;&#xB294; &#xC774; &#xD30C;&#xC77C;&#xC774; &#xC5C6;&#xC5C8;&#xB2E4;.<br>&#xADF8;&#xB798;&#xC11C; &#xBD80;&#xBD84;&#xC801;&#xC73C;&#xB85C; gcc&#xAC00; &#xC124;&#xCE58;&#xB410;&#xC5C8;&#xC74C;.  </p>
 <ul>
@@ -928,8 +867,8 @@ CC=$LFS_TGT-gcc AR=$LFS_TGT-ar RANLIB=$LFS_TGT-ranlib<br>&#xC774;&#xC81C;&#xBD80
 </code></pre>
 <pre><code class="lang-sh"> $ rm -rf gcc-build/
 </code></pre>
-<h1 id="511-tcl-863">5.11. Tcl-8.6.3</h1>
-<h2 id="5111-installation-of-tcl">5.11.1. Installation of Tcl</h2>
+<h2 id="511-tcl-863">5.11. Tcl-8.6.3</h2>
+<h3 id="5111-installation-of-tcl">5.11.1. Installation of Tcl</h3>
 <p>Tcl : Tool Command Language &#xAC00; &#xD3EC;&#xD568;&#xB41C; &#xD328;&#xD0A4;&#xC9C0;<br>Tcl, Expect, DejaGNU, Check &#xB294; test suites &#xB97C; &#xC704;&#xD55C; &#xD328;&#xD0A4;&#xC9C0; &#xC774;&#xB2E4;.<br>&#xD544;&#xC218;&#xB294; &#xC544;&#xB2C8;&#xC9C0;&#xB9CC; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xB9C8;&#xC74C;&#xC774; &#xB4E0;&#xB4E0;&#xD560;&#xAC83;.<br>test suites&#xB294; chap 6&#xC5D0;&#xC11C; &#xBCF8;&#xACA9;&#xC801;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;.<br><code>(&#xCC3E;&#xC544;&#xBCF4;&#xAE30;)</code> test suites&#xAC00; &#xBB65;&#xBBF8;?  </p>
 <ul>
 <li><strong>&#xD328;&#xD0A4;&#xC9C0; &#xC555;&#xCD95;&#xD574;&#xC81C;&#xD6C4; &#xC774;&#xB3D9;</strong>  </li>
@@ -979,16 +918,16 @@ CC=$LFS_TGT-gcc AR=$LFS_TGT-ar RANLIB=$LFS_TGT-ranlib<br>&#xC774;&#xC81C;&#xBD80
 </ul>
 <pre><code class="lang-sh"> $ ln -sv tclsh8.6 /tools/bin/tclsh
 </code></pre>
-<h2 id="5112-contents-of-tcl">5.11.2. Contents of Tcl</h2>
+<h3 id="5112-contents-of-tcl">5.11.2. Contents of Tcl</h3>
 <p>&#xBCF8;&#xD328;&#xD0A4;&#xC9C0; &#xC124;&#xCE58;&#xAD00;&#xB828; &#xACB0;&#xACFC;&#xBB3C;.<br>Installed programs:<br>tclsh (link to tclsh8.6) and tclsh8.6<br>Installed library:<br>libtcl8.6.so, libtclstub8.6.a  </p>
 <p>&#xAC04;&#xB7B5; &#xC124;&#xBA85;
 tclsh8.6         The Tcl command shell
 tclsh             A link to tclsh8.6
 libtcl8.6.so         The Tcl library
 libtclstub8.6.a         The Tcl Stub library</p>
-<h1 id="512-expect-545">5.12. Expect-5.45</h1>
+<h2 id="512-expect-545">5.12. Expect-5.45</h2>
 <p>&#xB300;&#xD654;&#xC2DD; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC5D0;&#xC11C; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xD654;&#xB41C; &#xB300;&#xD654;&#xB97C; &#xC218;&#xD589;&#xD558;&#xAE30;&#xC704;&#xD55C; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC774; &#xD3EC;&#xD568;</p>
-<h2 id="5121-installation-of-expect">5.12.1. Installation of Expect</h2>
+<h3 id="5121-installation-of-expect">5.12.1. Installation of Expect</h3>
 <p>First, force Expects configure script to use /bin/stty instead of a/usr/local/bin/stty it may find on the host system.<br>This will ensure that our test suite tools remain sane for the final builds of our toolchain:  </p>
 <ul>
 <li><strong>HOST&#xC2DC;&#xC2A4;&#xD15C;&#xC758;  /usr/local/bin/stty &#xB300;&#xC2E0;&#xC5D0; /bin/stty&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB3C4;&#xB85D; &#xC218;&#xC815;.</strong>  </li>
@@ -1026,15 +965,15 @@ Sourced 0 Test Files.</p>
 </code></pre>
 <p>(&#xC635;&#xC158;)
 SCRIPTS=&quot;&quot; : Expect&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xC911;&#xC5D0;&#xC11C; &#xBD88;&#xD544;&#xC694;&#xD55C; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xC124;&#xCE58;&#xB97C; &#xBC29;&#xC9C0;&#xD568;.</p>
-<h2 id="5122-contents-of-expect">5.12.2. Contents of Expect</h2>
+<h3 id="5122-contents-of-expect">5.12.2. Contents of Expect</h3>
 <p>&#xBCF8;&#xD328;&#xD0A4;&#xC9C0; &#xC124;&#xCE58;&#xAD00;&#xB828; &#xACB0;&#xACFC;&#xBB3C;.
 Installed program :        expect
 Installed library :         libexpect-5.45.so</p>
 <p>&#xAC04;&#xB7B5; &#xC124;&#xBA85;
 expect :<br>Communicates with other interactive programs according to a script<br>libexpect-5.45.so :<br>Contains functions that allow Expect to be used as a Tcl extension or to be used directly from C or C++ (without Tcl)  </p>
-<h1 id="513-dejagnu-152">5.13. DejaGNU-1.5.2</h1>
+<h2 id="513-dejagnu-152">5.13. DejaGNU-1.5.2</h2>
 <p>DejaGNU &#xB294; &#xB2E4;&#xB978; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC744; &#xD14C;&#xC2A4;&#xD2B8; &#xD560; &#xC218; &#xC788;&#xB294; &#xD504;&#xB808;&#xC784;&#xC6CC;&#xD06C;&#xB97C; &#xD3EC;&#xD568;&#xD558;&#xB294; &#xD328;&#xD0A4;&#xC9C0; &#xC774;&#xB2E4;.</p>
-<h2 id="5131-installation-of-dejagnu">5.13.1. Installation of DejaGNU</h2>
+<h3 id="5131-installation-of-dejagnu">5.13.1. Installation of DejaGNU</h3>
 <ul>
 <li><strong>configure &#xC2E4;&#xD589;.</strong>  </li>
 </ul>
@@ -1052,14 +991,14 @@ expect :<br>Communicates with other interactive programs according to a script<b
 <pre><code class="lang-sh"> $ make check
 </code></pre>
 <p><code>(&#xCC3E;&#xC544;&#xBCF4;&#xAE30;)</code> make check&#xB294; &#xB610; &#xBB50;&#xC784;?</p>
-<h2 id="5132-contents-of-dejagnu">5.13.2. Contents of DejaGNU</h2>
+<h3 id="5132-contents-of-dejagnu">5.13.2. Contents of DejaGNU</h3>
 <p>&#xBCF8;&#xD328;&#xD0A4;&#xC9C0; &#xC124;&#xCE58;&#xAD00;&#xB828; &#xACB0;&#xACFC;&#xBB3C;.
 Installed program :    runtest</p>
 <p>&#xAC04;&#xB7B5; &#xC124;&#xBA85;
 runtest :<br>A wrapper script that locates the proper expect shell and then runs DejaGNU Prev  </p>
-<h1 id="514-check-0914">5.14. Check-0.9.14</h1>
+<h2 id="514-check-0914">5.14. Check-0.9.14</h2>
 <p>Check&#xB294; C&#xC758; &#xB2E8;&#xC704;(unit) &#xD14C;&#xC2A4;&#xD2B8; &#xD504;&#xB808;&#xC784;&#xC6CC;&#xD06C;  </p>
-<h2 id="5141-installation-of-check">5.14.1. Installation of Check</h2>
+<h3 id="5141-installation-of-check">5.14.1. Installation of Check</h3>
 <ul>
 <li><strong>check&#xCEF4;&#xD30C;&#xC77C; &#xC900;&#xBE44;</strong>  </li>
 </ul>
@@ -1082,15 +1021,15 @@ PKG_CONFIG=<br>This tells the configure script to ignore any pkg-config options 
 </ul>
 <pre><code class="lang-sh"> $ make install
 </code></pre>
-<h2 id="5142-contents-of-check">5.14.2. Contents of Check</h2>
+<h3 id="5142-contents-of-check">5.14.2. Contents of Check</h3>
 <p>&#xBCF8;&#xD328;&#xD0A4;&#xC9C0; &#xC124;&#xCE58;&#xAD00;&#xB828; &#xACB0;&#xACFC;&#xBB3C;.
 Installed program:    checkmk
 Installed library:    libcheck.{a,so}</p>
 <p>&#xAC04;&#xB7B5; &#xC124;&#xBA85;
 checkmk :<br>Awk script for generating C unit tests for use with the Check unit testing framework<br>libcheck.{a,so} :<br>Contains functions that allow Check to be called from a test program  </p>
-<h1 id="515-ncurses-59">5.15. Ncurses-5.9</h1>
+<h2 id="515-ncurses-59">5.15. Ncurses-5.9</h2>
 <p>The Ncurses package contains libraries for terminal-independent handling of character screens.  </p>
-<h2 id="5151-installation-of-ncurses">5.15.1. Installation of Ncurses</h2>
+<h3 id="5151-installation-of-ncurses">5.15.1. Installation of Ncurses</h3>
 <ul>
 <li><strong>configure &#xC2E4;&#xD589;</strong>  </li>
 </ul>
@@ -1116,9 +1055,9 @@ checkmk :<br>Awk script for generating C unit tests for use with the Check unit 
 </ul>
 <pre><code class="lang-sh"> $ make install
 </code></pre>
-<h1 id="516-bash-4330">5.16. Bash-4.3.30</h1>
+<h2 id="516-bash-4330">5.16. Bash-4.3.30</h2>
 <p>The Bash package contains the Bourne-Again SHell.</p>
-<h2 id="5161-installation-of-bash">5.16.1. Installation of Bash</h2>
+<h3 id="5161-installation-of-bash">5.16.1. Installation of Bash</h3>
 <ul>
 <li><strong>Prepare Bash for compilation:</strong>  </li>
 </ul>
@@ -1147,9 +1086,9 @@ checkmk :<br>Awk script for generating C unit tests for use with the Check unit 
 </ul>
 <pre><code class="lang-sh"> $ ln -sv bash /tools/bin/sh
 </code></pre>
-<h1 id="517-bzip2-106">5.17. Bzip2-1.0.6</h1>
+<h2 id="517-bzip2-106">5.17. Bzip2-1.0.6</h2>
 <p>Bzip2 &#xD328;&#xD0A4;&#xC9C0;&#xB294; &#xC555;&#xCD95;/&#xD574;&#xC81C;&#xB97C; &#xD560; &#xC218; &#xC788;&#xB294; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC744; &#xD3EC;&#xD568;&#xD55C;&#xB2E4;.  </p>
-<h2 id="5171-installation-of-bzip2">5.17.1. Installation of Bzip2</h2>
+<h3 id="5171-installation-of-bzip2">5.17.1. Installation of Bzip2</h3>
 <ul>
 <li><strong>Bzip2 &#xD328;&#xD0A4;&#xC9C0;&#xB294; configure&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB97C; &#xAC16;&#xACE0;&#xC788;&#xC9C0; &#xC54A;&#xC74C;&#xC73C;&#xB85C; &#xBC14;&#xB85C; &#xBE4C;&#xB4DC;.</strong>  </li>
 </ul>
@@ -1161,9 +1100,9 @@ checkmk :<br>Awk script for generating C unit tests for use with the Check unit 
 <pre><code class="lang-sh"> $ make PREFIX=/tools install
 </code></pre>
 <p><code>(&#xCC3E;&#xC544;&#xBCF4;&#xAE30;)</code> PREFIX=/tools &#xC774; &#xC635;&#xC158;&#xC740; &#xC65C; make&#xD560;&#xB54C; &#xD544;&#xC694;&#xD558;&#xC9C0; &#xC54A;&#xACE0; make install&#xD560;&#xB54C; &#xD544;&#xC694;&#xD55C;&#xAC00;?  </p>
-<h1 id="518-coreutils-823">5.18. Coreutils-8.23</h1>
+<h2 id="518-coreutils-823">5.18. Coreutils-8.23</h2>
 <p>The Coreutils package contains utilities for showing and setting the basic system characteristics.  </p>
-<h2 id="5181-installation-of-coreutils">5.18.1. Installation of Coreutils</h2>
+<h3 id="5181-installation-of-coreutils">5.18.1. Installation of Coreutils</h3>
 <ul>
 <li><strong>configure &#xC2E4;&#xD589;</strong>  </li>
 </ul>
@@ -1187,9 +1126,9 @@ checkmk :<br>Awk script for generating C unit tests for use with the Check unit 
 </ul>
 <pre><code class="lang-sh"> $ make install
 </code></pre>
-<h1 id="519-diffutils-33">5.19. Diffutils-3.3</h1>
+<h2 id="519-diffutils-33">5.19. Diffutils-3.3</h2>
 <p>&#xD30C;&#xC77C;&#xC744; &#xBE44;&#xAD50;&#xD558;&#xB294; &#xD504;&#xB85C;&#xADF8;&#xB7A8;</p>
-<h2 id="5191-installation-of-diffutils">5.19.1. Installation of Diffutils</h2>
+<h3 id="5191-installation-of-diffutils">5.19.1. Installation of Diffutils</h3>
 <ul>
 <li><strong>configure &#xC2E4;&#xD589;</strong>  </li>
 </ul>
@@ -1210,9 +1149,9 @@ checkmk :<br>Awk script for generating C unit tests for use with the Check unit 
 </ul>
 <pre><code class="lang-sh"> $ make install
 </code></pre>
-<h1 id="520-file-522">5.20. File-5.22</h1>
+<h2 id="520-file-522">5.20. File-5.22</h2>
 <p>file &#xC720;&#xD2F8;&#xB9AC;&#xD2F0;</p>
-<h2 id="5201-installation-of-file">5.20.1. Installation of File</h2>
+<h3 id="5201-installation-of-file">5.20.1. Installation of File</h3>
 <ul>
 <li><strong>configure &#xC2E4;&#xD589;</strong>  </li>
 </ul>
@@ -1238,7 +1177,7 @@ checkmk :<br>Awk script for generating C unit tests for use with the Check unit 
 <li>&#xC124;&#xCE58;&#xC804;<br>lfs@jihuun:/mnt/lfs/sources$ which file /usr/bin/file</li>
 <li>&#xC124;&#xCE58;&#xD6C4; (make install &#xC774;&#xD6C4;)<br>lfs@jihuun:/mnt/lfs/sources/file-5.22$ which file /tools/bin/file<br>file &#xC720;&#xD2F8;&#xC744; &#xC2E4;&#xD589;&#xD560;&#xB54C; &#xC2E4;&#xD589;&#xACBD;&#xB85C;&#xAC00; make install &#xC774;&#xD6C4; &#xB2EC;&#xB77C;&#xC9D0;.<br>&#xB098;&#xBA38;&#xC9C0; &#xD328;&#xD0A4;&#xC9C0;&#xB4E4;&#xB3C4; &#xB2E4; &#xB9C8;&#xCC2C;&#xAC00;&#xC9C0;!  </li>
 </ul>
-<h1 id="521-findutils-442">5.21. Findutils-4.4.2</h1>
+<h2 id="521-findutils-442">5.21. Findutils-4.4.2</h2>
 <p>find &#xC720;&#xD2F8;&#xB9AC;&#xD2F0; &#xC124;&#xCE58;.</p>
 <ul>
 <li><strong>configure &#xC2E4;&#xD589;</strong>  </li>
@@ -1260,7 +1199,7 @@ checkmk :<br>Awk script for generating C unit tests for use with the Check unit 
 </ul>
 <pre><code class="lang-sh"> $ make install
 </code></pre>
-<h1 id="522-gawk-411">5.22. Gawk-4.1.1</h1>
+<h2 id="522-gawk-411">5.22. Gawk-4.1.1</h2>
 <p>text file&#xC744; &#xC870;&#xC791;&#xD560; &#xC218; &#xC788;&#xB294; Gawk &#xC720;&#xD2F8;&#xB9AC;&#xD2F0; &#xC124;&#xCE58;</p>
 <ul>
 <li><strong>configure &#xC2E4;&#xD589;</strong>  </li>
@@ -1282,7 +1221,7 @@ checkmk :<br>Awk script for generating C unit tests for use with the Check unit 
 </ul>
 <pre><code class="lang-sh"> $ make install
 </code></pre>
-<h1 id="523-gettext-0194">5.23. Gettext-0.19.4</h1>
+<h2 id="523-gettext-0194">5.23. Gettext-0.19.4</h2>
 <p>gettext &#xC720;&#xD2F8;&#xB9AC;&#xD2F0; &#xC124;&#xCE58;.<br>The Gettext package contains utilities for internationalization and localization.<br>These allow programs to be compiled with NLS (Native Language Support), enabling them to output messages in the user`s native language.<br>&#xC774;&#xBC88; &#xC784;&#xC2DC; tool&#xC14B;&#xD305;&#xC5D0;&#xC11C;&#xB294; gettext&#xC5D0;&#xC11C; 3&#xAC1C;&#xC758; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xB9CC; &#xC124;&#xCE58;&#xD55C;&#xB2E4;.  </p>
 <ul>
 <li><strong>configure &#xC218;&#xD589;</strong>  </li>
@@ -1308,7 +1247,7 @@ EMACS=&quot;no&quot;<br>This prevents the configure script from determining wher
 </ul>
 <pre><code class="lang-sh"> $ cp -v src/{msgfmt,msgmerge,xgettext} /tools/bin
 </code></pre>
-<h1 id="524-grep-221">5.24. Grep-2.21</h1>
+<h2 id="524-grep-221">5.24. Grep-2.21</h2>
 <p>grep &#xC720;&#xD2F8;&#xB9AC;&#xD2F0; &#xC124;&#xCE58;
 The Grep package contains programs for searching through files.</p>
 <ul>
@@ -1331,7 +1270,7 @@ The Grep package contains programs for searching through files.</p>
 </ul>
 <pre><code class="lang-sh"> $ make install
 </code></pre>
-<h1 id="525-gzip-16">5.25. Gzip-1.6</h1>
+<h2 id="525-gzip-16">5.25. Gzip-1.6</h2>
 <p>gzip &#xC720;&#xD2F8;&#xB9AC;&#xD2F0; &#xC124;&#xCE58;</p>
 <ul>
 <li><strong>configure &#xC2E4;&#xD589;</strong>  </li>
@@ -1359,24 +1298,22 @@ The Grep package contains programs for searching through files.</p>
 make -j2
 make check
 make install
-&#x200B;```````````````````
-&#xD2B9;&#xC9D5;&#xC740; HOST&#xC2DC;&#xC2A4;&#xD15C;&#xC758; /bin/bash &#xB9D0;&#xACE0; &#xB0B4;&#xAC00; &#xBE4C;&#xB4DC;&#xD55C; /tools/&#xC758; bash&#xB97C; &#xC0AC;&#xC6A9;&#xD55C;&#xAC83;.
-
-<span class="hljs-comment"># 5.26. M4-1.4.17</span>
-The M4 package contains a macro processor.
-
-
-- __configure &#xC2E4;&#xD589;__  
-
-&#x200B;````````````````````sh
- $ ./configure --prefix=/tools
+&#x200B;````````````````
 </code></pre>
+<p>&#xD2B9;&#xC9D5;&#xC740; HOST&#xC2DC;&#xC2A4;&#xD15C;&#xC758; /bin/bash &#xB9D0;&#xACE0; &#xB0B4;&#xAC00; &#xBE4C;&#xB4DC;&#xD55C; /tools/&#xC758; bash&#xB97C; &#xC0AC;&#xC6A9;&#xD55C;&#xAC83;.</p>
+<h2 id="526-m4-1417">5.26. M4-1.4.17</h2>
+<p>The M4 package contains a macro processor.</p>
 <ul>
-<li><strong>&#xBE4C;&#xB4DC;</strong>  </li>
+<li><strong>configure &#xC2E4;&#xD589;</strong>  </li>
 </ul>
-<pre><code class="lang-sh"> $ make
-</code></pre>
-<ul>
+<p>&#x200B;```sh
+ $ ./configure --prefix=/tools</p>
+<pre><code>
+- __&#xBE4C;&#xB4DC;__  
+
+```sh
+ $ make
+</code></pre><ul>
 <li><strong>test suite</strong>  </li>
 </ul>
 <pre><code class="lang-sh"> $ make check
@@ -1386,7 +1323,7 @@ The M4 package contains a macro processor.
 </ul>
 <pre><code class="lang-sh"> $ make install
 </code></pre>
-<h1 id="527-make-41">5.27. Make-4.1</h1>
+<h2 id="527-make-41">5.27. Make-4.1</h2>
 <p>Make&#xC720;&#xD2F8;&#xB9AC;&#xD2F0; &#xC124;&#xCE58;<br>The Make package contains a program for compiling packages.  </p>
 <ul>
 <li><strong>configure &#xC2E4;&#xD589;</strong>  </li>
@@ -1409,7 +1346,7 @@ The M4 package contains a macro processor.
 </ul>
 <pre><code class="lang-sh"> $ make install
 </code></pre>
-<h1 id="528-patch-274">5.28. Patch-2.7.4</h1>
+<h2 id="528-patch-274">5.28. Patch-2.7.4</h2>
 <p>patch &#xC720;&#xD2F8;&#xB9AC;&#xD2F0; &#xC124;&#xCE58; 
 The Patch package contains a program for modifying or creating files by applying a &#x201C;patch&#x201D; file typically created by the diff program.  </p>
 <ul>
@@ -1432,9 +1369,9 @@ The Patch package contains a program for modifying or creating files by applying
 </ul>
 <pre><code class="lang-sh"> $ make install
 </code></pre>
-<h1 id="529-perl-5202">5.29. Perl-5.20.2</h1>
+<h2 id="529-perl-5202">5.29. Perl-5.20.2</h2>
 <p>The Perl package contains the Practical Extraction and Report Language.  </p>
-<h2 id="5291-installation-of-perl">5.29.1. Installation of Perl</h2>
+<h3 id="5291-installation-of-perl">5.29.1. Installation of Perl</h3>
 <ul>
 <li><strong>configure &#xC2E4;&#xD589;</strong>  </li>
 </ul>
@@ -1453,7 +1390,7 @@ The Patch package contains a program for modifying or creating files by applying
  $ mkdir -pv /tools/lib/perl5/5.20.2
  $ cp -Rv lib/* /tools/lib/perl5/5.20.2
 </code></pre>
-<h1 id="530-sed-422">5.30. Sed-4.2.2</h1>
+<h2 id="530-sed-422">5.30. Sed-4.2.2</h2>
 <p>sed &#xC720;&#xD2F8;&#xB9AC;&#xD2F0; &#xC124;&#xCE58;
 The Sed package contains a stream editor.</p>
 <ul>
@@ -1476,7 +1413,7 @@ The Sed package contains a stream editor.</p>
 </ul>
 <pre><code class="lang-sh"> $ make install
 </code></pre>
-<h1 id="531-tar-128">5.31. Tar-1.28</h1>
+<h2 id="531-tar-128">5.31. Tar-1.28</h2>
 <p>tar &#xC720;&#xD2F8;&#xB9AC;&#xD2F0; &#xC124;&#xCE58;
 The Tar package contains an archiving program.</p>
 <ul>
@@ -1499,7 +1436,7 @@ The Tar package contains an archiving program.</p>
 </ul>
 <pre><code class="lang-sh"> $ make install
 </code></pre>
-<h1 id="532-texinfo-52">5.32. Texinfo-5.2</h1>
+<h2 id="532-texinfo-52">5.32. Texinfo-5.2</h2>
 <p>The Texinfo package contains programs for reading, writing, and converting info
 pages.</p>
 <ul>
@@ -1522,9 +1459,9 @@ pages.</p>
 </ul>
 <pre><code class="lang-sh"> $ make install
 </code></pre>
-<h1 id="533-util-linux-226">5.33. Util-linux-2.26</h1>
+<h2 id="533-util-linux-226">5.33. Util-linux-2.26</h2>
 <p>The Util-linux package contains miscellaneous utility programs.<br><code>(&#xCC3E;&#xC544;&#xBCF4;&#xAE30;)</code> &#xC774;&#xAC8C; &#xBB54; &#xD328;&#xD0A4;&#xC9C0;&#xC778;&#xC9C0;?  </p>
-<h2 id="5331-installation-of-util-linux">5.33.1. Installation of Util-linux</h2>
+<h3 id="5331-installation-of-util-linux">5.33.1. Installation of Util-linux</h3>
 <ul>
 <li><strong>configure &#xC2E4;&#xD589;</strong>  </li>
 </ul>
@@ -1552,7 +1489,7 @@ pages.</p>
 </ul>
 <pre><code class="lang-sh"> $ make install
 </code></pre>
-<h1 id="534-xz-520">5.34. Xz-5.2.0</h1>
+<h2 id="534-xz-520">5.34. Xz-5.2.0</h2>
 <p>xz &#xC720;&#xD2F8;&#xB9AC;&#xD2F0; &#xC124;&#xCE58;<br>The Xz package contains programs for compressing and decompressing files.<br>It provides capabilities for the lzma and the newer xz compression formats.<br>Compressing text files with xz yields a better compression percentage than with the traditional gzip or bzip2 commands.  </p>
 <ul>
 <li><strong>configure &#xC2E4;&#xD589;</strong>  </li>
@@ -1574,7 +1511,7 @@ pages.</p>
 </ul>
 <pre><code class="lang-sh"> $ make install
 </code></pre>
-<h1 id="535-stripping">5.35. Stripping</h1>
+<h2 id="535-stripping">5.35. Stripping</h2>
 <p>lfs&#xD30C;&#xD2F0;&#xC158;&#xC758; &#xACF5;&#xAC04;&#xC740; &#xB9CE;&#xC9C0; &#xC54A;&#xAE30;&#xB54C;&#xBB38;&#xC5D0; &#xC880;&#xB354; &#xD655;&#xBCF4;&#xD560; &#xD544;&#xC694;&#xAC00; &#xC788;&#xB2E4;.<br>&#xBD88;&#xD544;&#xC694;&#xD55C; &#xBD80;&#xBD84;&#xC744; &#xC81C;&#xAC70;&#xD558;&#xAE30;.<br>&#xB514;&#xBC84;&#xAE45; symbol&#xC81C;&#xAC70;<br>strip : &#xC624;&#xBE0C;&#xC81D;&#xD2B8; &#xD30C;&#xC77C;&#xC5D0;&#xC11C; &#xBD88;&#xD544;&#xC694;&#xD55C; symbol&#xC81C;&#xAC70;&#xD558;&#xB294; &#xC720;&#xD2F8;&#xB9AC;&#xD2F0; &#xADF8;&#xB9AC;&#xACE0; &#xC774;&#xAC83;&#xC740; &#xD544;&#xC218;&#xC0AC;&#xD56D;&#xC740; &#xC544;&#xB2D8;.  </p>
 <ul>
 <li><strong>strip &#xC73C;&#xB85C; &#xB514;&#xBC84;&#xAE45; symbol&#xC81C;&#xAC70;</strong>  </li>
@@ -1588,7 +1525,7 @@ pages.</p>
 <pre><code class="lang-sh"> $ rm -rf /tools/{,share}/{info,man,doc}
 </code></pre>
 <p>&#xC774;&#xC2DC;&#xC810;&#xC5D0;&#xC11C; LFS&#xB97C; &#xAD6C;&#xCD95;&#xD558;&#xB824;&#xBA74; 3GB &#xC815;&#xB3C4; &#xACF5;&#xAC04;&#xC774; &#xD544;&#xC694; </p>
-<h1 id="536-changing-ownership">5.36. Changing Ownership</h1>
+<h2 id="536-changing-ownership">5.36. Changing Ownership</h2>
 <ul>
 <li><strong>&#xC55E;&#xC73C;&#xB85C; &#xB8E8;&#xD2B8;&#xACC4;&#xC815;&#xC73C;&#xB85C; &#xBCC0;&#xACBD;&#xD574;&#xC11C; &#xC791;&#xC5C5;</strong>   </li>
 </ul>
@@ -1598,8 +1535,7 @@ pages.</p>
 <pre><code class="lang-sh"> $ chown -R root:root <span class="hljs-variable">$LFS</span>/tools
 </code></pre>
 <p><a href="http://linuxfromscratch.org/lfs/view/stable/chapter05/changingowner.html" target="_blank">&#xCC3E;&#xC544;&#xBCF4;&#xAE30;</a></p>
-<p>chap5&#xAE4C;&#xC9C0;&#xC758; &#xB0B4;&#xC6A9;&#xC744; ($LFS/tools)<br>&#xADF8;&#xB9AC;&#xACE0; &#xCC28;&#xAE30; LFS&#xB97C; &#xC704;&#xD574;&#xC11C; $LFS/tools&#xB294; &#xBC31;&#xC5C5;&#xC744; &#xD574;&#xB450;&#xB294;&#xAC8C; &#xC88B;&#xB2E4;.<br>chap6&#xC5D0;&#xC11C; $LFS/tools &#xC5D0; &#xB2E4;&#xC2DC; &#xC124;&#xCE58;&#xD560;&#xAC83;&#xC774;&#xBBC0;&#xB85C; &#xBCC0;&#xACBD;&#xB428;.   </p>
-<p>kkjj</p>
+<p>chap5&#xAE4C;&#xC9C0;&#xC758; &#xB0B4;&#xC6A9;&#xC744; ($LFS/tools)<br>&#xADF8;&#xB9AC;&#xACE0; &#xCC28;&#xAE30; LFS&#xB97C; &#xC704;&#xD574;&#xC11C; $LFS/tools&#xB294; &#xBC31;&#xC5C5;&#xC744; &#xD574;&#xB450;&#xB294;&#xAC8C; &#xC88B;&#xB2E4;.<br>chap6&#xC5D0;&#xC11C; $LFS/tools &#xC5D0; &#xB2E4;&#xC2DC; &#xC124;&#xCE58;&#xD560;&#xAC83;&#xC774;&#xBBC0;&#xB85C; &#xBCC0;&#xACBD;&#xB428;.</p>
 
                                 
                                 </section>
@@ -1643,7 +1579,7 @@ pages.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"5. Constructing a Temporary System","level":"1.7","depth":1,"next":{"title":"6.1. Installing Basic System Software","level":"1.8","depth":1,"path":"markdowns/6_1_Installing_Basic_System_Software.md","ref":"markdowns/6_1_Installing_Basic_System_Software.md","articles":[]},"previous":{"title":"4. Final Preparations","level":"1.6","depth":1,"path":"markdowns/4_Final_Preparations.md","ref":"markdowns/4_Final_Preparations.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"http://soopsaram.com/lfs"},"plugins":["ga","simple-page-toc","disqus","back-to-top-button","edit-link","github","livereload"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"jihuun"},"github":{"url":"https://github.com/jihuun/lfs"},"livereload":{},"simple-page-toc":{"maxDepth":2,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"ga":{"configuration":"auto","token":""},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit","base":"https://github.com/jihuun/lfs/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"markdowns/5_Constructing_a_Temporary_System.md","mtime":"2019-08-30T12:24:19.186Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-30T12:25:12.496Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"5. Constructing a Temporary System","level":"1.7","depth":1,"next":{"title":"6.1. Installing Basic System Software","level":"1.8","depth":1,"path":"markdowns/6_1_Installing_Basic_System_Software.md","ref":"markdowns/6_1_Installing_Basic_System_Software.md","articles":[]},"previous":{"title":"4. Final Preparations","level":"1.6","depth":1,"path":"markdowns/4_Final_Preparations.md","ref":"markdowns/4_Final_Preparations.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"http://soopsaram.com/lfs"},"plugins":["ga","simple-page-toc","disqus","back-to-top-button","edit-link","github","livereload"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"jihuun"},"github":{"url":"https://github.com/jihuun/lfs"},"livereload":{},"simple-page-toc":{"maxDepth":2,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"ga":{"configuration":"auto","token":""},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit","base":"https://github.com/jihuun/lfs/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"markdowns/5_Constructing_a_Temporary_System.md","mtime":"2019-08-30T12:42:46.634Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-30T12:55:53.674Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

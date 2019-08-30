@@ -1,28 +1,14 @@
---------------------  
- 목차    
-<!-- toc -->
---------------------  
-[7.1. Introduction  ](#71-introduction)  
-[7.2. LFS-Bootscripts-20150222](#72-lfs-bootscripts-20150222)  
-[7.3. Overview of Device and Module Handling](#73-overview-of-device-and-module-handling)  
-[7.4. Managing Devices](#74-managing-devices)  
-[7.5. General Network Configuration](#75-general-network-configuration)  
-[7.6. System V Bootscript Usage and Configuration](#76-system-v-bootscript-usage-and-configuration)  
-[7.7. The Bash Shell Startup Files](#77-the-bash-shell-startup-files)  
-[7.8. Creating the /etc/inputrc File](#78-creating-the-etcinputrc-file)  
-[7.9. Creating the /etc/shells File](#79-creating-the-etcshells-file)  
+# 7. System Configuration and Bootscripts
 
---------------------  
+  
+<!-- toc -->
   
   
   
   
   
   
-  
-  
---------------------  
-# 7.1. Introduction    
+## 7.1. Introduction    
   
 리눅스 시스템을 부팅하는 것은 몇몇 과정이 더 필요하다.    
 프로세스가 파일시스템과 가상파일시스템에 마운트 되야함.    
@@ -40,8 +26,8 @@
   
   
   
---------------------  
-## 7.1.1. System V    
+  
+### 7.1.1. System V    
    
 System V는 Unix시스템에서 전통적으로 사용하는 부트 프로세스이다.     
 init프로그램을 사용하고 login(getty)같은 기본 프로그램을 설치한다.      
@@ -69,7 +55,7 @@ init프로그램을 사용하고 login(getty)같은 기본 프로그램을 설�
   
   
   
---------------------  
+  
   
 ``(참고)`` debian 부트프로세스 참고.    
 > https://www.debian.org/doc/manuals/debian-reference/ch03.en.html    
@@ -118,28 +104,28 @@ http://clien.net/cs2/bbs/board.php?bo_table=cm_linux&wr_id=7662&sca=%5BOpen+sour
   
   
   
---------------------  
-# 7.2. LFS-Bootscripts-20150222  
+  
+## 7.2. LFS-Bootscripts-20150222  
   
 /sources/lfs-bootscripts-20150222/ 에는 LFS시스템이 부팅/종료될때 필요한 스크립트들이 구성되어있으며    
 Makefile 은 그 스크립트를 적절히 배치하는 역할을 한다.     
   
   
   
---------------------  
-## 7.2.1. Installation of LFS-Bootscripts  
+  
+### 7.2.1. Installation of LFS-Bootscripts  
   
 - __LFS-부트스크립트 설치__    
   
-````````````````````sh  
+```sh  
  $ make install  
-````````````````````  
+```  
   
   
   
   
---------------------  
-## 7.2.2. Contents of LFS-Bootscripts  
+  
+### 7.2.2. Contents of LFS-Bootscripts  
   
 - 설치 경로  
 > /etc/rc.d   
@@ -210,7 +196,7 @@ Makefile 은 그 스크립트를 적절히 배치하는 역할을 한다.
 > 파일위치 /sources/lfs-bootscripts-20150222/Makefile    
 > /etc/init.d/의 어떤 스크립트가 어떤 run-level로 지정되었는지 알수 있음.    
 >  
-> ````````````````````makefile  
+> ```makefile  
 >  rcS: files  
 >  	ln -sf ../init.d/mountvirtfs ${ETCDIR}/rc.d/rcS.d/S00mountvirtfs  
 >  	ln -sf ../init.d/modules     ${ETCDIR}/rc.d/rcS.d/S05modules  
@@ -262,12 +248,12 @@ Makefile 은 그 스크립트를 적절히 배치하는 역할을 한다.
 >  	ln -sf ../init.d/localnet    ${ETCDIR}/rc.d/rc6.d/S90localnet  
 >  	ln -sf ../init.d/reboot      ${ETCDIR}/rc.d/rc6.d/S99reboot  
 >    
-> ````````````````````  
+> ```  
   
   
 - ``(참고)`` __make install의 출력 로그는 아래와 같음.__    
 >   
-> ````````````````````sh  
+> ```sh  
 > root:/sources/lfs-bootscripts-20150222# make install  
 > install -d -m 755  /etc/rc.d/rc0.d  
 > install -d -m 755  /etc/rc.d/rc1.d  
@@ -358,7 +344,7 @@ Makefile 은 그 스크립트를 적절히 배치하는 역할을 한다.
 > ln -sf ../init.d/mountfs     /etc/rc.d/rc6.d/S70mountfs  
 > ln -sf ../init.d/localnet    /etc/rc.d/rc6.d/S90localnet  
 > ln -sf ../init.d/reboot      /etc/rc.d/rc6.d/S99reboot  
-> ````````````````````  
+> ```  
   
   
   
@@ -371,9 +357,9 @@ Makefile 은 그 스크립트를 적절히 배치하는 역할을 한다.
   
   
   
---------------------  
---------------------  
-# 7.3. Overview of Device and Module Handling  
+  
+  
+## 7.3. Overview of Device and Module Handling  
   
 chap.6에서 udev를 설치했다. udev가 어떻게 동작하는지 확인하기 전에  
 과거에 device를 어떻게 handling했는지 역사를 살펴본다.    
@@ -386,25 +372,25 @@ chap.6에서 udev를 설치했다. udev가 어떻게 동작하는지 확인하�
 그래서 메모리공간을 더 절약할 수가 있게되었다.    
   
   
---------------------  
-## 7.3.1. History  
+  
+### 7.3.1. History  
   
 2000년 2월에 devfs 파일시스템이 2.3.46 kernel에 반영되었고 2.4 stable kernel에서 이용가능하게 되었다.  
 그러나 커널 소스에 존재함에도 불구하고 커널의 코어개발자들에 의해 서포트되지 않았다.  
 Race condition등 여러 문제로 2006년 6월에 커널에서 완전히 제거되었다.    
 이것은 2.6 stable kernel부터 sysfs 파일시스템으로 대체되었다.    
   
---------------------  
-## 7.3.2. Udev Implementation  
   
---------------------  
-### 7.3.2.1. Sysfs  
+### 7.3.2. Udev Implementation  
+  
+  
+#### 7.3.2.1. Sysfs  
 드라이버가 커널에 컴파일되어 빌트인될때는 커널에 의해 감지되면 sysfs(내부적으로는 devtmpfs 사용)에 등록한다.   
 드라이버가 모듈로 컴파일되면 모듈이 로딩될때 sysfs에 등록.  
 sysfs가 마운트되면 (/sys) sysfs로 레지스터한 드라이버는 userspace에서 접근가능하다.  
   
---------------------  
-### 7.3.2.2. Device Node Creation  
+  
+#### 7.3.2.2. Device Node Creation  
   
 디바이스파일은 devtmpfs 파일시스템에 의해서 생성된다. 어떠한 드라이버라도 디바이스 노드로 등록하기위해서는 devtmpfs를 통해야한다. devtmpfs 인스턴스가 /dev에 마운트 될때, 디바이스 노드가 이름,퍼미션,소유권을 변경하면서 생성된다.  
   
@@ -414,48 +400,48 @@ udevd는 디바이스 노드에대한 새로운 심볼릭링크를 생성한다.
   
 이 세가지 경로는 함께 병합된다.   
   
---------------------  
-### 7.3.2.3. Module Loading  
+  
+#### 7.3.2.3. Module Loading  
   
   
---------------------  
-### 7.3.2.4. Handling Hotpluggable/Dynamic Devices  
+  
+#### 7.3.2.4. Handling Hotpluggable/Dynamic Devices  
   
   
---------------------  
-## 7.3.3. Problems with Loading Modules and Creating Devices  
+  
+### 7.3.3. Problems with Loading Modules and Creating Devices  
   
 디바이스 노드를 자동으로생성하는것은 몇가지 문제가 발생할 수 있다.   
   
   
---------------------  
-### 7.3.3.1. A kernel module is not loaded automatically  
+  
+#### 7.3.3.1. A kernel module is not loaded automatically  
   
 sys/bus/ 에 modalias 파일이 있어야만 드라이버가  udev의 도움을 받을수있음.  
   
---------------------  
-### 7.3.3.2. A kernel module is not loaded automatically, and Udev is not intended to load it  
+  
+#### 7.3.3.2. A kernel module is not loaded automatically, and Udev is not intended to load it  
   
 modprobe 를 설정한다 udev가 wrapped module을 로딩한 뒤에 wrapper를 로딩하기 위해서  
   
---------------------  
-### 7.3.3.3. Udev loads some unwanted module  
   
---------------------  
-### 7.3.3.4. Udev creates a device incorrectly, or makes a wrong symlink  
-  
---------------------  
-### 7.3.3.5. Udev rule works unreliably  
-  
---------------------  
-### 7.3.3.6. Device naming order changes randomly after rebooting    
+#### 7.3.3.3. Udev loads some unwanted module  
   
   
+#### 7.3.3.4. Udev creates a device incorrectly, or makes a wrong symlink  
+  
+  
+#### 7.3.3.5. Udev rule works unreliably  
+  
+  
+#### 7.3.3.6. Device naming order changes randomly after rebooting    
   
   
   
   
---------------------  
+  
+  
+  
   
 ``(찾아보기)`` __udev 에 대해서, rule작성법, 동작원리 등__    
 > udev는 (Userspace Implementation of devfs의 약자) 디바이스 파일 자동 관리.    
@@ -472,9 +458,9 @@ modprobe 를 설정한다 udev가 wrapped module을 로딩한 뒤에 wrapper를 
 >   
 > [udev rule기초 간략 설명 이동](http://chonnom.com/bbs/board.php?bo_table=B19&wr_id=440)    
 > > udev rule 간단 규칙.    
-> > ````````````````````  
+> > ```  
 > > KERNEL=="hdb", NAME="my_spare_disk"  
-> > ````````````````````  
+> > ```  
 > > hdb장치가 추가되면 /dev/my_spare_disk 노드를 생성한다.    
   
   
@@ -484,53 +470,53 @@ modprobe 를 설정한다 udev가 wrapped module을 로딩한 뒤에 wrapper를 
   
   
   
---------------------  
---------------------  
-# 7.4. Managing Devices  
   
---------------------  
-## 7.4.1. Network Devices  
+  
+## 7.4. Managing Devices  
+  
+  
+### 7.4.1. Network Devices  
 eth0 eth1이 순서가 바뀔수도 있기때문에  
 udev 룰을 이용해 MAC 어드레스 기반에 따라 디바이스 생성.  
   
---------------------  
-### 7.4.1.1. Disabling Persistent Naming on the Kernel Command Line  
+  
+#### 7.4.1.1. Disabling Persistent Naming on the Kernel Command Line  
   
   
---------------------  
-### 7.4.1.2. Creating Custom Udev Rules  
+  
+#### 7.4.1.2. Creating Custom Udev Rules  
   
 The naming scheme can be customized by creating custom Udev rules. A script has been included that generates the initial rules. Generate these rules by running:  
   
 - __스크립트를 이용해 네트워크 udev rule생성__    
   
-````````````````````sh  
+```sh  
  $ bash /lib/udev/init-net-rules.sh  
-````````````````````  
+```  
 > /etc/udev/rules.d/70-persistent-net.rules 생성됨.     
   
 - __생성된 rule확인__    
   
-````````````````````sh  
+```sh  
  $ cat /etc/udev/rules.d/70-persistent-net.rules  
-````````````````````  
+```  
   
   
 - __rule파일 내용__    
   
-````````````````````sh  
-# This file was automatically generated by the /lib/udev/write_net_rules  
-# program, run by the persistent-net-generator.rules rules file.  
-#  
-# You can modify it, as long as you keep each rule on a single  
-# line, and change only the value of the NAME= key.  
+```sh  
+## This file was automatically generated by the /lib/udev/write_net_rules  
+## program, run by the persistent-net-generator.rules rules file.  
+##  
+## You can modify it, as long as you keep each rule on a single  
+## line, and change only the value of the NAME= key.  
   
-# net device sky2  
+## net device sky2  
 SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="00:24:54:8a:85:a5", ATTR{dev_id}=="0x0", ATTR{type}=="1", NAME="eth0"  
   
-# net device ath9k  
+## net device ath9k  
 SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="e8:39:df:84:11:ab", ATTR{dev_id}=="0x0", ATTR{type}=="1", NAME="wlan0"  
-````````````````````  
+```  
 >   
 > SUBSYSTEM=="net" - udev 가 network 카드 디바이스가 아니면 무시하도록 함.    
 ACTION=="add" - add의 상황이 아니면 무시됨.    
@@ -549,17 +535,17 @@ NAME - /dev/에 해당 이름으로 생성.
   
   
   
---------------------  
---------------------  
-# 7.5. General Network Configuration  
   
-## 7.5.1. Creating Network Interface Configuration Files  
+  
+## 7.5. General Network Configuration  
+  
+### 7.5.1. Creating Network Interface Configuration Files  
   
 네트워크 인터페이스는 /etc/sysconfig/에 있는 스크립트에 의해 켜지거나 꺼짐.  
   
 - __eth0에 대한 설정파일 생성__    
   
-````````````````````sh  
+```sh  
  $ cd /etc/sysconfig/  
  $ cat > ifconfig.eth0 << "EOF"  
 	ONBOOT=yes  
@@ -570,46 +556,46 @@ NAME - /dev/에 해당 이름으로 생성.
 	PREFIX=24  
 	BROADCAST=192.168.1.255  
  $ EOF  
-````````````````````  
+```  
 > 내 시스템에 맞게 값 수정함.  
   
   
-## 7.5.2. Creating the /etc/resolv.conf File  
+### 7.5.2. Creating the /etc/resolv.conf File  
   
   
 - ____    
   
-````````````````````sh  
+```sh  
 cat > /etc/resolv.conf << "EOF"  
-# Begin /etc/resolv.conf  
+## Begin /etc/resolv.conf  
   
 domain <Your Domain Name>  
 nameserver <IP address of your primary nameserver>  
 nameserver <IP address of your secondary nameserver>  
   
-# End /etc/resolv.conf  
+## End /etc/resolv.conf  
 EOF  
-````````````````````  
+```  
 > host system의 resolv.conf랑 똑같이 맞춤.  
   
-## 7.5.3. Configuring the system hostname  
+### 7.5.3. Configuring the system hostname  
   
   
 - __Create the /etc/hostname file and enter a hostname__    
   
-````````````````````sh  
+```sh  
 echo "<lfs>" > /etc/hostname  
-````````````````````  
+```  
   
-## 7.5.4. Customizing the /etc/hosts File  
+### 7.5.4. Customizing the /etc/hosts File  
 - ____    
   
-````````````````````sh  
+```sh  
 Private Network Address Range      Normal Prefix  
 10.0.0.1 - 10.255.255.254           8  
 172.x.0.1 - 172.x.255.254           16  
 192.168.y.1 - 192.168.y.254         24  
-````````````````````  
+```  
   
   
   
@@ -620,22 +606,22 @@ Private Network Address Range      Normal Prefix
   
   
   
---------------------  
---------------------  
-# 7.6. System V Bootscript Usage and Configuration  
   
   
-## 7.6.1. How Do the System V Bootscripts Work?  
+## 7.6. System V Bootscript Usage and Configuration  
   
-## 7.6.2. Configuring Sysvinit  
+  
+### 7.6.1. How Do the System V Bootscripts Work?  
+  
+### 7.6.2. Configuring Sysvinit  
   
 init프로그램이 초기화하기위해서 /etc/inittab파일을 읽는다.  
   
 - __/etc/inittab 생성__    
   
-````````````````````sh  
+```sh  
 cat > /etc/inittab << "EOF"  
-# Begin /etc/inittab  
+## Begin /etc/inittab  
   
 id:3:initdefault:  
   
@@ -660,9 +646,9 @@ su:S016:once:/sbin/sulogin
 5:2345:respawn:/sbin/agetty tty5 9600  
 6:2345:respawn:/sbin/agetty tty6 9600  
   
-# End /etc/inittab  
+## End /etc/inittab  
 EOF  
-````````````````````  
+```  
 > inittab man 페이지 참고.    
 > rc 스크립트를 이용하여  
 > /etc/rc.d/rcS.d/먼저 실행, 그뒤 /etc/rc.d/rc?.d/ 실행 (?는 initdefault value)  
@@ -679,14 +665,14 @@ EOF
   
   
   
-### 7.6.2.1. Changing Run Levels  
+#### 7.6.2.1. Changing Run Levels  
   
 run-level은 init <runlevel> 으로 바꿀 수 있음.  
 /etc/rc.d/rc?.d/에 존재하는 스크립트는 /etc/rc.d/init.d/ 에 존재하는 스크립트의 심볼릭 링크임.  
 심볼릭링크의 바뀐이름이 (S,K) 실제 스크립트에 전달되는  서로다른 매개변수임.  
   
   
-## 7.6.3. Udev Bootscripts  
+### 7.6.3. Udev Bootscripts  
   
 The /etc/rc.d/init.d/udev initscript starts udevd,   
 triggers any "coldplug" devices that have already been created by the kernel  
@@ -708,34 +694,34 @@ time.  To find the subsystem of a device, use udevadm info --attribute-walk
 <device> where <device> is an absolute path in /dev or /sys such as /dev/sr0 or  
 /sys/class/rtc.  
   
-### 7.6.3.1. Module Loading  
+#### 7.6.3.1. Module Loading  
   
 모듈로 빌드된 디바이스 드라이버는 aliases를 가지고 있을 것이다.  
 modinfo프로그램에 의해서 aliases를 볼 수 있음.  
   
-### 7.6.3.2. Handling Hotpluggable/Dynamic Devices  
+#### 7.6.3.2. Handling Hotpluggable/Dynamic Devices  
   
   
   
-## 7.6.4. Configuring the System Clock  
+### 7.6.4. Configuring the System Clock  
   
   
   
 - __Create a new file /etc/sysconfig/clock__    
   
-````````````````````sh  
+```sh  
 cat > /etc/sysconfig/clock << "EOF"  
-# Begin /etc/sysconfig/clock  
+## Begin /etc/sysconfig/clock  
   
 UTC=1  
   
-# Set this to any options you might need to give to hwclock,  
-# such as machine hardware clock type for Alphas.  
+## Set this to any options you might need to give to hwclock,  
+## such as machine hardware clock type for Alphas.  
 CLOCKPARAMS=  
   
-# End /etc/sysconfig/clock  
+## End /etc/sysconfig/clock  
 EOF  
-````````````````````  
+```  
   
   
   
@@ -747,27 +733,27 @@ EOF
   
   
   
-## 7.6.5. Configuring the Linux Console  
+### 7.6.5. Configuring the Linux Console  
   
 /etc/sysconfig/console 안만듦. 어차피 한글은 안됨.  
 이파일을 만들면 rc.site에 있는 내용을 덮어씀.  
   
   
-## 7.6.6. Creating Files at Boot  
+### 7.6.6. Creating Files at Boot  
   
 부팅타임에 파일을 생성하고 싶을땐 /etc/sysconfig/createfiles 파일에 기술하면됨.  
   
-## 7.6.7. Configuring the sysklogd Script  
+### 7.6.7. Configuring the sysklogd Script  
   
   
 - __timestamp간격 바꾸고 싶으면 /etc/sysconfig/rc.site에서__    
   
-````````````````````sh  
+```sh  
 SYSKLOGD_PARMS=  
-````````````````````  
+```  
   
   
-## 7.6.8. The rc.site File  
+### 7.6.8. The rc.site File  
   
 /etc/sysconfig/rc.site 파일 참고 주석에 설명있음.  
   
@@ -794,9 +780,9 @@ SYSKLOGD_PARMS=
   
   
   
---------------------  
---------------------  
-# 7.7. The Bash Shell Startup Files  
+  
+  
+## 7.7. The Bash Shell Startup Files  
   
 쉘 프로그램(/bin/bash)은 스타트업 파일들의 모음을 사용해서 환경을 구축한다.  
 /etc에 디렉토리는 글로벌 셋팅이다. 만약 home디렉토리가 있다면 덮어씌워질 것이다.  
@@ -810,15 +796,15 @@ login shell은 성공적으로 로그인된 이후에 시작된다. (/bin/login 
   
 - __locale변경__    
   
-````````````````````sh  
+```sh  
 cat > /etc/profile << "EOF"  
-# Begin /etc/profile  
+## Begin /etc/profile  
   
 export LANG=<ll>_<CC>.<charmap><@modifiers>  
   
-# End /etc/profile  
+## End /etc/profile  
 EOF  
-````````````````````  
+```  
 > ko_KR.utf8 로변경  
   
   
@@ -827,9 +813,9 @@ EOF
   
   
   
---------------------  
---------------------  
-# 7.8. Creating the /etc/inputrc File  
+  
+  
+## 7.8. Creating the /etc/inputrc File  
   
 inputrc 파일은 특정상황에서 키보드 매핑을 다룬다.  
 readline프로그램이 사용하는 startup file이다.  
@@ -840,33 +826,33 @@ home디렉토리에 .inputrc 파일을 만들면 덮어씌워진다.
   
 - __/etc/inputrc파일 생성__    
   
-````````````````````sh  
+```sh  
 cat > /etc/inputrc << "EOF"  
-# Begin /etc/inputrc  
-# Modified by Chris Lynn <roryo@roryo.dynup.net>  
+## Begin /etc/inputrc  
+## Modified by Chris Lynn <roryo@roryo.dynup.net>  
   
-# Allow the command prompt to wrap to the next line  
+## Allow the command prompt to wrap to the next line  
 set horizontal-scroll-mode Off  
   
-# Enable 8bit input  
+## Enable 8bit input  
 set meta-flag On  
 set input-meta On  
   
-# Turns off 8th bit stripping  
+## Turns off 8th bit stripping  
 set convert-meta Off  
   
-# Keep the 8th bit for display  
+## Keep the 8th bit for display  
 set output-meta On  
   
-# none, visible or audible  
+## none, visible or audible  
 set bell-style none  
   
-# All of the following map the escape sequence of the value  
-# contained in the 1st argument to the readline specific functions  
+## All of the following map the escape sequence of the value  
+## contained in the 1st argument to the readline specific functions  
 "\eOd": backward-word  
 "\eOc": forward-word  
   
-# for linux console  
+## for linux console  
 "\e[1~": beginning-of-line  
 "\e[4~": end-of-line  
 "\e[5~": beginning-of-history  
@@ -874,17 +860,17 @@ set bell-style none
 "\e[3~": delete-char  
 "\e[2~": quoted-insert  
   
-# for xterm  
+## for xterm  
 "\eOH": beginning-of-line  
 "\eOF": end-of-line  
   
-# for Konsole  
+## for Konsole  
 "\e[H": beginning-of-line  
 "\e[F": end-of-line  
   
-# End /etc/inputrc  
+## End /etc/inputrc  
 EOF  
-````````````````````  
+```  
   
   
   
@@ -892,22 +878,22 @@ EOF
   
   
   
---------------------  
---------------------  
   
-# 7.9. Creating the /etc/shells File  
+  
+  
+## 7.9. Creating the /etc/shells File  
   
   
 - __/etc/shells 파일 생성__    
   
-````````````````````sh  
+```sh  
 cat > /etc/shells << "EOF"  
-# Begin /etc/shells  
+## Begin /etc/shells  
   
 /bin/sh  
 /bin/bash  
   
-# End /etc/shells  
+## End /etc/shells  
 EOF  
-````````````````````  
+```  
   

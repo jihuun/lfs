@@ -339,17 +339,11 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <hr>
-<p>&#xBAA9;&#xCC28;</p>
+                                <h1 id="6-installing-basic-system-software-1">6. Installing Basic System Software (1)</h1>
 <!-- toc -->
 <ul>
 <li><a href="#61-introduction">6.1. Introduction</a></li>
-<li><a href="#62-preparing-virtual-kernel-file-systems">6.2. Preparing Virtual Kernel File Systems</a><ul>
-<li><a href="#621-creating-initial-device-nodes">6.2.1. Creating Initial Device Nodes</a></li>
-<li><a href="#622-mounting-and-populating-dev">6.2.2. Mounting and Populating /dev</a></li>
-<li><a href="#623-mounting-virtual-kernel-file-systems">6.2.3. Mounting Virtual Kernel File Systems</a></li>
-</ul>
-</li>
+<li><a href="#62-preparing-virtual-kernel-file-systems">6.2. Preparing Virtual Kernel File Systems</a></li>
 <li><a href="#63-package-management">6.3. Package Management</a></li>
 <li><a href="#64-entering-the-chroot-environment">6.4. Entering the Chroot Environment</a></li>
 <li><a href="#64-entering-the-chroot-environment-1">6.4. Entering the Chroot Environment</a></li>
@@ -358,10 +352,7 @@
 <li><a href="#67-linux-319-api-headers">6.7. Linux-3.19 API Headers</a></li>
 </ul>
 <!-- tocstop -->
-<hr>
-<p><a href="#61-introduction">6.1. Introduction  </a><br><a href="#62-preparing-virtual-kernel-file-systems">6.2. Preparing Virtual Kernel File Systems  </a><br><a href="#63-package-management">6.3. Package Management  </a><br><a href="#64-entering-the-chroot-environment">6.4. Entering the Chroot Environment  </a><br><a href="#64-entering-the-chroot-environment">6.4. Entering the Chroot Environment  </a><br><a href="#65-creating-directories">6.5. Creating Directories  </a><br><a href="#66-creating-essential-files-and-symlinks">6.6. Creating Essential Files and Symlinks  </a><br><a href="#67-linux-319-api-headers">6.7. Linux-3.19 API Headers  </a>  </p>
-<hr>
-<h1 id="61-introduction">6.1. Introduction</h1>
+<h2 id="61-introduction">6.1. Introduction</h2>
 <p>&#xB9AC;&#xB205;&#xC2A4; &#xC2DC;&#xC2A4;&#xD15C;&#xC774; &#xC5B4;&#xB5BB;&#xAC8C; &#xB3D9;&#xC791;&#xD558;&#xB294;&#xAC00;&#xB97C; &#xC774;&#xD574;&#xD558;&#xB294;&#xB370; &#xD575;&#xC2EC;&#xC694;&#xC18C;&#xB294; &#xBC14;&#xB85C;<br>&#xAC01; &#xD328;&#xD0A4;&#xC9C0;&#xC758; &#xC0AC;&#xC6A9;&#xBAA9;&#xC801;&#xACFC; &#xC65C; &#xD544;&#xC694;&#xD55C;&#xC9C0;&#xB97C; &#xC774;&#xD574;&#xD558;&#xB294; &#xAC83;&#xC774;&#xB2E4;.    </p>
 <p>&#xAC01; &#xC21C;&#xC11C;&#xB97C; &#xCCA0;&#xCC98;&#xD788; &#xC9C0;&#xCF1C;&#xC57C;&#xD55C;&#xB2E4;. &#xBB38;&#xC81C;&#xBC1C;&#xC0DD; &#xC18C;&#xC9C0;&#xAC00; &#xC904;&#xC5B4;&#xB4EC;.    </p>
 <p>&#xADF8;&#xB9AC;&#xACE0; &#xC55E;&#xC73C;&#xB85C;&#xB294; lfs&#xAC00; &#xC544;&#xB2CC; root &#xC720;&#xC800;&#xB85C; &#xB85C;&#xADF8;&#xC778;&#xD574;&#xC11C; &#xC9C4;&#xD589;&#xD574;&#xC57C;&#xD568;.<br><code>(&#xCC3E;&#xC544;&#xBCF4;&#xAE30;)</code> lfs &#xC5D0;&#xC11C; sudo -s &#xD558;&#xBA74; &#xC5D0;&#xB7EC;&#xB098;&#xACE0;<br>    jihuun&#xACC4;&#xC815;&#xC5D0;&#xC11C;sudo -s &#xD558;&#xBA74; &#xC815;&#xC0C1;&#xC801;&#xC73C;&#xB85C; su&#xB85C; &#xACC4;&#xC815; &#xC804;&#xD658;&#xB428;. &#xC65C;?    </p>
@@ -369,16 +360,14 @@
 <p><code>(&#xC8FC;&#xC758;)</code> : 5&#xC7A5;&#xC5D0;&#xC11C; /sources &#xC5D0;&#xC11C; &#xC555;&#xCD95;&#xC744; &#xD480;&#xC5B4; &#xBE4C;&#xB4DC;&#xD588;&#xB358; &#xD3F4;&#xB354;&#xB294; &#xBAA8;&#xB450; &#xC9C0;&#xC6B0;&#xACE0; &#xC2DC;&#xC791;&#xD574;&#xC57C;&#xD568;.<br>5&#xC7A5;&#xC5D0;&#xC11C; &#xB9CC;&#xB4E4;&#xC5C8;&#xB358; configure&#xC635;&#xC158;&#xACFC; 6&#xC7A5;&#xC5D0;&#xC11C; &#xC9C4;&#xD589;&#xD558;&#xB294; configure&#xC635;&#xC158;&#xC774; &#xB2E4;&#xB974;&#xAE30;&#xB54C;&#xBB38;&#xC5D0; &#xBE4C;&#xB4DC; &#xD639;&#xC740; test suite&#xC5D0;&#xC11C; &#xC2E4;&#xD328;&#xD558;&#xB294; &#xACBD;&#xC6B0;&#xAC00; &#xC0DD;&#xAE30;&#xB294;&#xB4EF;.  </p>
 <p>&#xBB38;&#xC81C; &#xBC1C;&#xC0DD;&#xC2DC; &#xC544;&#xB798;&#xC5D0;&#xC11C; &#xAC80;&#xC0C9;&#xD558;&#xBA74; &#xC790;&#xB8CC;&#xB9CE;&#xC774; &#xB098;&#xC634;.<br><a href="http://search.gmane.org/?query=msgunfmt-3&amp;author=&amp;group=gmane.linux.lfs.support&amp;sort=relevance&amp;DEFAULTOP=and&amp;xP=fail%09msgunfmt%093&amp;xFILTERS=Glinux.lfs.support---A" target="_blank">http://search.gmane.org/?query=msgunfmt-3&amp;author=&amp;group=gmane.linux.lfs.support&amp;sort=relevance&amp;DEFAULTOP=and&amp;xP=fail%09msgunfmt%093&amp;xFILTERS=Glinux.lfs.support---A</a>   </p>
 </blockquote>
-<hr>
-<h1 id="62-preparing-virtual-kernel-file-systems">6.2. Preparing Virtual Kernel File Systems</h1>
+<h2 id="62-preparing-virtual-kernel-file-systems">6.2. Preparing Virtual Kernel File Systems</h2>
 <p>&#xD30C;&#xC77C;&#xC2DC;&#xC2A4;&#xD15C;&#xC740; disk&#xACF5;&#xAC04;&#xC744; &#xCC28;&#xC9C0;&#xD558;&#xC9C0; &#xC54A;&#xACE0; &#xBA54;&#xBAA8;&#xB9AC;&#xC5D0; &#xC0C1;&#xC8FC;&#xD55C;&#xB2E4;.    </p>
 <ul>
 <li><strong>&#xD30C;&#xC77C;&#xC2DC;&#xC2A4;&#xD15C;&#xC774; &#xB9C8;&#xC6B4;&#xD2B8; &#xB420; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xB4E4;&#xC744; &#xC0DD;&#xC131;.</strong>  </li>
 </ul>
 <pre><code class="lang-sh"> $ mkdir -pv <span class="hljs-variable">$LFS</span>/{dev,proc,sys,run}
 </code></pre>
-<hr>
-<h2 id="621-creating-initial-device-nodes">6.2.1. Creating Initial Device Nodes</h2>
+<h3 id="621-creating-initial-device-nodes">6.2.1. Creating Initial Device Nodes</h3>
 <p>&#xCEE4;&#xB110;&#xC774; &#xC2DC;&#xC2A4;&#xD15C;&#xC744; &#xBD80;&#xD305;&#xD560;&#xB54C; &#xBA87;&#xBA87; &#xB514;&#xBC14;&#xC774;&#xC2A4; &#xB178;&#xB4DC;&#xAC00; &#xD544;&#xC694;&#xD558;&#xB2E4;.<br>&#xD2B9;&#xD788; console, null&#xB178;&#xB4DC;&#xAC00; &#xD544;&#xC694;.<br>&#xC774; &#xB514;&#xBC14;&#xC774;&#xC2A4;&#xB178;&#xB4DC;&#xB294; &#xBC18;&#xB4DC;&#xC2DC; &#xD558;&#xB4DC;&#xB514;&#xC2A4;&#xD06C;&#xC5D0; &#xC0DD;&#xC131;&#xB418;&#xC5B4;&#xC57C;&#xD55C;&#xB2E4;. (udevd&#xAC00; &#xC2DC;&#xC791;&#xB418;&#xAE30;&#xC804;&#xC5D0; &#xD544;&#xC694;)<br>&#xADF8;&#xB9AC;&#xACE0; &#xB9AC;&#xB205;&#xC2A4;&#xAC00; init=/bin/bash&#xB97C; &#xC2DC;&#xC791;&#xD560;&#xB54C; &#xD544;&#xC694;<br><code>(&#xCC3E;&#xC544;&#xBCF4;&#xAE30;)</code> udevd : /dev &#xC758; &#xB514;&#xBC14;&#xC774;&#xC2A4;&#xD30C;&#xC77C; &#xAD00;&#xB9AC; &#xB370;&#xBAAC;?    </p>
 <ul>
 <li><strong>mknod&#xBA85;&#xB839;&#xC73C;&#xB85C; &#xB514;&#xBC14;&#xC774;&#xC2A4; &#xB178;&#xB4DC; &#xC0DD;&#xC131;</strong>  </li>
@@ -394,8 +383,7 @@
 crw------- 1 root root 5, 1  7&#xC6D4; 31 13:51 console  
 crw-rw-rw- 1 root root 1, 3  7&#xC6D4; 31 13:51 null
 </code></pre>
-<hr>
-<h2 id="622-mounting-and-populating-dev">6.2.2. Mounting and Populating /dev</h2>
+<h3 id="622-mounting-and-populating-dev">6.2.2. Mounting and Populating /dev</h3>
 <p>&#xC77C;&#xBC18;&#xC801;&#xC73C;&#xB85C; &#xBD80;&#xD305;&#xC911; Udev&#xC5D0; &#xC758;&#xD574; &#xB514;&#xBC14;&#xC774;&#xC2A4;&#xAC00; &#xC0DD;&#xC131;&#xB418;&#xC9C0;&#xB9CC;,<br> &#xC544;&#xC9C1; Udev&#xB97C; &#xC124;&#xCE58;&#xD558;&#xC9C0;&#xB3C4; &#xC54A;&#xC558;&#xACE0; &#xBD80;&#xD305;&#xB3C4; &#xC548;&#xD588;&#xC73C;&#xB2C8;, &#xC218;&#xB3D9;&#xC73C;&#xB85C; /dev&#xC5D0; &#xB9C8;&#xC6B4;&#xD2B8; &#xC2DC;&#xCF1C;&#xC57C; &#xD55C;&#xB2E4;.<br> `<br>HOST&#xC2DC;&#xC2A4;&#xD15C;&#xC758; /dev &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xC5D0; bind &#xB9C8;&#xC6B4;&#xD305;&#xC744; &#xD568;&#xC73C;&#xB85C;&#xC368; &#xC218;&#xD589; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;.<br>bind&#xB9C8;&#xC6B4;&#xD305;&#xC740; &#xB2E4;&#xB978; &#xB9C8;&#xC6B4;&#xD2B8; &#xD3EC;&#xC778;&#xD2B8;&#xC758; &#xBBF8;&#xB7EC;&#xB97C; &#xC0DD;&#xC131;&#xD55C;&#xB2E4;.   </p>
 <p><code>(&#xCC3E;&#xC544;&#xBCF4;&#xAE30;)</code> bind mounting &#xC774;&#xB780;?  </p>
 <blockquote>
@@ -411,8 +399,7 @@ crw-rw-rw- 1 root root 1, 3  7&#xC6D4; 31 13:51 null
 <p><code>(&#xC8FC;&#xC758;)</code> : &#xD130;&#xBBF8;&#xB110;&#xC744; &#xC0C8;&#xB85C; &#xC5F4;&#xC5C8;&#xB2E4;&#xBA74; export LFS=/mnt/lfs &#xB2E4;&#xC2DC;&#xD574;&#xC918;&#xC57C;&#xD568;.<br>echo $LFS &#xAC00; &#xC788;&#xB294;&#xC9C0; &#xD56D;&#xC0C1; &#xD655;&#xC778; &#xD544;&#xC694;.  </p>
 <p><code>(&#xC8FC;&#xC758;)</code> : &#xB098;&#xC911;&#xC5D0; 6&#xC7A5; &#xBE4C;&#xB4DC;&#xD558;&#xB2E4;&#xAC00; &#xAF2C;&#xC77C;&#xB54C; /dev/sdb5 &#xB97C; &#xB2E4;&#xC9C0;&#xC6B0;&#xACE0; &#xB2E4;&#xC2DC; &#xC2DC;&#xC791;&#xD558;&#xACE0;&#xC790; &#xD560;&#xB54C;,<br>/dev/sdb5&#xAC00; mount&#xB41C; /mnt/lfs/&#xC758; &#xB0B4;&#xC6A9;&#xC744; rm -rf * &#xD574;&#xBC84;&#xB9AC;&#xBA74; &#xD070; &#xBB38;&#xC81C;&#xAC00; &#xBC1C;&#xC0DD;&#xD55C;&#xB2E4;.<br>/mnt/lfs/dev/&#xAC00; &#xD638;&#xC2A4;&#xD2B8; &#xC2DC;&#xC2A4;&#xD15C;&#xC758;/dev&#xB85C; &#xBC14;&#xC6B4;&#xB4DC; &#xB9C8;&#xC6B4;&#xD305; &#xB418;&#xC5B4;&#xC788;&#xAE30;&#xB54C;&#xBB38;&#xC5D0; &#xD638;&#xC2A4;&#xD2B8; &#xC2DC;&#xC2A4;&#xD15C; &#xC790;&#xCCB4;&#xAC00; &#xB9DD;&#xAC00;&#xC9D0;.<br>/dev/ &#xBC11;&#xC5D0; &#xC544;&#xBB34;&#xAC83;&#xB3C4; &#xC5C6;&#xB294; &#xC2DC;&#xC2A4;&#xD15C;&#xC774; &#xB418;&#xC5B4;&#xBC84;&#xB9BC;.<br>&#xADF8;&#xB7EC;&#xB098; &#xB2E4;&#xD589;&#xC774;&#xB3C4; &#xC7AC;&#xBD80;&#xD305;&#xC2DC; udev&#xAC00; /dev &#xB97C; &#xB2E4;&#xC2DC; &#xCC44;&#xC6B0;&#xB294;&#xC9C0; &#xBB38;&#xC81C;&#xAC00; &#xC5C6;&#xC5B4;&#xC9D0;.  </p>
 </blockquote>
-<hr>
-<h2 id="623-mounting-virtual-kernel-file-systems">6.2.3. Mounting Virtual Kernel File Systems</h2>
+<h3 id="623-mounting-virtual-kernel-file-systems">6.2.3. Mounting Virtual Kernel File Systems</h3>
 <ul>
 <li><strong>&#xB098;&#xBA38;&#xC9C0; &#xAC00;&#xC0C1; &#xD30C;&#xC77C;&#xC2DC;&#xC2A4;&#xD15C; &#xB9C8;&#xC6B4;&#xD2B8;</strong>  </li>
 </ul>
@@ -446,13 +433,11 @@ tmpfs on /mnt/lfs/run <span class="hljs-built_in">type</span> tmpfs (rw)
  $ <span class="hljs-keyword">fi</span>
 </code></pre>
 <p>HOST &#xC2DC;&#xC2A4;&#xD15C;&#xC5D0;&#xB294; /dev/shm -&gt; /run/shm/ &#xC2EC;&#xBCFC;&#xB9AD; &#xB9C1;&#xD06C;&#xB418;&#xC5B4;&#xC788;&#xC74C;.    </p>
-<hr>
-<h1 id="63-package-management">6.3. Package Management</h1>
+<h2 id="63-package-management">6.3. Package Management</h2>
 <p>LFS&#xC5D0;&#xC11C;&#xB294; &#xD328;&#xD0A4;&#xC9C0; &#xAD00;&#xB9AC;&#xC790;&#xB97C; &#xC124;&#xCE58;&#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.<br>&#xC544;&#xB798; &#xCC38;&#xACE0;.<br><a href="http://linuxfromscratch.org/lfs/view/stable/chapter06/pkgmgt.html" target="_blank">http://linuxfromscratch.org/lfs/view/stable/chapter06/pkgmgt.html</a>  </p>
 <p>This approach is used by most of the package managers found in the commercial<br>distributions. Examples of package managers that follow this approach are RPM<br>(which, incidentally, is required by the Linux Standard Base Specification),<br>pkg-utils, Debian&apos;s apt, and Gentoo&apos;s Portage system. A hint describing how to<br>adopt this style of package management for LFS systems is located at<br><a href="http://www.linuxfromscratch.org/hints/downloads/files/fakeroot.txt" target="_blank">http://www.linuxfromscratch.org/hints/downloads/files/fakeroot.txt</a>.  </p>
-<hr>
-<h1 id="64-entering-the-chroot-environment">6.4. Entering the Chroot Environment</h1>
-<h1 id="64-entering-the-chroot-environment">6.4. Entering the Chroot Environment</h1>
+<h2 id="64-entering-the-chroot-environment">6.4. Entering the Chroot Environment</h2>
+<h2 id="64-entering-the-chroot-environment">6.4. Entering the Chroot Environment</h2>
 <p>&#xC774;&#xC81C; &#xBCF8;&#xACA9;&#xC801;&#xC73C;&#xB85C; &#xCD5C;&#xC885; LFS&#xBE4C;&#xB4DC;, &#xC124;&#xCE58; &#xC2DC;&#xC791;&#xD558;&#xAE30; &#xC704;&#xD574; change root&#xB97C; &#xD568;.  </p>
 <p>It is time to enter the chroot environment to begin building and installing the<br>final LFS system. As user root, run the following command to enter the realm<br>that is, at the moment, populated with only the temporary tools:  </p>
 <ul>
@@ -469,8 +454,7 @@ tmpfs on /mnt/lfs/run <span class="hljs-built_in">type</span> tmpfs (rw)
 <p><code>(&#xC635;&#xC158;)</code><br>chroot [OPTION] NEWROOT [COMMAND [ARG]...]<br>&quot;$LFS&quot; : chroot&#xC774;&#xD6C4;&#xC5D0; $LFS/ &#xAC00; &#xC774;&#xC81C; / &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xAC00; &#xB428;.(&#xB530;&#xB77C;&#xC11C; &#xB354;&#xC774;&#xC0C1; $LFS&#xB3C4; &#xD544;&#xC694;&#xC5C6;&#xC74C;)<br>/tools/bin/env -i : /tools&#xC5D0; &#xC0C8;&#xB85C; &#xC124;&#xCE58;&#xD55C; env&#xBA85;&#xB839;&#xB85C; -i &#xC640;&#xD568;&#xAED8; &#xD658;&#xACBD;&#xBCC0;&#xC218; &#xCD08;&#xAE30;&#xD654;.<br>env -i /tools/bin/bash : &#xC9C0;&#xC815;&#xD55C; &#xD658;&#xACBD;&#xBCC0;&#xC218;&#xB85C; bash&#xB2E4;&#xC2DC; &#xC2E4;&#xD589;.<br>--login +h :  &#xB85C;&#xADF8;&#xC778;&#xC258;   </p>
 </blockquote>
 <p>(&#xC8FC;&#xC758;)<br>&#xB9CC;&#xC57D; &#xC7AC;&#xBD80;&#xD305; &#xD588;&#xC73C;&#xBA74; 6&#xC7A5; &#xCC98;&#xC74C;&#xBD80;&#xD130; &#xC5EC;&#xAE30;&#xAE4C;&#xC9C0; &#xB2E4;&#xC2DC;&#xD558;&#xBA74;&#xB428;.<br>mount &#xB4F1; 6.2.2.&#xC7A5;  6.2.3.&#xC7A5; &#xCC38;&#xACE0;    </p>
-<hr>
-<h1 id="65-creating-directories">6.5. Creating Directories</h1>
+<h2 id="65-creating-directories">6.5. Creating Directories</h2>
 <p>LFS&#xC758; &#xD30C;&#xC77C;&#xC2DC;&#xC2A4;&#xD15C; &#xC0DD;&#xC131;&#xD558;&#xAE30;.  </p>
 <ul>
 <li><strong>Unix &#xD45C;&#xC900; &#xB514;&#xB809;&#xD1A0;&#xB9AC; &#xAD6C;&#xC870;&#xB85C; &#xC0DD;&#xC131;</strong>  </li>
@@ -497,8 +481,7 @@ tmpfs on /mnt/lfs/run <span class="hljs-built_in">type</span> tmpfs (rw)
  $ mkdir -pv /var/{opt,cache,lib/{color,misc,locate},<span class="hljs-built_in">local</span>}
 </code></pre>
 <p><a href="https://wiki.linuxfoundation.org/en/FHS" target="_blank">Filesystem Hierarchy Standard (FHS) &#xCC38;&#xACE0;</a>    </p>
-<hr>
-<h1 id="66-creating-essential-files-and-symlinks">6.6. Creating Essential Files and Symlinks</h1>
+<h2 id="66-creating-essential-files-and-symlinks">6.6. Creating Essential Files and Symlinks</h2>
 <ul>
 <li>&#xBA87;&#xBA87; &#xC720;&#xD2F8;&#xB9AC;&#xD2F0; &#xC2EC;&#xBCFC;&#xB9AD; &#xB9C1;&#xD06C; &#xC0DD;&#xC131;  </li>
 </ul>
@@ -585,8 +568,7 @@ EOF
 <blockquote>
 <p>login, agetty, init &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xB4F1;&#xB9AC;  log&#xD30C;&#xC77C;&#xC744; &#xC0AC;&#xC6A9;&#xD568;.  </p>
 </blockquote>
-<hr>
-<h1 id="67-linux-319-api-headers">6.7. Linux-3.19 API Headers</h1>
+<h2 id="67-linux-319-api-headers">6.7. Linux-3.19 API Headers</h2>
 <p>&#xB2E4;&#xC74C; &#xD30C;&#xC77C;&#xB85C;  ..</p>
 
                                 
@@ -631,7 +613,7 @@ EOF
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6.1. Installing Basic System Software","level":"1.8","depth":1,"next":{"title":"6.2. Installing Basic System Software","level":"1.9","depth":1,"path":"markdowns/6_2_Installing_Basic_System_Software.md","ref":"markdowns/6_2_Installing_Basic_System_Software.md","articles":[]},"previous":{"title":"5. Constructing a Temporary System","level":"1.7","depth":1,"path":"markdowns/5_Constructing_a_Temporary_System.md","ref":"markdowns/5_Constructing_a_Temporary_System.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"http://soopsaram.com/lfs"},"plugins":["ga","simple-page-toc","disqus","back-to-top-button","edit-link","github","livereload"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"jihuun"},"github":{"url":"https://github.com/jihuun/lfs"},"livereload":{},"simple-page-toc":{"maxDepth":2,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"ga":{"configuration":"auto","token":""},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit","base":"https://github.com/jihuun/lfs/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"markdowns/6_1_Installing_Basic_System_Software.md","mtime":"2019-08-30T12:24:21.408Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-30T12:25:12.496Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6.1. Installing Basic System Software","level":"1.8","depth":1,"next":{"title":"6.2. Installing Basic System Software","level":"1.9","depth":1,"path":"markdowns/6_2_Installing_Basic_System_Software.md","ref":"markdowns/6_2_Installing_Basic_System_Software.md","articles":[]},"previous":{"title":"5. Constructing a Temporary System","level":"1.7","depth":1,"path":"markdowns/5_Constructing_a_Temporary_System.md","ref":"markdowns/5_Constructing_a_Temporary_System.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"http://soopsaram.com/lfs"},"plugins":["ga","simple-page-toc","disqus","back-to-top-button","edit-link","github","livereload"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"jihuun"},"github":{"url":"https://github.com/jihuun/lfs"},"livereload":{},"simple-page-toc":{"maxDepth":2,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"ga":{"configuration":"auto","token":""},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit","base":"https://github.com/jihuun/lfs/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"markdowns/6_1_Installing_Basic_System_Software.md","mtime":"2019-08-30T12:45:26.777Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-30T12:55:53.674Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -1,0 +1,1053 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>7. System Configuration and Bootscripts · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="8_Making_the_LFS_System_Bootable.html" />
+    
+    
+    <link rel="prev" href="6_4_Installing_Basic_System_Software.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">* Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="0_Preface.html">
+            
+                <a href="0_Preface.html">
+            
+                    
+                    0. Preface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="1_Introduction.html">
+            
+                <a href="1_Introduction.html">
+            
+                    
+                    1. Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="2_Preparing_a_New_Partition.html">
+            
+                <a href="2_Preparing_a_New_Partition.html">
+            
+                    
+                    2. Preparing a New Partition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="3_Packages_and_Patches.html">
+            
+                <a href="3_Packages_and_Patches.html">
+            
+                    
+                    3. Packages and Patches
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="4_Final_Preparations.html">
+            
+                <a href="4_Final_Preparations.html">
+            
+                    
+                    4. Final Preparations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="5_Constructing_a_Temporary_System.html">
+            
+                <a href="5_Constructing_a_Temporary_System.html">
+            
+                    
+                    5. Constructing a Temporary System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="6_1_Installing_Basic_System_Software.html">
+            
+                <a href="6_1_Installing_Basic_System_Software.html">
+            
+                    
+                    6.1. Installing Basic System Software
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="6_2_Installing_Basic_System_Software.html">
+            
+                <a href="6_2_Installing_Basic_System_Software.html">
+            
+                    
+                    6.2. Installing Basic System Software
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="6_3_Installing_Basic_System_Software.html">
+            
+                <a href="6_3_Installing_Basic_System_Software.html">
+            
+                    
+                    6.3. Installing Basic System Software
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="6_4_Installing_Basic_System_Software.html">
+            
+                <a href="6_4_Installing_Basic_System_Software.html">
+            
+                    
+                    6.4. Installing Basic System Software
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.12" data-path="7_System_Configuration_and_Bootscripts.html">
+            
+                <a href="7_System_Configuration_and_Bootscripts.html">
+            
+                    
+                    7. System Configuration and Bootscripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="8_Making_the_LFS_System_Bootable.html">
+            
+                <a href="8_Making_the_LFS_System_Bootable.html">
+            
+                    
+                    8. Making the LFS System Bootable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="9_The_End.html">
+            
+                <a href="9_The_End.html">
+            
+                    
+                    9. The End
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="pakages.html">
+            
+                <a href="pakages.html">
+            
+                    
+                    pakages.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >7. System Configuration and Bootscripts</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <hr>
+<h2 id="">{}</h2>
+<hr>
+<p> &#xBAA9;&#xCC28;</p>
+<!-- toc -->
+<ul>
+<li><a href="#71-introduction">7.1. Introduction</a><ul>
+<li><a href="#711-system-v">7.1.1. System V</a></li>
+</ul>
+</li>
+<li><a href="#72-lfs-bootscripts-20150222">7.2. LFS-Bootscripts-20150222</a><ul>
+<li><a href="#721-installation-of-lfs-bootscripts">7.2.1. Installation of LFS-Bootscripts</a></li>
+<li><a href="#722-contents-of-lfs-bootscripts">7.2.2. Contents of LFS-Bootscripts</a></li>
+</ul>
+</li>
+<li><a href="#73-overview-of-device-and-module-handling">7.3. Overview of Device and Module Handling</a><ul>
+<li><a href="#731-history">7.3.1. History</a></li>
+<li><a href="#732-udev-implementation">7.3.2. Udev Implementation</a></li>
+<li><a href="#733-problems-with-loading-modules-and-creating-devices">7.3.3. Problems with Loading Modules and Creating Devices</a></li>
+</ul>
+</li>
+<li><a href="#74-managing-devices">7.4. Managing Devices</a><ul>
+<li><a href="#741-network-devices">7.4.1. Network Devices</a></li>
+</ul>
+</li>
+<li><a href="#75-general-network-configuration">7.5. General Network Configuration</a><ul>
+<li><a href="#751-creating-network-interface-configuration-files">7.5.1. Creating Network Interface Configuration Files</a></li>
+<li><a href="#752-creating-the-etcresolvconf-file">7.5.2. Creating the /etc/resolv.conf File</a></li>
+<li><a href="#753-configuring-the-system-hostname">7.5.3. Configuring the system hostname</a></li>
+<li><a href="#754-customizing-the-etchosts-file">7.5.4. Customizing the /etc/hosts File</a></li>
+</ul>
+</li>
+<li><a href="#76-system-v-bootscript-usage-and-configuration">7.6. System V Bootscript Usage and Configuration</a><ul>
+<li><a href="#761-how-do-the-system-v-bootscripts-work">7.6.1. How Do the System V Bootscripts Work?</a></li>
+<li><a href="#762-configuring-sysvinit">7.6.2. Configuring Sysvinit</a></li>
+<li><a href="#763-udev-bootscripts">7.6.3. Udev Bootscripts</a></li>
+<li><a href="#764-configuring-the-system-clock">7.6.4. Configuring the System Clock</a></li>
+<li><a href="#765-configuring-the-linux-console">7.6.5. Configuring the Linux Console</a></li>
+<li><a href="#766-creating-files-at-boot">7.6.6. Creating Files at Boot</a></li>
+<li><a href="#767-configuring-the-sysklogd-script">7.6.7. Configuring the sysklogd Script</a></li>
+<li><a href="#768-the-rcsite-file">7.6.8. The rc.site File</a></li>
+</ul>
+</li>
+<li><a href="#77-the-bash-shell-startup-files">7.7. The Bash Shell Startup Files</a></li>
+<li><a href="#78-creating-the-etcinputrc-file">7.8. Creating the /etc/inputrc File</a></li>
+<li><a href="#79-creating-the-etcshells-file">7.9. Creating the /etc/shells File</a></li>
+</ul>
+<!-- tocstop -->
+<hr>
+<p><a href="#71-introduction">7.1. Introduction  </a><br><a href="#72-lfs-bootscripts-20150222">7.2. LFS-Bootscripts-20150222</a><br><a href="#73-overview-of-device-and-module-handling">7.3. Overview of Device and Module Handling</a><br><a href="#74-managing-devices">7.4. Managing Devices</a><br><a href="#75-general-network-configuration">7.5. General Network Configuration</a><br><a href="#76-system-v-bootscript-usage-and-configuration">7.6. System V Bootscript Usage and Configuration</a><br><a href="#77-the-bash-shell-startup-files">7.7. The Bash Shell Startup Files</a><br><a href="#78-creating-the-etcinputrc-file">7.8. Creating the /etc/inputrc File</a><br><a href="#79-creating-the-etcshells-file">7.9. Creating the /etc/shells File</a>  </p>
+<hr>
+<hr>
+<h1 id="71-introduction">7.1. Introduction</h1>
+<p>&#xB9AC;&#xB205;&#xC2A4; &#xC2DC;&#xC2A4;&#xD15C;&#xC744; &#xBD80;&#xD305;&#xD558;&#xB294; &#xAC83;&#xC740; &#xBA87;&#xBA87; &#xACFC;&#xC815;&#xC774; &#xB354; &#xD544;&#xC694;&#xD558;&#xB2E4;.<br>&#xD504;&#xB85C;&#xC138;&#xC2A4;&#xAC00; &#xD30C;&#xC77C;&#xC2DC;&#xC2A4;&#xD15C;&#xACFC; &#xAC00;&#xC0C1;&#xD30C;&#xC77C;&#xC2DC;&#xC2A4;&#xD15C;&#xC5D0; &#xB9C8;&#xC6B4;&#xD2B8; &#xB418;&#xC57C;&#xD568;.    </p>
+<blockquote>
+<p>&#xB514;&#xBC14;&#xC774;&#xC2A4; &#xCD08;&#xAE30;&#xD654;<br>swap &#xD65C;&#xC131;&#xD654;<br>swap &#xD30C;&#xD2F0;&#xC158;&#xACFC; &#xD30C;&#xC77C; &#xB9C8;&#xC6B4;&#xD2B8;<br>&#xC2DC;&#xC2A4;&#xD15C; &#xD074;&#xB7ED; &#xC124;&#xC815;<br>&#xB124;&#xD2B8;&#xC6CC;&#xD06C; &#xC124;&#xC815;<br>&#xC2DC;&#xC2A4;&#xD15C;&#xC5D0;&#xC11C; &#xC694;&#xAD6C;&#xD558;&#xB294; &#xB370;&#xBAAC; &#xC2E4;&#xD589;<br>&#xC720;&#xC838;&#xAC00; &#xD544;&#xC694;&#xD55C; custom &#xC791;&#xC5C5;&#xB4E4; &#xC218;&#xD589;.    </p>
+</blockquote>
+<p>&#xC774; &#xACFC;&#xC815;&#xC740; &#xC815;&#xD655;&#xD55C; &#xC21C;&#xC11C;&#xB85C; &#xC218;&#xD589;&#xB418;&#xC5B4;&#xC57C;&#xD55C;&#xB2E4;. &#xADF8;&#xB9AC;&#xACE0; &#xB3D9;&#xC2DC;&#xC5D0; &#xBE60;&#xB974;&#xAC8C; &#xC2E4;&#xD589;&#xB418;&#xC5B4;&#xC57C;&#xD55C;&#xB2E4;.    </p>
+<hr>
+<h2 id="711-system-v">7.1.1. System V</h2>
+<p>System V&#xB294; Unix&#xC2DC;&#xC2A4;&#xD15C;&#xC5D0;&#xC11C; &#xC804;&#xD1B5;&#xC801;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xBD80;&#xD2B8; &#xD504;&#xB85C;&#xC138;&#xC2A4;&#xC774;&#xB2E4;.<br>init&#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xACE0; login(getty)&#xAC19;&#xC740; &#xAE30;&#xBCF8; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC744; &#xC124;&#xCE58;&#xD55C;&#xB2E4;.<br>&#xADF8;&#xB9AC;&#xACE0; &#xD544;&#xC694;&#xD55C; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB97C; &#xC2E4;&#xD589;&#xD55C;&#xB2E4;. &#xC774; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB294; rc&#xB77C;&#xB294; &#xC774;&#xB984;&#xC774; &#xBD99;&#xC5B4;&#xC788;&#xC73C;&#xBA70;<br>&#xC2DC;&#xC2A4;&#xD15C;&#xC774; &#xCD08;&#xAE30;&#xD654;&#xB418;&#xB294;&#xB370; &#xD544;&#xC694;&#xD55C; &#xC77C;&#xB828;&#xC758; &#xC791;&#xC5C5;&#xB4E4;&#xC774; &#xC2E4;&#xD589;&#xB41C;&#xB2E4;.<br>&#xC774; init&#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC740; /etc/inittab &#xD30C;&#xC77C;&#xC5D0; &#xAE30;&#xC220;&#xB418;&#xC5B4;&#xC9C4; &#xB0B4;&#xC6A9;&#xC73C;&#xB85C; &#xCEE8;&#xD2B8;&#xB864;&#xB418;&#xBA70;<br>&#xC774; &#xD30C;&#xC77C;&#xC5D0;&#xB294; runlevel&#xC774; &#xAE30;&#xC220;&#xB418;&#xC5B4;&#xC788;&#xB2E4;.    </p>
+<blockquote>
+<p>0 &#x2014; halt<br>1 &#x2014; Single user mode<br>2 &#x2014; Multiuser, without networking<br>3 &#x2014; Full multiuser mode<br>4 &#x2014; User definable<br>5 &#x2014; Full multiuser mode with display manager<br>6 &#x2014; reboot<br>&#xB514;&#xD3F4;&#xD2B8; run level&#xC740; 3 &#xB610;&#xB294; 5.    </p>
+</blockquote>
+<ul>
+<li><p>System V&#xC758; &#xC7A5;&#xC810;<br>&#xC774;&#xD574;&#xD558;&#xAE30; &#xC27D;&#xB2E4;. &#xCEE4;&#xC2A4;&#xD130;&#xB9C8;&#xC774;&#xC9D5; &#xD558;&#xAE30; &#xC27D;&#xB2E4;.    </p>
+</li>
+<li><p>System V&#xC758; &#xB2E8;&#xC810;<br>&#xBD80;&#xD305;&#xC774; &#xB290;&#xB9AC;&#xB2E4;. &#xC21C;&#xCC28;&#xC801; &#xD504;&#xB85C;&#xC138;&#xC2F1;(&#xB51C;&#xB808;&#xC774;&#xAC00;&#xB9CE;&#xC74C;).<br>&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB97C; &#xCD94;&#xAC00;&#xD558;&#xB294;&#xB370; &#xB9E4;&#xB274;&#xC5BC;&#xC774; &#xD544;&#xC694;.<br>(Adding scripts requires manual, static sequencing decisions.)    </p>
+</li>
+</ul>
+<hr>
+<p><code>(&#xCC38;&#xACE0;)</code> debian &#xBD80;&#xD2B8;&#xD504;&#xB85C;&#xC138;&#xC2A4; &#xCC38;&#xACE0;.    </p>
+<blockquote>
+<p><a href="https://www.debian.org/doc/manuals/debian-reference/ch03.en.html" target="_blank">https://www.debian.org/doc/manuals/debian-reference/ch03.en.html</a>    </p>
+</blockquote>
+<p><code>(&#xCC38;&#xACE0;)</code> /etc/init.d/ &#xC5D0; &#xBD80;&#xD305;&#xC2DC; &#xC2E4;&#xD589;&#xB420; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xAC00; &#xC874;&#xC7AC;&#xD558;&#xACE0; &#xADF8;&#xAC8C; /etc/rc0.d/ ~ etc/rcS.d/ &#xBC11;&#xC5D0; &#xC2EC;&#xBCFC;&#xB9AD; &#xB9C1;&#xD06C; &#xB418;&#xC5B4;&#xC788;&#xC74C;.    </p>
+<blockquote>
+<p>&#xC2EC;&#xBCFC;&#xB9AD;&#xB9C1;&#xD06C;&#xB418;&#xB294; &#xC774;&#xB984;&#xC740; K&#xC22B;&#xC790; &#xD639;&#xC740; S&#xC22B;&#xC790; &#xC774;&#xB7F0;&#xC2DD;&#xC73C;&#xB85C; &#xBCC0;&#xACBD;&#xB428;.<br>lfs&#xC5D0;&#xC11C;&#xB294; /etc/rc.d/rc0.d/ &#xC774;&#xB7F0;&#xC2DD;&#xC73C;&#xB85C; &#xACBD;&#xB85C;&#xAC00; &#xB418;&#xC5B4;&#xC788;&#xC74C;.    </p>
+</blockquote>
+<p><code>(&#xCC38;&#xACE0;)</code> rcS.d/ &#xC640;  rc0.d/&#xC758; &#xCC28;&#xC774;?    </p>
+<blockquote>
+<p>rcS.d/&#xB294;  Boot-time system configuration/initialization script  &#xC778;&#xB4EF;?    </p>
+</blockquote>
+<p><code>(&#xCC38;&#xACE0;)</code> &#xB9AC;&#xB205;&#xC2A4; &#xBD80;&#xD305;&#xAD00;&#xB828; &#xCC38;&#xACE0;&#xAE00;      </p>
+<blockquote>
+<p><a href="https://www.linux.co.kr/home/lecture/?leccode=10256" target="_blank">&#xB9AC;&#xB205;&#xC2A4; &#xBD80;&#xD305;&#xACFC;&#xC815; &#xC774;&#xD574;</a><br><a href="http://haerakai.tistory.com/3" target="_blank">&#xB9AC;&#xB205;&#xC2A4; -run-level&#xC774;&#xD574;</a><br>init&#xC774; /etc/inittab &#xC744; &#xC77D;&#xC74C;.     </p>
+</blockquote>
+<p><code>(&#xCC38;&#xACE0;)</code> &#xC6B0;&#xBD84;&#xD22C;&#xB294; sysvinit &#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xC9C0; &#xC54A;&#xC74C;. upstart&#xC0AC;&#xC6A9;(?) /etc/inittab&#xC5C6;&#xC74C;.      </p>
+<blockquote>
+<p>systemd&#xC0AC;&#xC6A9;<br>/etc/inittab &#xD30C;&#xC77C; &#xC790;&#xCCB4;&#xB294; &#xC544;&#xC608; &#xC5C6;&#xC5B4;&#xC838; &#xBC84;&#xB838;&#xACE0;,<br>&#xC124;&#xC815; &#xD30C;&#xC77C;&#xB4E4;&#xC740; /etc/init &#xB514;&#xB809;&#xD1A0;&#xB9AC; &#xC544;&#xB798;&#xC5D0; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC740; &#xC5EC;&#xB7EC;&#xAC1C;&#xC758; &#xD30C;&#xC77C;&#xB85C; &#xB098;&#xB258;&#xC5B4; &#xC874;&#xC7AC; &#xD55C;&#xB2E4;.<br>(upstart-udev-bridge.conf , rc-sysinit.conf, rc.conf, rcS.conf, control-alt-delete.conf, tty1.conf)<br><a href="http://forum.falinux.com/zbxe/index.php?document_srl=533108&amp;mid=lecture_tip" target="_blank">http://forum.falinux.com/zbxe/index.php?document_srl=533108&amp;mid=lecture_tip</a><br><a href="http://egloos.zum.com/mcchae/v/11179204" target="_blank">http://egloos.zum.com/mcchae/v/11179204</a>    </p>
+</blockquote>
+<p><code>(&#xCC38;&#xACE0;)</code> systemd &#xB780;?<br>init &#xB300;&#xCCB4;, inetd&#xB300;&#xCCB4;(crond,ard,syslog,watchd&#xB300;&#xCCB4;), udev&#xB300;&#xCCB4;<br><a href="http://clien.net/cs2/bbs/board.php?bo_table=cm_linux&amp;wr_id=7662&amp;sca=%5BOpen+source%5D" target="_blank">http://clien.net/cs2/bbs/board.php?bo_table=cm_linux&amp;wr_id=7662&amp;sca=%5BOpen+source%5D</a>    </p>
+<p><code>(&#xCC38;&#xACE0;)</code> inittab &#xADDC;&#xCE59;    </p>
+<blockquote>
+<p>id:runlevels:action:process<br>7.6.2.&#xC7A5;&#xC5D0;&#xC11C; &#xB9CC;&#xB4E4;&#xAC83;&#xC784;.    </p>
+</blockquote>
+<hr>
+<h1 id="72-lfs-bootscripts-20150222">7.2. LFS-Bootscripts-20150222</h1>
+<p>/sources/lfs-bootscripts-20150222/ &#xC5D0;&#xB294; LFS&#xC2DC;&#xC2A4;&#xD15C;&#xC774; &#xBD80;&#xD305;/&#xC885;&#xB8CC;&#xB420;&#xB54C; &#xD544;&#xC694;&#xD55C; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB4E4;&#xC774; &#xAD6C;&#xC131;&#xB418;&#xC5B4;&#xC788;&#xC73C;&#xBA70;<br>Makefile &#xC740; &#xADF8; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB97C; &#xC801;&#xC808;&#xD788; &#xBC30;&#xCE58;&#xD558;&#xB294; &#xC5ED;&#xD560;&#xC744; &#xD55C;&#xB2E4;.     </p>
+<hr>
+<h2 id="721-installation-of-lfs-bootscripts">7.2.1. Installation of LFS-Bootscripts</h2>
+<ul>
+<li><strong>LFS-&#xBD80;&#xD2B8;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xC124;&#xCE58;</strong>    </li>
+</ul>
+<pre><code class="lang-sh"> $ make install
+</code></pre>
+<hr>
+<h2 id="722-contents-of-lfs-bootscripts">7.2.2. Contents of LFS-Bootscripts</h2>
+<ul>
+<li>&#xC124;&#xCE58; &#xACBD;&#xB85C;  <blockquote>
+<p>/etc/rc.d<br>/etc/init.d (symbolic link)<br>/etc/sysconfig<br>/lib/services<br>/lib/lsb (symbolic link)  </p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li>&#xC124;&#xCE58;&#xB418;&#xB294; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;    <blockquote>
+<p>&#xC544;&#xB798;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB294; LFS&#xB97C; &#xC704;&#xD574;&#xC11C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC9C4; &#xBD80;&#xD2B8;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC784;.<br><code>checkfs</code><br>&#xD30C;&#xC77C;&#xC2DC;&#xC2A4;&#xD15C;&#xC774; &#xB9C8;&#xC6B4;&#xD2B8;&#xB418;&#xAE30; &#xC804;&#xC5D0; &#xD30C;&#xC77C;&#xC2DC;&#xC2A4;&#xD15C;&#xC774; &#xBB34;&#xACB0;&#xD55C;&#xC9C0; &#xD655;&#xC778;.<br><code>cleanfs</code><br>reboots, fastboot, forcefsck &#xD30C;&#xC77C;&#xC0AC;&#xC774;&#xC5D0;&#xC11C; &#xC720;&#xC9C0; &#xB418;&#xC5B4;&#xC11C;&#xB294; &#xC548;&#xB418;&#xB294; &#xD30C;&#xC77C;&#xC744; &#xC81C;&#xAC70;.<br><code>console</code><br>&#xC6D0;&#xD558;&#xB294; &#xD0A4;&#xBCF4;&#xB4DC; &#xB808;&#xC774;&#xC544;&#xC6C3;&#xC744; &#xC704;&#xD55C; &#xC801;&#xC808;&#xD55C; keymap &#xD14C;&#xC774;&#xBE14;&#xC744; load, &#xC2A4;&#xD06C;&#xB9B0; font&#xB3C4; &#xC124;&#xC815;.<br><code>functions</code><br>Contains common functions, such as error and status checking, that are used by several bootscripts<br><code>halt</code><br>&#xC2DC;&#xC2A4;&#xD15C; &#xC911;&#xB2E8;.<br><code>ifdown</code><br>&#xB124;&#xD2B8;&#xC6CC;&#xD06C; &#xB514;&#xBC14;&#xC774;&#xC2A4; &#xC911;&#xB2E8;.<br><code>ifup</code><br>&#xB124;&#xD2B8;&#xC6CC;&#xD06C; &#xB514;&#xBC14;&#xC774;&#xC2A4; &#xCD08;&#xAE30;&#xD654;.<br><code>localnet</code><br>&#xC2DC;&#xC2A4;&#xD15C;&#xC758; hostname&#xACFC; &#xB85C;&#xCEEC; loopback &#xB514;&#xBC14;&#xC774;&#xC2A4;&#xB97C; &#xC124;&#xC815;.<br><code>modules</code><br>/etc/sysconfig/modules&#xC5D0; &#xC874;&#xC7AC;&#xD558;&#xB294; &#xCEE4;&#xB110; &#xBAA8;&#xB4C8; load. (&#xAC70;&#xAE30;&#xC5D0; &#xAC19;&#xC774;&#xC788;&#xB294; &#xB9E4;&#xAC1C;&#xBCC0;&#xC218; &#xC774;&#xC6A9;)<br><code>mountfs</code><br>&#xBAA8;&#xB4E0; &#xD30C;&#xC77C;&#xC2DC;&#xC2A4;&#xD15C; &#xB9C8;&#xC6B4;&#xD2B8; (noauto&#xB610;&#xB294; network&#xAE30;&#xBC18;&#xC740; &#xC81C;&#xC678;)<br><code>mountvirtfs</code><br>proc&#xAC19;&#xC740; &#xCEE4;&#xB110;&#xC758; &#xAC00;&#xC0C1;&#xD30C;&#xC77C;&#xC2DC;&#xC2A4;&#xD15C; &#xB9C8;&#xC6B4;&#xD2B8;<br><code>network</code><br>&#xB124;&#xD2B8;&#xC6CC;&#xD06C; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4; &#xC124;&#xC815;(&#xC608;&#xB97C;&#xB4E4;&#xC5B4; &#xB124;&#xD2B8;&#xC6CC;&#xD06C; &#xCE74;&#xB4DC;, &#xB514;&#xD3F4;&#xD2B8; gateway)<br><code>rc</code><br>&#xB9C8;&#xC2A4;&#xD130; run-level &#xCEE8;&#xD2B8;&#xB864; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;.<br>&#xBAA8;&#xB4E0; &#xB2E4;&#xB978; &#xBD80;&#xD2B8;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB97C; &#xD558;&#xB098;&#xD558;&#xB098; &#xC2E4;&#xD589;&#xD568;. &#xC774; &#xC21C;&#xC11C;&#xB294; &#xC2EC;&#xBCFC;&#xB9AD; &#xB9C1;&#xD06C;&#xC758; &#xC774;&#xB984;&#xC73C;&#xB85C; &#xC815;&#xD574;&#xC9D0;.(S~ &#xD639;&#xC740; K~)<br><code>reboot</code><br>&#xC2DC;&#xC2A4;&#xD15C; &#xC7AC;&#xBD80;&#xD305;<br><code>sendsignals</code><br>&#xC2DC;&#xC2A4;&#xD15C;&#xC774; &#xC7AC;&#xBD80;&#xD305;&#xB418;&#xAC70;&#xB098; halt&#xB418;&#xAE30;&#xC804;&#xC5D0; &#xBAA8;&#xB4E0; &#xD504;&#xB85C;&#xC138;&#xC2A4;&#xAC00; &#xC885;&#xB8CC;&#xB418;&#xC5C8;&#xB294;&#xC9C0; &#xD655;&#xC778;.<br><code>setclock</code><br>HW clock&#xC774; UTC time&#xC73C;&#xB85C; &#xC124;&#xC815;&#xB418;&#xC9C0; &#xC54A;&#xC558;&#xC744;&#xB54C; &#xCEE4;&#xB110; clock&#xC744; &#xB85C;&#xCEEC; time&#xC73C;&#xB85C; &#xC124;&#xC815;.<br><code>ipv4-static</code><br>IP &#xC8FC;&#xC18C; &#xD560;&#xB2F9;.<br><code>swap</code><br>swap &#xD30C;&#xC77C;&#xACFC; &#xD30C;&#xD2F0;&#xC158;&#xC744; enable/disable<br><code>sysctl</code><br>/etc/sysctl.conf&#xC5D0;&#xC11C; &#xC2DC;&#xC2A4;&#xD15C; &#xC124;&#xC815;&#xAC12;&#xC744; &#xB85C;&#xB529;&#xD568;. (&#xCEE4;&#xB110;&#xC5D0; &#xADF8; &#xD30C;&#xC77C;&#xC774; &#xC788;&#xB2E4;&#xB294; &#xAC00;&#xC815;&#xD558;&#xC5D0;)<br><code>sysklogd</code><br>&#xC2DC;&#xC2A4;&#xD15C; &#xCEE4;&#xB110;&#xB85C;&#xADF8; &#xB370;&#xBAAC; &#xC2E4;&#xD589;/&#xC885;&#xB8CC;<br><code>template</code><br>&#xB2E4;&#xB978; &#xB370;&#xBAAC;&#xC744; &#xC704;&#xD574; &#xCEE4;&#xC2A4;&#xD140; &#xBD80;&#xD2B8;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xC0DD;&#xC131;&#xC744;&#xC704;&#xD55C; &#xD0EC;&#xD50C;&#xB9BF;.<br><code>udev</code><br>/dev &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xB97C; &#xC900;&#xBE44;&#xD558;&#xACE0; Udev&#xB97C; &#xC2E4;&#xD589;.<br><code>udev_retry</code><br>udev uevents&#xAC00; &#xC2E4;&#xD328;&#xD588;&#xC744;&#xB54C; &#xC7AC; &#xC2DC;&#xB3C4;,<br>&#xD544;&#xC694;&#xD558;&#xB2E4;&#xBA74; rule&#xC0AC;&#xBCF8;&#xC744; &#xC0DD;&#xC131;( /run/udev &#xC73C;&#xB85C;&#xBD80;&#xD130; /etc/udev/rules &#xB85C;)    </p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><code>(&#xCC38;&#xACE0;)</code> <strong>lfs &#xBD80;&#xD2B8;&#xC2A4;&#xD2B8;&#xB9BD;&#xD2B8; Makefile&#xC77C;&#xBD80;</strong>    <blockquote>
+<p>&#xD30C;&#xC77C;&#xC704;&#xCE58; /sources/lfs-bootscripts-20150222/Makefile<br>/etc/init.d/&#xC758; &#xC5B4;&#xB5A4; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xAC00; &#xC5B4;&#xB5A4; run-level&#xB85C; &#xC9C0;&#xC815;&#xB418;&#xC5C8;&#xB294;&#xC9C0; &#xC54C;&#xC218; &#xC788;&#xC74C;.    </p>
+<pre><code class="lang-makefile"> rcS: files  
+     ln -sf ../init.d/mountvirtfs ${ETCDIR}/rc.d/rcS.d/S00mountvirtfs  
+     ln -sf ../init.d/modules     ${ETCDIR}/rc.d/rcS.d/S05modules  
+     ln -sf ../init.d/localnet    ${ETCDIR}/rc.d/rcS.d/S08localnet  
+     ln -sf ../init.d/udev        ${ETCDIR}/rc.d/rcS.d/S10udev  
+     ln -sf ../init.d/swap        ${ETCDIR}/rc.d/rcS.d/S20swap  
+     ln -sf ../init.d/checkfs     ${ETCDIR}/rc.d/rcS.d/S30checkfs  
+     ln -sf ../init.d/mountfs     ${ETCDIR}/rc.d/rcS.d/S40mountfs  
+     ln -sf ../init.d/cleanfs     ${ETCDIR}/rc.d/rcS.d/S45cleanfs  
+     ln -sf ../init.d/udev_retry  ${ETCDIR}/rc.d/rcS.d/S50udev_retry  
+     ln -sf ../init.d/console     ${ETCDIR}/rc.d/rcS.d/S70console  
+     ln -sf ../init.d/sysctl      ${ETCDIR}/rc.d/rcS.d/S90sysctl  
+
+ rc0: files  
+     ln -sf ../init.d/network     ${ETCDIR}/rc.d/rc0.d/K80network  
+     ln -sf ../init.d/sysklogd    ${ETCDIR}/rc.d/rc0.d/K90sysklogd  
+     ln -sf ../init.d/sendsignals ${ETCDIR}/rc.d/rc0.d/S60sendsignals  
+     ln -sf ../init.d/swap        ${ETCDIR}/rc.d/rc0.d/S65swap  
+     ln -sf ../init.d/mountfs     ${ETCDIR}/rc.d/rc0.d/S70mountfs  
+     ln -sf ../init.d/localnet    ${ETCDIR}/rc.d/rc0.d/S90localnet  
+     ln -sf ../init.d/halt        ${ETCDIR}/rc.d/rc0.d/S99halt  
+
+ rc1: files  
+     ln -sf ../init.d/network     ${ETCDIR}/rc.d/rc1.d/K80network  
+     ln -sf ../init.d/sysklogd    ${ETCDIR}/rc.d/rc1.d/K90sysklogd  
+
+ rc2: files  
+     ln -sf ../init.d/network     ${ETCDIR}/rc.d/rc2.d/K80network  
+     ln -sf ../init.d/sysklogd    ${ETCDIR}/rc.d/rc2.d/K90sysklogd  
+
+ rc3: files  
+     ln -sf ../init.d/sysklogd    ${ETCDIR}/rc.d/rc3.d/S10sysklogd  
+     ln -sf ../init.d/network     ${ETCDIR}/rc.d/rc3.d/S20network  
+
+ rc4: files  
+     ln -sf ../init.d/sysklogd    ${ETCDIR}/rc.d/rc4.d/S10sysklogd  
+     ln -sf ../init.d/network     ${ETCDIR}/rc.d/rc4.d/S20network  
+
+ rc5: files  
+     ln -sf ../init.d/sysklogd    ${ETCDIR}/rc.d/rc5.d/S10sysklogd  
+     ln -sf ../init.d/network     ${ETCDIR}/rc.d/rc5.d/S20network  
+
+ rc6: files  
+     ln -sf ../init.d/network     ${ETCDIR}/rc.d/rc6.d/K80network  
+     ln -sf ../init.d/sysklogd    ${ETCDIR}/rc.d/rc6.d/K90sysklogd  
+     ln -sf ../init.d/sendsignals ${ETCDIR}/rc.d/rc6.d/S60sendsignals  
+     ln -sf ../init.d/swap        ${ETCDIR}/rc.d/rc6.d/S65swap  
+     ln -sf ../init.d/mountfs     ${ETCDIR}/rc.d/rc6.d/S70mountfs  
+     ln -sf ../init.d/localnet    ${ETCDIR}/rc.d/rc6.d/S90localnet  
+     ln -sf ../init.d/reboot      ${ETCDIR}/rc.d/rc6.d/S99reboot
+</code></pre>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><code>(&#xCC38;&#xACE0;)</code> <strong>make install&#xC758; &#xCD9C;&#xB825; &#xB85C;&#xADF8;&#xB294; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC74C;.</strong>    <blockquote>
+<pre><code class="lang-sh">root:/sources/lfs-bootscripts-20150222<span class="hljs-comment"># make install  </span>
+install <span class="hljs-_">-d</span> -m 755  /etc/rc.d/rc0.d  
+install <span class="hljs-_">-d</span> -m 755  /etc/rc.d/rc1.d  
+install <span class="hljs-_">-d</span> -m 755  /etc/rc.d/rc2.d  
+install <span class="hljs-_">-d</span> -m 755  /etc/rc.d/rc3.d  
+install <span class="hljs-_">-d</span> -m 755  /etc/rc.d/rc4.d  
+install <span class="hljs-_">-d</span> -m 755  /etc/rc.d/rc5.d  
+install <span class="hljs-_">-d</span> -m 755  /etc/rc.d/rc6.d  
+install <span class="hljs-_">-d</span> -m 755  /etc/rc.d/rcS.d  
+install <span class="hljs-_">-d</span> -m 755  /etc/rc.d/init.d  
+install <span class="hljs-_">-d</span> -m 755  /etc/sysconfig  
+install <span class="hljs-_">-d</span> -m 755  /lib  
+install <span class="hljs-_">-d</span> -m 755  /lib/services  
+install <span class="hljs-_">-d</span> -m 755  /usr/share/man/man8  
+install <span class="hljs-_">-d</span> -m 755  /sbin  
+ln -sfn       services    /lib/lsb  
+ln -sfn       rc.d/init.d /etc/init.d  
+install -m 754 lfs/init.d/checkfs       /etc/rc.d/init.d/  
+install -m 754 lfs/init.d/cleanfs       /etc/rc.d/init.d/  
+install -m 754 lfs/init.d/halt          /etc/rc.d/init.d/  
+install -m 754 lfs/init.d/console       /etc/rc.d/init.d/  
+install -m 754 lfs/init.d/localnet      /etc/rc.d/init.d/  
+install -m 754 lfs/init.d/modules       /etc/rc.d/init.d/  
+install -m 754 lfs/init.d/mountfs       /etc/rc.d/init.d/  
+install -m 754 lfs/init.d/mountvirtfs   /etc/rc.d/init.d/  
+install -m 754 lfs/init.d/network       /etc/rc.d/init.d/  
+install -m 754 lfs/init.d/rc            /etc/rc.d/init.d/  
+install -m 754 lfs/init.d/reboot        /etc/rc.d/init.d/  
+install -m 754 lfs/init.d/sendsignals   /etc/rc.d/init.d/  
+install -m 754 lfs/init.d/setclock      /etc/rc.d/init.d/  
+install -m 754 lfs/init.d/swap          /etc/rc.d/init.d/  
+install -m 754 lfs/init.d/sysctl        /etc/rc.d/init.d/  
+install -m 754 lfs/init.d/sysklogd      /etc/rc.d/init.d/  
+install -m 754 lfs/init.d/template      /etc/rc.d/init.d/  
+install -m 754 lfs/init.d/udev          /etc/rc.d/init.d/  
+install -m 754 lfs/init.d/udev_retry    /etc/rc.d/init.d/  
+install -m 754 lfs/sbin/ifup            /sbin  
+install -m 754 lfs/sbin/ifdown          /sbin  
+install -m 644 lfs/sbin/ifup.8      /usr/share/man/man8  
+ln -sf  ifup.8                              /usr/share/man/man8/ifdown.8  
+install -m 754     lfs/lib/services/ipv4-static-route  /lib/services  
+install -m 754     lfs/lib/services/ipv4-static        /lib/services  
+install -m 644 lfs/lib/services/init-functions     /lib/services  
+<span class="hljs-keyword">if</span> [ ! <span class="hljs-_">-f</span> /etc/sysconfig/createfiles ]; <span class="hljs-keyword">then</span> \  
+    install -m 644 lfs/sysconfig/createfiles /etc/sysconfig/ ;\  
+<span class="hljs-keyword">fi</span>  
+<span class="hljs-keyword">if</span> [ ! <span class="hljs-_">-f</span> /etc/sysconfig/modules     ]; <span class="hljs-keyword">then</span> \  
+    install -m 644 lfs/sysconfig/modules     /etc/sysconfig/ ;\  
+<span class="hljs-keyword">fi</span>  
+<span class="hljs-keyword">if</span> [ ! <span class="hljs-_">-f</span> /etc/sysconfig/udev_retry  ]; <span class="hljs-keyword">then</span> \  
+    install -m 644 lfs/sysconfig/udev_retry  /etc/sysconfig/ ;\  
+<span class="hljs-keyword">fi</span>  
+<span class="hljs-keyword">if</span> [ ! <span class="hljs-_">-f</span> /etc/sysconfig/rc.site     ]; <span class="hljs-keyword">then</span> \  
+    install -m 644 lfs/sysconfig/rc.site     /etc/sysconfig/ ;\  
+<span class="hljs-keyword">fi</span>  
+ln -sf ../init.d/mountvirtfs /etc/rc.d/rcS.d/S00mountvirtfs  
+ln -sf ../init.d/modules     /etc/rc.d/rcS.d/S05modules  
+ln -sf ../init.d/localnet    /etc/rc.d/rcS.d/S08localnet  
+ln -sf ../init.d/udev        /etc/rc.d/rcS.d/S10udev  
+ln -sf ../init.d/swap        /etc/rc.d/rcS.d/S20swap  
+ln -sf ../init.d/checkfs     /etc/rc.d/rcS.d/S30checkfs  
+ln -sf ../init.d/mountfs     /etc/rc.d/rcS.d/S40mountfs  
+ln -sf ../init.d/cleanfs     /etc/rc.d/rcS.d/S45cleanfs  
+ln -sf ../init.d/udev_retry  /etc/rc.d/rcS.d/S50udev_retry  
+ln -sf ../init.d/console     /etc/rc.d/rcS.d/S70console  
+ln -sf ../init.d/sysctl      /etc/rc.d/rcS.d/S90sysctl  
+ln -sf ../init.d/network     /etc/rc.d/rc0.d/K80network  
+ln -sf ../init.d/sysklogd    /etc/rc.d/rc0.d/K90sysklogd  
+ln -sf ../init.d/sendsignals /etc/rc.d/rc0.d/S60sendsignals  
+ln -sf ../init.d/swap        /etc/rc.d/rc0.d/S65swap  
+ln -sf ../init.d/mountfs     /etc/rc.d/rc0.d/S70mountfs  
+ln -sf ../init.d/localnet    /etc/rc.d/rc0.d/S90localnet  
+ln -sf ../init.d/halt        /etc/rc.d/rc0.d/S99halt  
+ln -sf ../init.d/network     /etc/rc.d/rc1.d/K80network  
+ln -sf ../init.d/sysklogd    /etc/rc.d/rc1.d/K90sysklogd  
+ln -sf ../init.d/network     /etc/rc.d/rc2.d/K80network  
+ln -sf ../init.d/sysklogd    /etc/rc.d/rc2.d/K90sysklogd  
+ln -sf ../init.d/sysklogd    /etc/rc.d/rc3.d/S10sysklogd  
+ln -sf ../init.d/network     /etc/rc.d/rc3.d/S20network  
+ln -sf ../init.d/sysklogd    /etc/rc.d/rc4.d/S10sysklogd  
+ln -sf ../init.d/network     /etc/rc.d/rc4.d/S20network  
+ln -sf ../init.d/sysklogd    /etc/rc.d/rc5.d/S10sysklogd  
+ln -sf ../init.d/network     /etc/rc.d/rc5.d/S20network  
+ln -sf ../init.d/network     /etc/rc.d/rc6.d/K80network  
+ln -sf ../init.d/sysklogd    /etc/rc.d/rc6.d/K90sysklogd  
+ln -sf ../init.d/sendsignals /etc/rc.d/rc6.d/S60sendsignals  
+ln -sf ../init.d/swap        /etc/rc.d/rc6.d/S65swap  
+ln -sf ../init.d/mountfs     /etc/rc.d/rc6.d/S70mountfs  
+ln -sf ../init.d/localnet    /etc/rc.d/rc6.d/S90localnet  
+ln -sf ../init.d/reboot      /etc/rc.d/rc6.d/S99reboot
+</code></pre>
+</blockquote>
+</li>
+</ul>
+<p><code>(&#xCC38;&#xACE0;)</code> install &#xACFC;  cp&#xC758; &#xCC28;&#xC774;&#xC810;?    </p>
+<blockquote>
+<p>&#xB458;&#xB2E4; &#xBCF5;&#xC0AC;&#xD558;&#xB294; &#xC720;&#xD2F8;&#xB9AC;&#xD2F0;.<br>install &#xC740; dest&#xD30C;&#xC77C;&#xC744; &#xBA3C;&#xC800; &#xC9C0;&#xC6B0;&#xACE0; &#xBCF5;&#xC0AC;.<br>cp&#xB294; overwrite&#xD558;&#xB294; &#xB4EF;.<br>&#xBCF4;&#xD1B5; install&#xC740; Makefile&#xC5D0;&#xC11C; &#xB9CE;&#xC774; &#xC0AC;&#xC6A9;&#xD568;.    </p>
+</blockquote>
+<h2 id="---------------------">--------------------  </h2>
+<h1 id="73-overview-of-device-and-module-handling">7.3. Overview of Device and Module Handling</h1>
+<p>chap.6&#xC5D0;&#xC11C; udev&#xB97C; &#xC124;&#xCE58;&#xD588;&#xB2E4;. udev&#xAC00; &#xC5B4;&#xB5BB;&#xAC8C; &#xB3D9;&#xC791;&#xD558;&#xB294;&#xC9C0; &#xD655;&#xC778;&#xD558;&#xAE30; &#xC804;&#xC5D0;<br>&#xACFC;&#xAC70;&#xC5D0; device&#xB97C; &#xC5B4;&#xB5BB;&#xAC8C; handling&#xD588;&#xB294;&#xC9C0; &#xC5ED;&#xC0AC;&#xB97C; &#xC0B4;&#xD3B4;&#xBCF8;&#xB2E4;.    </p>
+<p>&#xB9AC;&#xB205;&#xC2A4; &#xC2DC;&#xC2A4;&#xD15C;&#xC5D0;&#xC11C;&#xB294; &#xC804;&#xD1B5;&#xC801;&#xC73C;&#xB85C; &#xC815;&#xC801; &#xB514;&#xBC14;&#xC774;&#xC2A4; &#xC0DD;&#xC131; &#xBC29;&#xBC95;&#xC744; &#xC0AC;&#xC6A9;&#xD588;&#xC5C8;&#xB2E4;.<br>&#xC608;&#xC804;&#xC5D0;&#xB294; MAKEDEV&#xB77C;&#xB294; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB97C; &#xC0AC;&#xC6A9;&#xD588;&#xB294;&#xB370; mknod&#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC744; &#xC774;&#xC6A9;&#xD574;&#xC11C;, &#xC2E4;&#xC81C; HW &#xB514;&#xBC14;&#xC774;&#xC2A4;&#xAC00; &#xC874;&#xC7AC;&#xD558;&#xB294;&#xC9C0; &#xC5EC;&#xBD80;&#xB294; &#xAD00;&#xACC4;&#xC5C6;&#xC774; &#xC218;&#xB9CE;&#xC740; node&#xB97C; /dev &#xBC11;&#xC5D0; &#xB9CC;&#xB4E4;&#xC5C8;&#xB2E4;.    </p>
+<p>&#xADF8;&#xB7EC;&#xB098; Udev&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xBA74;&#xC11C;, &#xCEE4;&#xB110;&#xC774; &#xCC3E;&#xC740; &#xC874;&#xC7AC;&#xD558;&#xB294; device&#xB9CC;&#xC744;&#xC704;&#xD55C; node&#xB97C; &#xC0DD;&#xC131;&#xD560; &#xC218; &#xC788;&#xAC8C; &#xB418;&#xC5C8;&#xB2E4;.<br>&#xADF8; node&#xB4E4;&#xC740; devtmpfs&#xD30C;&#xC77C;&#xC2DC;&#xC2A4;&#xD15C;&#xC5D0; &#xC800;&#xC7A5;&#xB41C;&#xB2E4;.<br>&#xADF8;&#xB798;&#xC11C; &#xBA54;&#xBAA8;&#xB9AC;&#xACF5;&#xAC04;&#xC744; &#xB354; &#xC808;&#xC57D;&#xD560; &#xC218;&#xAC00; &#xC788;&#xAC8C;&#xB418;&#xC5C8;&#xB2E4;.    </p>
+<hr>
+<h2 id="731-history">7.3.1. History</h2>
+<p>2000&#xB144; 2&#xC6D4;&#xC5D0; devfs &#xD30C;&#xC77C;&#xC2DC;&#xC2A4;&#xD15C;&#xC774; 2.3.46 kernel&#xC5D0; &#xBC18;&#xC601;&#xB418;&#xC5C8;&#xACE0; 2.4 stable kernel&#xC5D0;&#xC11C; &#xC774;&#xC6A9;&#xAC00;&#xB2A5;&#xD558;&#xAC8C; &#xB418;&#xC5C8;&#xB2E4;.<br>&#xADF8;&#xB7EC;&#xB098; &#xCEE4;&#xB110; &#xC18C;&#xC2A4;&#xC5D0; &#xC874;&#xC7AC;&#xD568;&#xC5D0;&#xB3C4; &#xBD88;&#xAD6C;&#xD558;&#xACE0; &#xCEE4;&#xB110;&#xC758; &#xCF54;&#xC5B4;&#xAC1C;&#xBC1C;&#xC790;&#xB4E4;&#xC5D0; &#xC758;&#xD574; &#xC11C;&#xD3EC;&#xD2B8;&#xB418;&#xC9C0; &#xC54A;&#xC558;&#xB2E4;.<br>Race condition&#xB4F1; &#xC5EC;&#xB7EC; &#xBB38;&#xC81C;&#xB85C; 2006&#xB144; 6&#xC6D4;&#xC5D0; &#xCEE4;&#xB110;&#xC5D0;&#xC11C; &#xC644;&#xC804;&#xD788; &#xC81C;&#xAC70;&#xB418;&#xC5C8;&#xB2E4;.<br>&#xC774;&#xAC83;&#xC740; 2.6 stable kernel&#xBD80;&#xD130; sysfs &#xD30C;&#xC77C;&#xC2DC;&#xC2A4;&#xD15C;&#xC73C;&#xB85C; &#xB300;&#xCCB4;&#xB418;&#xC5C8;&#xB2E4;.    </p>
+<hr>
+<h2 id="732-udev-implementation">7.3.2. Udev Implementation</h2>
+<hr>
+<h3 id="7321-sysfs">7.3.2.1. Sysfs</h3>
+<p>&#xB4DC;&#xB77C;&#xC774;&#xBC84;&#xAC00; &#xCEE4;&#xB110;&#xC5D0; &#xCEF4;&#xD30C;&#xC77C;&#xB418;&#xC5B4; &#xBE4C;&#xD2B8;&#xC778;&#xB420;&#xB54C;&#xB294; &#xCEE4;&#xB110;&#xC5D0; &#xC758;&#xD574; &#xAC10;&#xC9C0;&#xB418;&#xBA74; sysfs(&#xB0B4;&#xBD80;&#xC801;&#xC73C;&#xB85C;&#xB294; devtmpfs &#xC0AC;&#xC6A9;)&#xC5D0; &#xB4F1;&#xB85D;&#xD55C;&#xB2E4;.<br>&#xB4DC;&#xB77C;&#xC774;&#xBC84;&#xAC00; &#xBAA8;&#xB4C8;&#xB85C; &#xCEF4;&#xD30C;&#xC77C;&#xB418;&#xBA74; &#xBAA8;&#xB4C8;&#xC774; &#xB85C;&#xB529;&#xB420;&#xB54C; sysfs&#xC5D0; &#xB4F1;&#xB85D;.<br>sysfs&#xAC00; &#xB9C8;&#xC6B4;&#xD2B8;&#xB418;&#xBA74; (/sys) sysfs&#xB85C; &#xB808;&#xC9C0;&#xC2A4;&#xD130;&#xD55C; &#xB4DC;&#xB77C;&#xC774;&#xBC84;&#xB294; userspace&#xC5D0;&#xC11C; &#xC811;&#xADFC;&#xAC00;&#xB2A5;&#xD558;&#xB2E4;.  </p>
+<hr>
+<h3 id="7322-device-node-creation">7.3.2.2. Device Node Creation</h3>
+<p>&#xB514;&#xBC14;&#xC774;&#xC2A4;&#xD30C;&#xC77C;&#xC740; devtmpfs &#xD30C;&#xC77C;&#xC2DC;&#xC2A4;&#xD15C;&#xC5D0; &#xC758;&#xD574;&#xC11C; &#xC0DD;&#xC131;&#xB41C;&#xB2E4;. &#xC5B4;&#xB5A0;&#xD55C; &#xB4DC;&#xB77C;&#xC774;&#xBC84;&#xB77C;&#xB3C4; &#xB514;&#xBC14;&#xC774;&#xC2A4; &#xB178;&#xB4DC;&#xB85C; &#xB4F1;&#xB85D;&#xD558;&#xAE30;&#xC704;&#xD574;&#xC11C;&#xB294; devtmpfs&#xB97C; &#xD1B5;&#xD574;&#xC57C;&#xD55C;&#xB2E4;. devtmpfs &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xAC00; /dev&#xC5D0; &#xB9C8;&#xC6B4;&#xD2B8; &#xB420;&#xB54C;, &#xB514;&#xBC14;&#xC774;&#xC2A4; &#xB178;&#xB4DC;&#xAC00; &#xC774;&#xB984;,&#xD37C;&#xBBF8;&#xC158;,&#xC18C;&#xC720;&#xAD8C;&#xC744; &#xBCC0;&#xACBD;&#xD558;&#xBA74;&#xC11C; &#xC0DD;&#xC131;&#xB41C;&#xB2E4;.  </p>
+<p>&#xADF8; &#xB4A4;, &#xCEE4;&#xB110;&#xC740; uevent&#xB97C; udev&#xB370;&#xBAAC;(udevd)&#xC5D0; &#xB0A0;&#xB9B0;&#xB2E4;.<br>/etc/udev/rules.d, /lib/udev/rules.d, &#xADF8;&#xB9AC;&#xACE0; /run/udev/rules.d &#xACBD;&#xB85C;&#xC5D0; &#xAE30;&#xC220;&#xB41C; rule&#xC744; &#xAE30;&#xBC18;&#xC73C;&#xB85C;<br>udevd&#xB294; &#xB514;&#xBC14;&#xC774;&#xC2A4; &#xB178;&#xB4DC;&#xC5D0;&#xB300;&#xD55C; &#xC0C8;&#xB85C;&#xC6B4; &#xC2EC;&#xBCFC;&#xB9AD;&#xB9C1;&#xD06C;&#xB97C; &#xC0DD;&#xC131;&#xD55C;&#xB2E4;. &#xD37C;&#xBBF8;&#xC158;, &#xC18C;&#xC720;&#xAD8C;, &#xADF8;&#xB8F9;, &#xB0B4;&#xBD80;, udevd DB &#xB4F1;&#xC744; &#xBCC0;&#xACBD;.  </p>
+<p>&#xC774; &#xC138;&#xAC00;&#xC9C0; &#xACBD;&#xB85C;&#xB294; &#xD568;&#xAED8; &#xBCD1;&#xD569;&#xB41C;&#xB2E4;.   </p>
+<hr>
+<h3 id="7323-module-loading">7.3.2.3. Module Loading</h3>
+<hr>
+<h3 id="7324-handling-hotpluggabledynamic-devices">7.3.2.4. Handling Hotpluggable/Dynamic Devices</h3>
+<hr>
+<h2 id="733-problems-with-loading-modules-and-creating-devices">7.3.3. Problems with Loading Modules and Creating Devices</h2>
+<p>&#xB514;&#xBC14;&#xC774;&#xC2A4; &#xB178;&#xB4DC;&#xB97C; &#xC790;&#xB3D9;&#xC73C;&#xB85C;&#xC0DD;&#xC131;&#xD558;&#xB294;&#xAC83;&#xC740; &#xBA87;&#xAC00;&#xC9C0; &#xBB38;&#xC81C;&#xAC00; &#xBC1C;&#xC0DD;&#xD560; &#xC218; &#xC788;&#xB2E4;.   </p>
+<hr>
+<h3 id="7331-a-kernel-module-is-not-loaded-automatically">7.3.3.1. A kernel module is not loaded automatically</h3>
+<p>sys/bus/ &#xC5D0; modalias &#xD30C;&#xC77C;&#xC774; &#xC788;&#xC5B4;&#xC57C;&#xB9CC; &#xB4DC;&#xB77C;&#xC774;&#xBC84;&#xAC00;  udev&#xC758; &#xB3C4;&#xC6C0;&#xC744; &#xBC1B;&#xC744;&#xC218;&#xC788;&#xC74C;.  </p>
+<hr>
+<h3 id="7332-a-kernel-module-is-not-loaded-automatically-and-udev-is-not-intended-to-load-it">7.3.3.2. A kernel module is not loaded automatically, and Udev is not intended to load it</h3>
+<p>modprobe &#xB97C; &#xC124;&#xC815;&#xD55C;&#xB2E4; udev&#xAC00; wrapped module&#xC744; &#xB85C;&#xB529;&#xD55C; &#xB4A4;&#xC5D0; wrapper&#xB97C; &#xB85C;&#xB529;&#xD558;&#xAE30; &#xC704;&#xD574;&#xC11C;  </p>
+<hr>
+<h3 id="7333-udev-loads-some-unwanted-module">7.3.3.3. Udev loads some unwanted module</h3>
+<hr>
+<h3 id="7334-udev-creates-a-device-incorrectly-or-makes-a-wrong-symlink">7.3.3.4. Udev creates a device incorrectly, or makes a wrong symlink</h3>
+<hr>
+<h3 id="7335-udev-rule-works-unreliably">7.3.3.5. Udev rule works unreliably</h3>
+<hr>
+<h3 id="7336-device-naming-order-changes-randomly-after-rebooting">7.3.3.6. Device naming order changes randomly after rebooting</h3>
+<hr>
+<p><code>(&#xCC3E;&#xC544;&#xBCF4;&#xAE30;)</code> <strong>udev &#xC5D0; &#xB300;&#xD574;&#xC11C;, rule&#xC791;&#xC131;&#xBC95;, &#xB3D9;&#xC791;&#xC6D0;&#xB9AC; &#xB4F1;</strong>    </p>
+<blockquote>
+<p>udev&#xB294; (Userspace Implementation of devfs&#xC758; &#xC57D;&#xC790;) &#xB514;&#xBC14;&#xC774;&#xC2A4; &#xD30C;&#xC77C; &#xC790;&#xB3D9; &#xAD00;&#xB9AC;.<br><a href="http://lshsblog.blogspot.kr/2011/01/udev.html" target="_blank">http://lshsblog.blogspot.kr/2011/01/udev.html</a><br><a href="http://kjjeon.blogspot.kr/2015/05/udev-usb-mount.html" target="_blank">http://kjjeon.blogspot.kr/2015/05/udev-usb-mount.html</a>    </p>
+<p><a href="http://hoonycream.tistory.com/entry/udev" target="_blank">http://hoonycream.tistory.com/entry/udev</a>    </p>
+<blockquote>
+<ul>
+<li>&#xB9AC;&#xB205;&#xC2A4; &#xBD80;&#xD305; &#xC2DC; init &#xC758; &#xC2E4;&#xD589; &#xC2DC; /sbin/init &#xD504;&#xB85C;&#xC138;&#xC2A4;&#xAC00; /etc/inittab &#xB85C;&#xB529; &#xD6C4; &#xAC01; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xB4F1;&#xC744; &#xC2E4;&#xD589;    </li>
+<li>&#xC774; &#xB54C; sysfs &#xB97C; /sys &#xB85C; &#xB9C8;&#xC6B4;&#xD2B8;&#xD558;&#xC5EC; udev &#xB370;&#xBAAC;&#xC774; &#xB3D9;&#xC791;    </li>
+<li>udev &#xB370;&#xBAAC;&#xC774; &#xC2E4;&#xD589; &#xB41C; &#xD6C4; &#xC2DC;&#xC2A4;&#xD15C;&#xC5D0;&#xC11C; &#xB514;&#xBC14;&#xC774;&#xC2A4; &#xB178;&#xB4DC; &#xC0DD;&#xC131;    </li>
+<li>&#xC2E4;&#xC81C; &#xB514;&#xBC14;&#xC774;&#xC2A4;&#xAC00; detect &#xB418;&#xBA74; sysfs &#xC5D0; &#xB4F1;&#xB85D;&#xB418;&#xACE0; &#xD574;&#xB2F9; &#xB514;&#xBC14;&#xC774;&#xC2A4;&#xB294; &#xC0AC;&#xC6A9;&#xC790; &#xACF5;&#xAC04;&#xC5D0;&#xC11C; /sys&#xC5D0; &#xB4F1;&#xB85D;    </li>
+<li>udev &#xB370;&#xBAAC;&#xC73C;&#xB85C; netlink socket &#xC744; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xC0C8;&#xB85C;&#xC6B4; &#xB514;&#xBC14;&#xC774;&#xC2A4;&#xAC00; &#xC0DD;&#xC131;&#xB418;&#xC5C8;&#xB2E4;&#xB294; &#xBA54;&#xC2DC;&#xC9C0;&#xB97C; &#xC804;&#xC1A1;    </li>
+<li>udev &#xB370;&#xBAAC;&#xC740; /sys&#xC758; &#xB514;&#xBC14;&#xC774;&#xC2A4; &#xB0B4;&#xC6A9; (Major, Minor &#xBC88;&#xD638; &#xBC0F; &#xC0DD;&#xC131;&#xD560; &#xB514;&#xBC14;&#xC774;&#xC2A4; &#xD30C;&#xC77C;&#xC758; &#xC774;&#xB984; &#xB4F1;) &#xC744; &#xC774;&#xC6A9;&#xD574;&#xC11C; /dev &#xC5D0; &#xB514;&#xBC14;&#xC774;&#xC2A4; &#xB178;&#xB4DC;&#xB97C; &#xC0DD;&#xC131;    </li>
+</ul>
+</blockquote>
+<p><a href="http://chonnom.com/bbs/board.php?bo_table=B19&amp;wr_id=440" target="_blank">udev rule&#xAE30;&#xCD08; &#xAC04;&#xB7B5; &#xC124;&#xBA85; &#xC774;&#xB3D9;</a>    </p>
+<blockquote>
+<p>udev rule &#xAC04;&#xB2E8; &#xADDC;&#xCE59;.    </p>
+<pre><code>KERNEL==&quot;hdb&quot;, NAME=&quot;my_spare_disk&quot;
+</code></pre><p>hdb&#xC7A5;&#xCE58;&#xAC00; &#xCD94;&#xAC00;&#xB418;&#xBA74; /dev/my_spare_disk &#xB178;&#xB4DC;&#xB97C; &#xC0DD;&#xC131;&#xD55C;&#xB2E4;.    </p>
+</blockquote>
+</blockquote>
+<h2 id="---------------------">--------------------  </h2>
+<h1 id="74-managing-devices">7.4. Managing Devices</h1>
+<hr>
+<h2 id="741-network-devices">7.4.1. Network Devices</h2>
+<p>eth0 eth1&#xC774; &#xC21C;&#xC11C;&#xAC00; &#xBC14;&#xB014;&#xC218;&#xB3C4; &#xC788;&#xAE30;&#xB54C;&#xBB38;&#xC5D0;<br>udev &#xB8F0;&#xC744; &#xC774;&#xC6A9;&#xD574; MAC &#xC5B4;&#xB4DC;&#xB808;&#xC2A4; &#xAE30;&#xBC18;&#xC5D0; &#xB530;&#xB77C; &#xB514;&#xBC14;&#xC774;&#xC2A4; &#xC0DD;&#xC131;.  </p>
+<hr>
+<h3 id="7411-disabling-persistent-naming-on-the-kernel-command-line">7.4.1.1. Disabling Persistent Naming on the Kernel Command Line</h3>
+<hr>
+<h3 id="7412-creating-custom-udev-rules">7.4.1.2. Creating Custom Udev Rules</h3>
+<p>The naming scheme can be customized by creating custom Udev rules. A script has been included that generates the initial rules. Generate these rules by running:  </p>
+<ul>
+<li><strong>&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB97C; &#xC774;&#xC6A9;&#xD574; &#xB124;&#xD2B8;&#xC6CC;&#xD06C; udev rule&#xC0DD;&#xC131;</strong>    </li>
+</ul>
+<pre><code class="lang-sh"> $ bash /lib/udev/init-net-rules.sh
+</code></pre>
+<blockquote>
+<p>/etc/udev/rules.d/70-persistent-net.rules &#xC0DD;&#xC131;&#xB428;.     </p>
+</blockquote>
+<ul>
+<li><strong>&#xC0DD;&#xC131;&#xB41C; rule&#xD655;&#xC778;</strong>    </li>
+</ul>
+<pre><code class="lang-sh"> $ cat /etc/udev/rules.d/70-persistent-net.rules
+</code></pre>
+<ul>
+<li><strong>rule&#xD30C;&#xC77C; &#xB0B4;&#xC6A9;</strong>    </li>
+</ul>
+<pre><code class="lang-sh"><span class="hljs-comment"># This file was automatically generated by the /lib/udev/write_net_rules  </span>
+<span class="hljs-comment"># program, run by the persistent-net-generator.rules rules file.  </span>
+<span class="hljs-comment">#  </span>
+<span class="hljs-comment"># You can modify it, as long as you keep each rule on a single  </span>
+<span class="hljs-comment"># line, and change only the value of the NAME= key.  </span>
+
+<span class="hljs-comment"># net device sky2  </span>
+SUBSYSTEM==<span class="hljs-string">&quot;net&quot;</span>, ACTION==<span class="hljs-string">&quot;add&quot;</span>, DRIVERS==<span class="hljs-string">&quot;?*&quot;</span>, ATTR{address}==<span class="hljs-string">&quot;00:24:54:8a:85:a5&quot;</span>, ATTR{dev_id}==<span class="hljs-string">&quot;0x0&quot;</span>, ATTR{<span class="hljs-built_in">type</span>}==<span class="hljs-string">&quot;1&quot;</span>, NAME=<span class="hljs-string">&quot;eth0&quot;</span>  
+
+<span class="hljs-comment"># net device ath9k  </span>
+SUBSYSTEM==<span class="hljs-string">&quot;net&quot;</span>, ACTION==<span class="hljs-string">&quot;add&quot;</span>, DRIVERS==<span class="hljs-string">&quot;?*&quot;</span>, ATTR{address}==<span class="hljs-string">&quot;e8:39:df:84:11:ab&quot;</span>, ATTR{dev_id}==<span class="hljs-string">&quot;0x0&quot;</span>, ATTR{<span class="hljs-built_in">type</span>}==<span class="hljs-string">&quot;1&quot;</span>, NAME=<span class="hljs-string">&quot;wlan0&quot;</span>
+</code></pre>
+<blockquote>
+<p>SUBSYSTEM==&quot;net&quot; - udev &#xAC00; network &#xCE74;&#xB4DC; &#xB514;&#xBC14;&#xC774;&#xC2A4;&#xAC00; &#xC544;&#xB2C8;&#xBA74; &#xBB34;&#xC2DC;&#xD558;&#xB3C4;&#xB85D; &#xD568;.<br>ACTION==&quot;add&quot; - add&#xC758; &#xC0C1;&#xD669;&#xC774; &#xC544;&#xB2C8;&#xBA74; &#xBB34;&#xC2DC;&#xB428;.<br>DRIVERS==&quot;?*&quot; - &#xC774;&#xBBF8; &#xC874;&#xC7AC;&#xD558;&#xB294; VLAN&#xC774;&#xB098; bridge sub-interface&#xB4E4;&#xC744; &#xBB34;&#xC2DC;&#xD558;&#xB3C4;&#xB85D; &#xB9CC;&#xB4EC;<br>ATTR{address} - NIC &#xC758; MAC &#xC5B4;&#xB4DC;&#xB808;&#xC2A4;<br>ATTR{type}==&quot;1&quot; - 1&#xC6B0;&#xC120;&#xC21C;&#xC704;&#xC758; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB9CC; &#xB8F0; &#xC801;&#xC6A9;. &#xB098;&#xBA38;&#xC9C0;&#xB294; skip<br>NAME - /dev/&#xC5D0; &#xD574;&#xB2F9; &#xC774;&#xB984;&#xC73C;&#xB85C; &#xC0DD;&#xC131;.    </p>
+</blockquote>
+<h2 id="---------------------">--------------------  </h2>
+<h1 id="75-general-network-configuration">7.5. General Network Configuration</h1>
+<h2 id="751-creating-network-interface-configuration-files">7.5.1. Creating Network Interface Configuration Files</h2>
+<p>&#xB124;&#xD2B8;&#xC6CC;&#xD06C; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB294; /etc/sysconfig/&#xC5D0; &#xC788;&#xB294; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC5D0; &#xC758;&#xD574; &#xCF1C;&#xC9C0;&#xAC70;&#xB098; &#xAEBC;&#xC9D0;.  </p>
+<ul>
+<li><strong>eth0&#xC5D0; &#xB300;&#xD55C; &#xC124;&#xC815;&#xD30C;&#xC77C; &#xC0DD;&#xC131;</strong>    </li>
+</ul>
+<pre><code class="lang-sh"> $ <span class="hljs-built_in">cd</span> /etc/sysconfig/  
+ $ cat &gt; ifconfig.eth0 &lt;&lt; <span class="hljs-string">&quot;EOF&quot;</span>  
+    ONBOOT=yes  
+    IFACE=eth0  
+    SERVICE=ipv4-static  
+    IP=192.168.1.2  
+    GATEWAY=192.168.1.1  
+    PREFIX=24  
+    BROADCAST=192.168.1.255  
+ $ EOF
+</code></pre>
+<blockquote>
+<p>&#xB0B4; &#xC2DC;&#xC2A4;&#xD15C;&#xC5D0; &#xB9DE;&#xAC8C; &#xAC12; &#xC218;&#xC815;&#xD568;.  </p>
+</blockquote>
+<h2 id="752-creating-the-etcresolvconf-file">7.5.2. Creating the /etc/resolv.conf File</h2>
+<hr>
+<pre><code class="lang-sh">cat &gt; /etc/resolv.conf &lt;&lt; <span class="hljs-string">&quot;EOF&quot;</span>  
+<span class="hljs-comment"># Begin /etc/resolv.conf  </span>
+
+domain &lt;Your Domain Name&gt;  
+nameserver &lt;IP address of your primary nameserver&gt;  
+nameserver &lt;IP address of your secondary nameserver&gt;  
+
+<span class="hljs-comment"># End /etc/resolv.conf  </span>
+EOF
+</code></pre>
+<blockquote>
+<p>host system&#xC758; resolv.conf&#xB791; &#xB611;&#xAC19;&#xC774; &#xB9DE;&#xCDA4;.  </p>
+</blockquote>
+<h2 id="753-configuring-the-system-hostname">7.5.3. Configuring the system hostname</h2>
+<ul>
+<li><strong>Create the /etc/hostname file and enter a hostname</strong>    </li>
+</ul>
+<pre><code class="lang-sh"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&lt;lfs&gt;&quot;</span> &gt; /etc/hostname
+</code></pre>
+<h2 id="754-customizing-the-etchosts-file">7.5.4. Customizing the /etc/hosts File</h2>
+<hr>
+<pre><code class="lang-sh">Private Network Address Range      Normal Prefix  
+10.0.0.1 - 10.255.255.254           8  
+172.x.0.1 - 172.x.255.254           16  
+192.168.y.1 - 192.168.y.254         24
+</code></pre>
+<h2 id="---------------------">--------------------  </h2>
+<h1 id="76-system-v-bootscript-usage-and-configuration">7.6. System V Bootscript Usage and Configuration</h1>
+<h2 id="761-how-do-the-system-v-bootscripts-work">7.6.1. How Do the System V Bootscripts Work?</h2>
+<h2 id="762-configuring-sysvinit">7.6.2. Configuring Sysvinit</h2>
+<p>init&#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC774; &#xCD08;&#xAE30;&#xD654;&#xD558;&#xAE30;&#xC704;&#xD574;&#xC11C; /etc/inittab&#xD30C;&#xC77C;&#xC744; &#xC77D;&#xB294;&#xB2E4;.  </p>
+<ul>
+<li><strong>/etc/inittab &#xC0DD;&#xC131;</strong>    </li>
+</ul>
+<pre><code class="lang-sh">cat &gt; /etc/inittab &lt;&lt; <span class="hljs-string">&quot;EOF&quot;</span>  
+<span class="hljs-comment"># Begin /etc/inittab  </span>
+
+id:3:initdefault:  
+
+si::sysinit:/etc/rc.d/init.d/rc S  
+
+l0:0:<span class="hljs-built_in">wait</span>:/etc/rc.d/init.d/rc 0  
+l1:S1:<span class="hljs-built_in">wait</span>:/etc/rc.d/init.d/rc 1  
+l2:2:<span class="hljs-built_in">wait</span>:/etc/rc.d/init.d/rc 2  
+l3:3:<span class="hljs-built_in">wait</span>:/etc/rc.d/init.d/rc 3  
+l4:4:<span class="hljs-built_in">wait</span>:/etc/rc.d/init.d/rc 4  
+l5:5:<span class="hljs-built_in">wait</span>:/etc/rc.d/init.d/rc 5  
+l6:6:<span class="hljs-built_in">wait</span>:/etc/rc.d/init.d/rc 6  
+
+ca:12345:ctrlaltdel:/sbin/shutdown -t1 <span class="hljs-_">-a</span> -r now  
+
+su:S016:once:/sbin/sulogin  
+
+1:2345:respawn:/sbin/agetty --noclear tty1 9600  
+2:2345:respawn:/sbin/agetty tty2 9600  
+3:2345:respawn:/sbin/agetty tty3 9600  
+4:2345:respawn:/sbin/agetty tty4 9600  
+5:2345:respawn:/sbin/agetty tty5 9600  
+6:2345:respawn:/sbin/agetty tty6 9600  
+
+<span class="hljs-comment"># End /etc/inittab  </span>
+EOF
+</code></pre>
+<blockquote>
+<p>inittab man &#xD398;&#xC774;&#xC9C0; &#xCC38;&#xACE0;.<br>rc &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC;<br>/etc/rc.d/rcS.d/&#xBA3C;&#xC800; &#xC2E4;&#xD589;, &#xADF8;&#xB4A4; /etc/rc.d/rc?.d/ &#xC2E4;&#xD589; (?&#xB294; initdefault value)  </p>
+<p>rc&#xB294; /lib/lsb/init-functions &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xB97C; &#xC77D;&#xB294;&#xB2E4;.<br>&#xC774; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xB294; &#xB610;&#xD55C; &#xCD94;&#xAC00; configuration &#xD30C;&#xC77C;&#xC778; /etc/sysconfig/rc.site &#xB97C; &#xC77D;&#xB294;&#xB2E4;.<br>&#xB2E4;&#xC74C; &#xC139;&#xC158;&#xC5D0;&#xC11C; &#xC124;&#xBA85;&#xD560; &#xBAA8;&#xB4E0; &#xC2DC;&#xC2A4;&#xD15C; &#xC124;&#xC815; &#xD30C;&#xC77C; &#xD30C;&#xB77C;&#xBBF8;&#xD130;&#xB4E4;&#xC740; &#xBAA8;&#xB450; &#xC774; &#xD558;&#xB098;&#xC758; &#xD30C;&#xC77C;&#xB85C; &#xD1B5;&#xD569;&#xB420; &#xC218; &#xC788;&#xB2E4;.  </p>
+<p>&#xB514;&#xBC84;&#xAE45;&#xC758; &#xC6A9;&#xC774;&#xC131;&#xC744; &#xC704;&#xD574; &#xD568;&#xC218; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC758; &#xB85C;&#xADF8;&#xB294; /run/var/bootlog&#xC5D0; &#xC800;&#xC7A5;<br>/run&#xC774; tmpfs&#xD30C;&#xC77C;&#xC2DC;&#xC2A4;&#xD15C;&#xC774;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; booting&#xB54C;&#xB9C8;&#xB2E4; &#xBC14;&#xB01C;.<br>/var/log/boot.log&#xAC00; &#xC9C0;&#xC6CC;&#xC9C0;&#xC9C0;&#xC54A;&#xB294; &#xB85C;&#xADF8;&#xC784;.  </p>
+<p><code>(&#xCC3E;&#xC544;&#xBCF4;&#xAE30;)</code> &#xC704;&#xC758; inittab&#xD30C;&#xC77C; &#xB0B4;&#xC6A9; &#xC774;&#xD574;&#xD558;&#xAE30;  </p>
+</blockquote>
+<h3 id="7621-changing-run-levels">7.6.2.1. Changing Run Levels</h3>
+<p>run-level&#xC740; init <runlevel> &#xC73C;&#xB85C; &#xBC14;&#xAFC0; &#xC218; &#xC788;&#xC74C;.<br>/etc/rc.d/rc?.d/&#xC5D0; &#xC874;&#xC7AC;&#xD558;&#xB294; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB294; /etc/rc.d/init.d/ &#xC5D0; &#xC874;&#xC7AC;&#xD558;&#xB294; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC758; &#xC2EC;&#xBCFC;&#xB9AD; &#xB9C1;&#xD06C;&#xC784;.<br>&#xC2EC;&#xBCFC;&#xB9AD;&#xB9C1;&#xD06C;&#xC758; &#xBC14;&#xB010;&#xC774;&#xB984;&#xC774; (S,K) &#xC2E4;&#xC81C; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC5D0; &#xC804;&#xB2EC;&#xB418;&#xB294;  &#xC11C;&#xB85C;&#xB2E4;&#xB978; &#xB9E4;&#xAC1C;&#xBCC0;&#xC218;&#xC784;.  </runlevel></p>
+<h2 id="763-udev-bootscripts">7.6.3. Udev Bootscripts</h2>
+<p>The /etc/rc.d/init.d/udev initscript starts udevd,<br>triggers any &quot;coldplug&quot; devices that have already been created by the kernel<br>and waits for any rules to complete. The script also unsets the uevent handler<br>from the default of /sbin/hotplug . This is done because the kernel no longer<br>needs to call out to an external binary. Instead udevd will listen on a netlink<br>socket for uevents that the kernel raises.  </p>
+<p>udev_retry&#xB294; mountfs &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xAC00; &#xC9C4;&#xD589;&#xB41C; &#xC774;&#xD6C4;&#xC5D0; udev &#xAD00;&#xB828;&#xC791;&#xC5C5;&#xC744; &#xB9C8;&#xBB34;&#xB9AC;&#xD55C;&#xB2E4;.<br>&#xD30C;&#xC77C;&#xC2DC;&#xC2A4;&#xD15C;&#xC774; &#xB9C8;&#xC6B4;&#xD2B8; &#xB41C;&#xC0C1;&#xD0DC;&#xC5D0;&#xC11C; &#xC9C4;&#xD589;&#xB418;&#xC5B4;&#xC57C;&#xD560; &#xC791;&#xC5C5;&#xB4E4;&#xB54C;&#xBB38;&#xC5D0;<br>The /etc/rc.d/init.d/udev_retry initscript<br>takes care of re-triggering events for subsystems whose rules may rely on<br>filesystems that are not mounted until the mountfs script is run (in<br>particular, /usr and /var may cause this). This script runs after the mountfs<br>script, so those rules (if re-triggered) should succeed the second time around.<br>It is configured from the /etc/sysconfig/udev_retry file; any words in this<br>file other than comments are considered subsystem names to trigger at retry<br>time.  To find the subsystem of a device, use udevadm info --attribute-walk  </p>
+<p><device> where <device> is an absolute path in /dev or /sys such as /dev/sr0 or<br>/sys/class/rtc.  </device></device></p>
+<h3 id="7631-module-loading">7.6.3.1. Module Loading</h3>
+<p>&#xBAA8;&#xB4C8;&#xB85C; &#xBE4C;&#xB4DC;&#xB41C; &#xB514;&#xBC14;&#xC774;&#xC2A4; &#xB4DC;&#xB77C;&#xC774;&#xBC84;&#xB294; aliases&#xB97C; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xC744; &#xAC83;&#xC774;&#xB2E4;.<br>modinfo&#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC5D0; &#xC758;&#xD574;&#xC11C; aliases&#xB97C; &#xBCFC; &#xC218; &#xC788;&#xC74C;.  </p>
+<h3 id="7632-handling-hotpluggabledynamic-devices">7.6.3.2. Handling Hotpluggable/Dynamic Devices</h3>
+<h2 id="764-configuring-the-system-clock">7.6.4. Configuring the System Clock</h2>
+<ul>
+<li><strong>Create a new file /etc/sysconfig/clock</strong>    </li>
+</ul>
+<pre><code class="lang-sh">cat &gt; /etc/sysconfig/clock &lt;&lt; <span class="hljs-string">&quot;EOF&quot;</span>  
+<span class="hljs-comment"># Begin /etc/sysconfig/clock  </span>
+
+UTC=1  
+
+<span class="hljs-comment"># Set this to any options you might need to give to hwclock,  </span>
+<span class="hljs-comment"># such as machine hardware clock type for Alphas.  </span>
+CLOCKPARAMS=  
+
+<span class="hljs-comment"># End /etc/sysconfig/clock  </span>
+EOF
+</code></pre>
+<p><code>(&#xCC3E;&#xC544;&#xBCF4;&#xAE30;)</code> <strong>/etc/sysconfig/ &#xC758; &#xC5ED;&#xD560;?</strong>  </p>
+<blockquote>
+<p>The /etc/sysconfig/ directory is where a variety of system configuration files<br>/etc/sysconfig/rc.site&#xB294; lfs&#xC5D0;&#xB9CC; &#xC788;&#xB294; &#xD30C;&#xC77C;&#xC778;&#xB4EF;.<br><a href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Reference_Guide/ch-sysconfig.html" target="_blank">https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Reference_Guide/ch-sysconfig.html</a>  </p>
+</blockquote>
+<h2 id="765-configuring-the-linux-console">7.6.5. Configuring the Linux Console</h2>
+<p>/etc/sysconfig/console &#xC548;&#xB9CC;&#xB4E6;. &#xC5B4;&#xCC28;&#xD53C; &#xD55C;&#xAE00;&#xC740; &#xC548;&#xB428;.<br>&#xC774;&#xD30C;&#xC77C;&#xC744; &#xB9CC;&#xB4E4;&#xBA74; rc.site&#xC5D0; &#xC788;&#xB294; &#xB0B4;&#xC6A9;&#xC744; &#xB36E;&#xC5B4;&#xC500;.  </p>
+<h2 id="766-creating-files-at-boot">7.6.6. Creating Files at Boot</h2>
+<p>&#xBD80;&#xD305;&#xD0C0;&#xC784;&#xC5D0; &#xD30C;&#xC77C;&#xC744; &#xC0DD;&#xC131;&#xD558;&#xACE0; &#xC2F6;&#xC744;&#xB550; /etc/sysconfig/createfiles &#xD30C;&#xC77C;&#xC5D0; &#xAE30;&#xC220;&#xD558;&#xBA74;&#xB428;.  </p>
+<h2 id="767-configuring-the-sysklogd-script">7.6.7. Configuring the sysklogd Script</h2>
+<ul>
+<li><strong>timestamp&#xAC04;&#xACA9; &#xBC14;&#xAFB8;&#xACE0; &#xC2F6;&#xC73C;&#xBA74; /etc/sysconfig/rc.site&#xC5D0;&#xC11C;</strong>    </li>
+</ul>
+<pre><code class="lang-sh">SYSKLOGD_PARMS=
+</code></pre>
+<h2 id="768-the-rcsite-file">7.6.8. The rc.site File</h2>
+<p>/etc/sysconfig/rc.site &#xD30C;&#xC77C; &#xCC38;&#xACE0; &#xC8FC;&#xC11D;&#xC5D0; &#xC124;&#xBA85;&#xC788;&#xC74C;.  </p>
+<ul>
+<li>ustomizing the Boot and Shutdown Scripts  </li>
+</ul>
+<p>/etc/sysconfig/rc.site &#xC218;&#xC815;.  </p>
+<p><a href="http://www.linuxfromscratch.org/lfs/view/stable/chapter07/usage.html" target="_blank">&#xAC01;&#xAC01;&#xC758; &#xC635;&#xC158;&#xC124;&#xBA85; &#xCC38;&#xACE0;</a>  </p>
+<blockquote>
+<p>OMIT_UDEV_SETTLE=y.<br>OMIT_UDEV_RETRY_SETTLE=y.<br>VERBOSE_FSCK=y.<br>FASTBOOT=y<br>SKIPTMPCLEAN=y.<br>KILLDELAY=0.  </p>
+</blockquote>
+<h2 id="---------------------">--------------------  </h2>
+<h1 id="77-the-bash-shell-startup-files">7.7. The Bash Shell Startup Files</h1>
+<p>&#xC258; &#xD504;&#xB85C;&#xADF8;&#xB7A8;(/bin/bash)&#xC740; &#xC2A4;&#xD0C0;&#xD2B8;&#xC5C5; &#xD30C;&#xC77C;&#xB4E4;&#xC758; &#xBAA8;&#xC74C;&#xC744; &#xC0AC;&#xC6A9;&#xD574;&#xC11C; &#xD658;&#xACBD;&#xC744; &#xAD6C;&#xCD95;&#xD55C;&#xB2E4;.<br>/etc&#xC5D0; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xB294; &#xAE00;&#xB85C;&#xBC8C; &#xC14B;&#xD305;&#xC774;&#xB2E4;. &#xB9CC;&#xC57D; home&#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xAC00; &#xC788;&#xB2E4;&#xBA74; &#xB36E;&#xC5B4;&#xC50C;&#xC6CC;&#xC9C8; &#xAC83;&#xC774;&#xB2E4;.  </p>
+<p>login shell&#xC740; &#xC131;&#xACF5;&#xC801;&#xC73C;&#xB85C; &#xB85C;&#xADF8;&#xC778;&#xB41C; &#xC774;&#xD6C4;&#xC5D0; &#xC2DC;&#xC791;&#xB41C;&#xB2E4;. (/bin/login &#xC774;&#xC6A9;)<br>(/etc/passwd&#xD30C;&#xC77C;&#xC744; &#xC77D;&#xC74C; &#xC73C;&#xB85C;&#xC368;. )  </p>
+<p>/etc/profile&#xACFC; ~/.bash_profile&#xC740; interactive login shell&#xC774; &#xC2E4;&#xD589;&#xB418;&#xC5C8;&#xC744;&#xB54C; &#xC77D;&#xB294; &#xD30C;&#xC77C;  </p>
+<ul>
+<li><strong>locale&#xBCC0;&#xACBD;</strong>    </li>
+</ul>
+<pre><code class="lang-sh">cat &gt; /etc/profile &lt;&lt; <span class="hljs-string">&quot;EOF&quot;</span>  
+<span class="hljs-comment"># Begin /etc/profile  </span>
+
+<span class="hljs-built_in">export</span> LANG=&lt;ll&gt;_&lt;CC&gt;.&lt;charmap&gt;&lt;@modifiers&gt;  
+
+<span class="hljs-comment"># End /etc/profile  </span>
+EOF
+</code></pre>
+<blockquote>
+<p>ko_KR.utf8 &#xB85C;&#xBCC0;&#xACBD;  </p>
+</blockquote>
+<h2 id="---------------------">--------------------  </h2>
+<h1 id="78-creating-the-etcinputrc-file">7.8. Creating the /etc/inputrc File</h1>
+<p>inputrc &#xD30C;&#xC77C;&#xC740; &#xD2B9;&#xC815;&#xC0C1;&#xD669;&#xC5D0;&#xC11C; &#xD0A4;&#xBCF4;&#xB4DC; &#xB9E4;&#xD551;&#xC744; &#xB2E4;&#xB8EC;&#xB2E4;.<br>readline&#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC774; &#xC0AC;&#xC6A9;&#xD558;&#xB294; startup file&#xC774;&#xB2E4;.  </p>
+<p>home&#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xC5D0; .inputrc &#xD30C;&#xC77C;&#xC744; &#xB9CC;&#xB4E4;&#xBA74; &#xB36E;&#xC5B4;&#xC50C;&#xC6CC;&#xC9C4;&#xB2E4;.<br>&#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; info readline  </p>
+<ul>
+<li><strong>/etc/inputrc&#xD30C;&#xC77C; &#xC0DD;&#xC131;</strong>    </li>
+</ul>
+<pre><code class="lang-sh">cat &gt; /etc/inputrc &lt;&lt; <span class="hljs-string">&quot;EOF&quot;</span>  
+<span class="hljs-comment"># Begin /etc/inputrc  </span>
+<span class="hljs-comment"># Modified by Chris Lynn &lt;roryo@roryo.dynup.net&gt;  </span>
+
+<span class="hljs-comment"># Allow the command prompt to wrap to the next line  </span>
+<span class="hljs-built_in">set</span> horizontal-scroll-mode Off  
+
+<span class="hljs-comment"># Enable 8bit input  </span>
+<span class="hljs-built_in">set</span> meta-flag On  
+<span class="hljs-built_in">set</span> input-meta On  
+
+<span class="hljs-comment"># Turns off 8th bit stripping  </span>
+<span class="hljs-built_in">set</span> convert-meta Off  
+
+<span class="hljs-comment"># Keep the 8th bit for display  </span>
+<span class="hljs-built_in">set</span> output-meta On  
+
+<span class="hljs-comment"># none, visible or audible  </span>
+<span class="hljs-built_in">set</span> bell-style none  
+
+<span class="hljs-comment"># All of the following map the escape sequence of the value  </span>
+<span class="hljs-comment"># contained in the 1st argument to the readline specific functions  </span>
+<span class="hljs-string">&quot;\eOd&quot;</span>: backward-word  
+<span class="hljs-string">&quot;\eOc&quot;</span>: forward-word  
+
+<span class="hljs-comment"># for linux console  </span>
+<span class="hljs-string">&quot;\e[1~&quot;</span>: beginning-of-line  
+<span class="hljs-string">&quot;\e[4~&quot;</span>: end-of-line  
+<span class="hljs-string">&quot;\e[5~&quot;</span>: beginning-of-history  
+<span class="hljs-string">&quot;\e[6~&quot;</span>: end-of-history  
+<span class="hljs-string">&quot;\e[3~&quot;</span>: delete-char  
+<span class="hljs-string">&quot;\e[2~&quot;</span>: quoted-insert  
+
+<span class="hljs-comment"># for xterm  </span>
+<span class="hljs-string">&quot;\eOH&quot;</span>: beginning-of-line  
+<span class="hljs-string">&quot;\eOF&quot;</span>: end-of-line  
+
+<span class="hljs-comment"># for Konsole  </span>
+<span class="hljs-string">&quot;\e[H&quot;</span>: beginning-of-line  
+<span class="hljs-string">&quot;\e[F&quot;</span>: end-of-line  
+
+<span class="hljs-comment"># End /etc/inputrc  </span>
+EOF
+</code></pre>
+<h2 id="---------------------">--------------------  </h2>
+<h1 id="79-creating-the-etcshells-file">7.9. Creating the /etc/shells File</h1>
+<ul>
+<li><strong>/etc/shells &#xD30C;&#xC77C; &#xC0DD;&#xC131;</strong>    </li>
+</ul>
+<pre><code class="lang-sh">cat &gt; /etc/shells &lt;&lt; <span class="hljs-string">&quot;EOF&quot;</span>  
+<span class="hljs-comment"># Begin /etc/shells  </span>
+
+/bin/sh  
+/bin/bash  
+
+<span class="hljs-comment"># End /etc/shells  </span>
+EOF
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="6_4_Installing_Basic_System_Software.html" class="navigation navigation-prev " aria-label="Previous page: 6.4. Installing Basic System Software">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="8_Making_the_LFS_System_Bootable.html" class="navigation navigation-next " aria-label="Next page: 8. Making the LFS System Bootable">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"7. System Configuration and Bootscripts","level":"1.12","depth":1,"next":{"title":"8. Making the LFS System Bootable","level":"1.13","depth":1,"path":"markdowns/8_Making_the_LFS_System_Bootable.md","ref":"markdowns/8_Making_the_LFS_System_Bootable.md","articles":[]},"previous":{"title":"6.4. Installing Basic System Software","level":"1.11","depth":1,"path":"markdowns/6_4_Installing_Basic_System_Software.md","ref":"markdowns/6_4_Installing_Basic_System_Software.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"http://soopsaram.com/lfs"},"plugins":["ga","simple-page-toc","disqus","back-to-top-button","edit-link","github","livereload"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"jihuun"},"github":{"url":"https://github.com/jihuun/lfs"},"livereload":{},"simple-page-toc":{"maxDepth":2,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"ga":{"configuration":"auto","token":""},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit","base":"https://github.com/jihuun/lfs/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"markdowns/7_System_Configuration_and_Bootscripts.md","mtime":"2019-08-30T12:24:29.625Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-30T12:25:12.496Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
