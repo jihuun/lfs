@@ -1,0 +1,786 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>10. LFS on RaspberryPI · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../pakages.html" />
+    
+    
+    <link rel="prev" href="../9_The_End.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Linux From Scratch
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../0_Preface.html">
+            
+                <a href="../0_Preface.html">
+            
+                    
+                    0. Preface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../1_Introduction.html">
+            
+                <a href="../1_Introduction.html">
+            
+                    
+                    1. Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../2_Preparing_a_New_Partition.html">
+            
+                <a href="../2_Preparing_a_New_Partition.html">
+            
+                    
+                    2. Preparing a New Partition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../3_Packages_and_Patches.html">
+            
+                <a href="../3_Packages_and_Patches.html">
+            
+                    
+                    3. Packages and Patches
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../4_Final_Preparations.html">
+            
+                <a href="../4_Final_Preparations.html">
+            
+                    
+                    4. Final Preparations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../5_Constructing_a_Temporary_System.html">
+            
+                <a href="../5_Constructing_a_Temporary_System.html">
+            
+                    
+                    5. Constructing a Temporary System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../6_1_Installing_Basic_System_Software.html">
+            
+                <a href="../6_1_Installing_Basic_System_Software.html">
+            
+                    
+                    6. Installing Basic System Software (1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../6_2_Installing_Basic_System_Software.html">
+            
+                <a href="../6_2_Installing_Basic_System_Software.html">
+            
+                    
+                    6. Installing Basic System Software (2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../6_3_Installing_Basic_System_Software.html">
+            
+                <a href="../6_3_Installing_Basic_System_Software.html">
+            
+                    
+                    6. Installing Basic System Software (3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="../6_4_Installing_Basic_System_Software.html">
+            
+                <a href="../6_4_Installing_Basic_System_Software.html">
+            
+                    
+                    6. Installing Basic System Software (4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="../7_System_Configuration_and_Bootscripts.html">
+            
+                <a href="../7_System_Configuration_and_Bootscripts.html">
+            
+                    
+                    7. System Configuration and Bootscripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="../8_Making_the_LFS_System_Bootable.html">
+            
+                <a href="../8_Making_the_LFS_System_Bootable.html">
+            
+                    
+                    8. Making the LFS System Bootable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="../9_The_End.html">
+            
+                <a href="../9_The_End.html">
+            
+                    
+                    9. The End
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter active" data-level="3.1" data-path="pilfs.html">
+            
+                <a href="pilfs.html">
+            
+                    
+                    10. LFS on RaspberryPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../pakages.html">
+            
+                <a href="../pakages.html">
+            
+                    
+                    Appendix: pakages
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >10. LFS on RaspberryPI</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#xB77C;&#xC988;&#xBCA0;&#xB9AC;&#xD30C;&#xC774;&#xC5D0;&#xC11C;-&#xB3D9;&#xC791;&#xD558;&#xB294;-&#xCD5C;&#xC18C;&#xD55C;&#xC758;-&#xB9AC;&#xB205;&#xC2A4;-&#xC2DC;&#xC2A4;&#xD15C;-&#xB9CC;&#xB4E4;&#xAE30;">&#xB77C;&#xC988;&#xBCA0;&#xB9AC;&#xD30C;&#xC774;&#xC5D0;&#xC11C; &#xB3D9;&#xC791;&#xD558;&#xB294; &#xCD5C;&#xC18C;&#xD55C;&#xC758; &#xB9AC;&#xB205;&#xC2A4; &#xC2DC;&#xC2A4;&#xD15C; &#xB9CC;&#xB4E4;&#xAE30;</h1>
+<p>&#xACB0;&#xACFC;&#xBB3C;&#xC740; &#xBD80;&#xD305;&#xD6C4; &#xC258;&#xD658;&#xACBD; &#xAE4C;&#xC9C0;&#xB9CC; &#xB728;&#xB294; &#xCD5C;&#xC18C;&#xD55C;&#xC758; &#xC2DC;&#xC2A4;&#xD15C;&#xC774;&#xB2E4;.  &#xC774;&#xAC83;&#xC744; &#xBCA0;&#xC774;&#xC2A4;&#xB85C; &#xD30C;&#xC77C;, &#xD328;&#xD0A4;&#xC9C0; &#xB4F1;&#xC744; &#xCD94;&#xAC00;&#xD558;&#xC5EC; &#xC6D0;&#xD558;&#xB294; &#xBAA9;&#xC801;&#xC5D0; &#xB9DE;&#xB294; &#xC2DC;&#xC2A4;&#xD15C;&#xC744; &#xAD6C;&#xCD95;&#xD560; &#xC218; &#xC788;&#xB2E4;.   </p>
+<h1 id="0-&#xC0AC;&#xC804;&#xC870;&#xC0AC;">0. &#xC0AC;&#xC804;&#xC870;&#xC0AC;</h1>
+<h2 id="01-&#xCC38;&#xACE0;-base-lfs-sd-card-image-&#xB97C;-sd-card&#xC5D0;-&#xC124;&#xCE58;&#xD558;&#xAE30;">0.1. <code>(&#xCC38;&#xACE0;)</code> Base LFS SD-Card Image &#xB97C; sd card&#xC5D0; &#xC124;&#xCE58;&#xD558;&#xAE30;.</h2>
+<p>&#xC774;&#xBBF8; &#xB9CC;&#xB4E4;&#xC5B4;&#xB193;&#xC740; &#xACF5;&#xC2DD; pilfs &#xC774;&#xBBF8;&#xC9C0;.  </p>
+<pre><code class="lang-sh"> $ fdisk &#xBC0F; mkfs.ext4 &#xC774;&#xC6A9; sd card&#xD3EC;&#xB9F7;.
+ $ dd bs=4M <span class="hljs-keyword">if</span>=pilfs-base-rpi2-20150811.img of=/dev/sdx //pilfs &#xC774;&#xBBF8;&#xC9C0; &#xC124;&#xCE58;
+</code></pre>
+<p><a href="http://www.intestinate.com/pilfs/images.html" target="_blank">http://www.intestinate.com/pilfs/images.html</a>  </p>
+<h2 id="02&#xCC38;&#xACE0;-&#xB77C;&#xC988;&#xBCA0;&#xB9AC;&#xD30C;&#xC774;&#xC5D0;&#xC11C;-&#xBD80;&#xD305;-&#xAC00;&#xB2A5;&#xD55C;-img&#xB9CC;&#xB4E4;&#xAE30;-&#xB098;&#xB9CC;&#xC758;-img&#xD30C;&#xC77C;-&#xB9CC;&#xB4E4;&#xAE30;">0.2.<code>(&#xCC38;&#xACE0;)</code> &#xB77C;&#xC988;&#xBCA0;&#xB9AC;&#xD30C;&#xC774;&#xC5D0;&#xC11C; &#xBD80;&#xD305; &#xAC00;&#xB2A5;&#xD55C; img&#xB9CC;&#xB4E4;&#xAE30; (&#xB098;&#xB9CC;&#xC758; img&#xD30C;&#xC77C; &#xB9CC;&#xB4E4;&#xAE30;)</h2>
+<ul>
+<li><strong>Sd card &#xD3EC;&#xB9F7;</strong>  </li>
+</ul>
+<pre><code class="lang-sh"> $ sd card &#xB9C8;&#xC6B4;&#xD2B8;  
+ $ fdisk /dev/sdc (&#xB514;&#xC2A4;&#xD2B8; &#xC0AD;&#xC81C;)
+</code></pre>
+<ul>
+<li><strong>&#xD30C;&#xD2F0;&#xC158; &#xC0DD;&#xC131;-&gt; boot,&#xB8E8;&#xD2B8;&#xD30C;&#xC77C;&#xC2DC;&#xC2A4;&#xD15C;</strong>  </li>
+</ul>
+<pre><code class="lang-sh"> $ fdisk /dev/sdc
+    &#xCCAB;&#xBC88;&#xC9F8; &#xD30C;&#xD2F0;&#xC158; &#xC0DD;&#xC131;
+    n
+    p
+    1
+    enter(using first sector)
+    +50M
+    a
+    t
+    b (fat 32)
+    &#xB450;&#xBC88;&#xC9F8; &#xD30C;&#xD2F0;&#xC158; &#xC0DD;&#xC131;
+    n
+    p
+    2
+    enter(using second sector)
+    enter(using remeins all of sector)
+    t
+    83(linux)
+</code></pre>
+<ul>
+<li><strong>&#xD30C;&#xC77C;&#xC2DC;&#xC2A4;&#xD15C; &#xD3EC;&#xB9F7;</strong>  </li>
+</ul>
+<pre><code class="lang-sh"> $ mkdosfs -F 32 -n Pi-boot -v /dev/sdc1
+ $ mkfs.ext4 -m 1 -L MyLFS /dev/sdc2
+</code></pre>
+<ul>
+<li><strong>&#xB9C8;&#xC6B4;&#xD2B8;</strong>  </li>
+</ul>
+<pre><code class="lang-sh"> $ mount /dev/sdc1 /mnt/rasp0
+ $ mount /dev/sdc2 /mnt/rasp
+</code></pre>
+<ul>
+<li><strong>&#xAE30;&#xC874; pilfs&#xC774;&#xBBF8;&#xC9C0; &#xB9C8;&#xC6B4;&#xD2B8;</strong><br>boot &#xAD00;&#xB828; &#xD30C;&#xC77C;&#xC774;&#xB098; &#xB8E8;&#xD2B8;&#xD30C;&#xC77C;&#xC2DC;&#xC2A4;&#xD15C; &#xD30C;&#xC77C;&#xB4E4; &#xBCF5;&#xC0AC; &#xBAA9;&#xC801;</li>
+</ul>
+<pre><code class="lang-sh"> $ fdisk <span class="hljs-_">-l</span> pilfs-base-rpi2-20150811.img
+ $ mount pilfs-base-rpi2-20150811.img -o loop,offset=$((512*2048)) /mnt/tmp1/
+ $ mount pilfs-base-rpi2-20150811.img -o loop,offset=$((512*98304)) /mnt/tmp2/
+</code></pre>
+<blockquote>
+<p>&#xC790;&#xC138;&#xD55C; &#xBC29;&#xBC95;&#xC740; 9&#xC7A5; &#xCC38;&#xACE0;.  </p>
+</blockquote>
+<ul>
+<li><strong>&#xB0B4;&#xC6A9;&#xBB3C; &#xD1B5;&#xC9F8; &#xBCF5;&#xC0AC;</strong>  </li>
+</ul>
+<pre><code class="lang-sh"> $ cp -vpr /mnt/tmp1/* /mnt/rasp0/
+ $ cp -vpr /mnt/tmp2/* /mnt/rasp/
+</code></pre>
+<ul>
+<li><strong>my-pilfs.img &#xC774;&#xBBF8;&#xC9C0; &#xD30C;&#xC77C; &#xB9CC;&#xB4E4;&#xAE30;</strong>  </li>
+</ul>
+<pre><code class="lang-sh"> $ dd <span class="hljs-keyword">if</span>=/dev/sdc of=my-pilfs.img bs=1M count=950
+</code></pre>
+<p>&#xC774;&#xD6C4;&#xC5D0;&#xB294; /dev/sdc2&#xC744; &#xB098;&#xB9CC;&#xC758; &#xB8E8;&#xD2B8;&#xD30C;&#xC77C;&#xC2DC;&#xC2A4;&#xD15C;&#xC73C;&#xB85C; &#xBCC0;&#xACBD; &#xAC00;&#xB2A5;.  </p>
+<h2 id="03-&#xCC38;&#xACE0;-&#xB77C;&#xC988;&#xBCA0;&#xB9AC;&#xD30C;&#xC774;&#xC6A9;-&#xCEE4;&#xB110;-cross-build-&#xD558;&#xACE0;-&#xCEE4;&#xB110;-&#xAD50;&#xCCB4;&#xD558;&#xAE30;">0.3. <code>(&#xCC38;&#xACE0;)</code> &#xB77C;&#xC988;&#xBCA0;&#xB9AC;&#xD30C;&#xC774;&#xC6A9; &#xCEE4;&#xB110; CROSS build &#xD558;&#xACE0; &#xCEE4;&#xB110; &#xAD50;&#xCCB4;&#xD558;&#xAE30;.</h2>
+<ul>
+<li><strong>&#xC18C;&#xC2A4;&#xCF54;&#xB4DC; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;</strong>  </li>
+</ul>
+<pre><code class="lang-sh"> $ wget https://github.com/raspberrypi/linux/archive/rpi-4.1.y.tar.gz
+</code></pre>
+<ul>
+<li><strong>defconfig&#xC774;&#xC6A9; &#xCEE4;&#xB110; &#xBE4C;&#xB4DC;</strong>  </li>
+</ul>
+<pre><code class="lang-sh"> $ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- mrproper
+ $ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- bcm2709_defconfig
+ $ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi-
+</code></pre>
+<ul>
+<li><strong>kernel&#xAD50;&#xCCB4;</strong>  </li>
+</ul>
+<pre><code class="lang-sh"> $ mount /dev/sdc1 /mnt/temp/
+ $ mv /mnt/temp/kernel7.img /mnt/temp/kernel7.img.back
+ $ cp arch/arm/boot/zImage /mnt/temp/kernel7.img
+</code></pre>
+<p>&#xC774;&#xD6C4; &#xC7AC;&#xBD80;&#xD305; uname -a &#xBE4C;&#xB4DC;&#xB0A0;&#xC9DC; &#xD655;&#xC778;. -&gt; &#xAD50;&#xCCB4;&#xC644;&#xB8CC;  </p>
+<h1 id="1-&#xB8E8;&#xD2B8;&#xD30C;&#xC77C;&#xC2DC;&#xC2A4;&#xD15C;-&#xAD6C;&#xCD95;-from-scratch">1. &#xB8E8;&#xD2B8;&#xD30C;&#xC77C;&#xC2DC;&#xC2A4;&#xD15C; &#xAD6C;&#xCD95; From Scratch</h1>
+<p>&#xC704;&#xC5D0;&#xC11C; &#xC124;&#xCE58;&#xD55C; Base LFS SD-Card Image &#xC2DC;&#xC2A4;&#xD15C;&#xC5D0;&#xC11C; SD&#xCE74;&#xB4DC;&#xC758; &#xB450;&#xBC88;&#xC9F8; &#xD30C;&#xD2F0;&#xC158;(&#xB8E8;&#xD2B8;&#xD30C;&#xC77C; &#xC2DC;&#xC2A4;&#xD15C;)&#xC744; &#xC0C8;&#xB86D;&#xAC8C; &#xAD6C;&#xCD95;&#xD558;&#xAE30;.<br>&#xD544;&#xC694;&#xD55C; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC; &#xB4F1;&#xC740; Base LFS SD-Card img&#xC758; root fs &#xB0B4;&#xC6A9;&#xC744; &#xBCF5;&#xC0AC;&#xD574; &#xC62C;&#xAC83;&#xC784;.  </p>
+<p>1.1. Basic File System &#xAD6C;&#xC131;.<br>1.2. Busy Box &#xC124;&#xCE58;<br>1.3. System V Init &#xC124;&#xCE58;.  </p>
+<p>&#xCC38;&#xACE0; &#xD30C;&#xC77C;(Ramdisk&#xB97C; &#xC774;&#xC6A9;&#xD55C; root FS) - &#xC5EC;&#xAE30;&#xC11C;&#xB294; ramdisk&#xB97C; &#xB9CC;&#xB4E4;&#xC9C4; &#xC54A;&#xC74C;<br><a href="https://www.google.co.kr/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0CCIQFjAAahUKEwiX0L6-lIDIAhVlKqYKHeBqAYM&amp;url=http%3A%2F%2Fcfile219.uf.daum.net%2Fattach%2F26255937553F1A5F105F76&amp;usg=AFQjCNF794qAdOvD6Cos175l2SEvbVqUaw&amp;sig2=hluKZibdy5NNIUEFn4qpeg&amp;cad=rja" target="_blank">https://www.google.co.kr/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0CCIQFjAAahUKEwiX0L6-lIDIAhVlKqYKHeBqAYM&amp;url=http%3A%2F%2Fcfile219.uf.daum.net%2Fattach%2F26255937553F1A5F105F76&amp;usg=AFQjCNF794qAdOvD6Cos175l2SEvbVqUaw&amp;sig2=hluKZibdy5NNIUEFn4qpeg&amp;cad=rja</a>  </p>
+<p><a href="https://emreboy.wordpress.com/2012/12/20/building-a-root-file-system-using-busybox/" target="_blank">https://emreboy.wordpress.com/2012/12/20/building-a-root-file-system-using-busybox/</a>  </p>
+<h2 id="11-basic-file-system-&#xAD6C;&#xC131;">1.1. Basic File System &#xAD6C;&#xC131;.</h2>
+<ul>
+<li><strong>FSH &#xAD6C;&#xC131;&#xD558;&#xAE30;</strong>  </li>
+</ul>
+<pre><code class="lang-sh">mkdir /home/jihuun/project/pilfs/rootfs
+ROOTFS=/home/jihuun/project/pilfs/rootfs
+<span class="hljs-built_in">cd</span> <span class="hljs-variable">${ROOTFS}</span>
+mkdir bin dev etc lib proc sbin tmp usr var
+chmod 1777 tmp
+mkdir usr/bin usr/lib usr/sbin
+mkdir var/lib var/lock var/<span class="hljs-built_in">log</span> var/run var/tmp
+mkdir root
+chmod 1777 var/tmp
+</code></pre>
+<ul>
+<li><strong>&#xC77C;&#xB2E8; &#xAE30;&#xC874; pilfs&#xC5D0;&#xC11C; &#xC4F0;&#xB358; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC; &#xBAA8;&#xB450; &#xBCF5;&#xC0AC;.</strong>  </li>
+</ul>
+<pre><code class="lang-sh">mount /dev/sdc2 /mnt/temp/
+<span class="hljs-built_in">cd</span> /mnt/temp/lib/
+cp *-*.so <span class="hljs-variable">$ROOTFS</span>/lib
+cp <span class="hljs-_">-d</span>  *.so.[*0-9] <span class="hljs-variable">$ROOTFS</span>/lib
+cp libSegFault.so libmemusage.so libpcprofile.so <span class="hljs-variable">$ROOTFS</span>/lib/
+</code></pre>
+<blockquote>
+<p>&#xB098;&#xC911;&#xC5D0; busybox&#xC5D0; &#xD544;&#xC694;&#xD55C; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xB9CC; &#xBCF5;&#xC0AC;&#xD544;&#xC694;.</p>
+</blockquote>
+<h2 id="12-busy-box-&#xC124;&#xCE58;">1.2. Busy Box &#xC124;&#xCE58;</h2>
+<ul>
+<li><strong>&#xD604;&#xC7AC; &#xCD5C;&#xC2E0;&#xBC84;&#xC804; 1.23.2 &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;</strong>  </li>
+</ul>
+<pre><code class="lang-sh">wget http://www.busybox.net/downloads/busybox-1.23.2.tar.bz2
+</code></pre>
+<ul>
+<li><strong>CROSS &#xBE4C;&#xB4DC;</strong>  </li>
+</ul>
+<pre><code class="lang-sh"> $ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- defconfig
+ $ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- menuconfig
+     Build Options &#xC5D0;&#xC11C; Cross Compiler Prefix&#xC5D0; arm-linux-gnueabi- &#xC785;&#xB825;
+ $ make CONFIG_PREFIX=<span class="hljs-variable">$ROOTFS</span> all install
+</code></pre>
+<blockquote>
+<p>CONFIG_PREFIX= install&#xD560; &#xB514;&#xB809;&#xD130;&#xB9AC;(&#xB8E8;&#xD2B8;&#xD30C;&#xC77C;&#xC2DC;&#xC2A4;&#xD15C;&#xC5D0;) &#xC124;&#xC815;.<br>init &#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xC81C;&#xAC70; &#xC124;&#xC815; &#xCC3E;&#xC544;&#xC11C; &#xC0AD;&#xC81C;&#xD544;&#xC694;.<br><a href="http://yjaeseok.tistory.com/299" target="_blank">http://yjaeseok.tistory.com/299</a></p>
+<p>&#xCC38;&#xACE0;<br>busybox&#xC5D0; &#xD544;&#xC694;&#xD55C; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC; &#xD655;&#xC778;&#xD574;&#xC11C; &#xBCF5;&#xC0AC;&#xD558;&#xAE30;.<br>$ objdump -p &#xB85C; &#xD655;&#xC778;. (&#xC5EC;&#xAE30;&#xC120; &#xBAA8;&#xB4E0; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xB97C; &#xBCF5;&#xC0AC;&#xD588;&#xAE30;&#xB54C;&#xBB38;&#xC5D0; &#xC0C1;&#xACFC;&#xC5C6;&#xC74C;)<br>busybox &#xB97C; static&#xC73C;&#xB85C; &#xCEF4;&#xD30C;&#xC77C; &#xD588;&#xB2E4;&#xBA74; lib&#xBCF5;&#xC0AC;&#xB294; &#xD544;&#xC694;&#xC5C6;&#xC74C;.  </p>
+</blockquote>
+<h2 id="13-system-v-init&#xC124;&#xCE58;">1.3 System V init&#xC124;&#xCE58;</h2>
+<ul>
+<li><strong>2.86 &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;</strong>  </li>
+</ul>
+<pre><code class="lang-sh"> $ wget ftp://ftp.cistron.nl/pub/people/miquels/sysvinit/sysvinit2.86.tar.gz
+ $ tar -jxvf sysvinit2.86.tar.gz
+</code></pre>
+<ul>
+<li><strong>CROSS&#xBE4C;&#xB4DC;</strong>  </li>
+</ul>
+<pre><code class="lang-sh"><span class="hljs-built_in">cd</span> sysvinit2.86/src/
+make CC=arm-linux-gnueabi-gcc
+</code></pre>
+<ul>
+<li><strong>crypt&#xC5D0;&#xB7EC;</strong>  </li>
+</ul>
+<pre><code class="lang-sh">sulogin.c:(.text.startup+0x284): undefined reference to `crypt<span class="hljs-string">&apos;
+collect2: error: ld returned 1 exit status
+make: *** [sulogin] Error 1
+</span></code></pre>
+<blockquote>
+<p>patch -Np1 -i ../sysvinit-2.88dsf-consolidated-1.patch &#xB85C; &#xD574;&#xACB0;.  </p>
+</blockquote>
+<ul>
+<li><strong>install</strong>  </li>
+</ul>
+<pre><code class="lang-sh"><span class="hljs-built_in">cd</span> <span class="hljs-variable">$ROOTFS</span>/
+mkdir usr/include
+mkdir -p ./usr/share/man/man1
+mkdir -p ./usr/share/man/man5
+mkdir -p ./usr/share/man/man8
+<span class="hljs-built_in">cd</span> sysvinit2.86/src/ (&#xB2E4;&#xC2DC; &#xBE4C;&#xB4DC; &#xC18C;&#xC2A4;&#xB85C;&#xC774;&#xB3D9;)
+make ROOT=<span class="hljs-variable">$ROOTFS</span> install
+</code></pre>
+<h2 id="14-&#xB514;&#xBC14;&#xC774;&#xC2A4;-&#xD30C;&#xC77C;&#xC0DD;&#xC131;">1.4. &#xB514;&#xBC14;&#xC774;&#xC2A4; &#xD30C;&#xC77C;&#xC0DD;&#xC131;.</h2>
+<hr>
+<pre><code class="lang-sh">mknod -m 600 <span class="hljs-variable">${ROOTFS}</span>/dev/mem c 1 1
+mknod -m 666 <span class="hljs-variable">${ROOTFS}</span>/dev/null c 1 3
+mknod -m 666 <span class="hljs-variable">${ROOTFS}</span>/dev/zero c 1 5
+mknod -m 644 <span class="hljs-variable">${ROOTFS}</span>/dev/random c 1 8
+mknod -m 600 <span class="hljs-variable">${ROOTFS}</span>/dev/tty0 c 4 0
+mknod -m 600 <span class="hljs-variable">${ROOTFS}</span>/dev/tty1 c 4 1
+mknod -m 600 <span class="hljs-variable">${ROOTFS}</span>/dev/ttyS0 c 4 64
+mknod -m 666 <span class="hljs-variable">${ROOTFS}</span>/dev/tty c 5 0
+mknod -m 600 <span class="hljs-variable">${ROOTFS}</span>/dev/console c 5 1
+mknod -m 660 <span class="hljs-variable">${ROOTFS}</span>/dev/ram0 b 1 0
+</code></pre>
+<h2 id="15-&#xBD80;&#xD2B8;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;-&#xC124;&#xC815;">1.5. &#xBD80;&#xD2B8;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xC124;&#xC815;.</h2>
+<p>-&gt;&gt;&gt;&#xC798; &#xC548;&#xB428;!!  </p>
+<p><a href="http://www.intestinate.com/pilfs/guide.html" target="_blank">http://www.intestinate.com/pilfs/guide.html</a><br>piLFS bootscript&#xB97C; &#xC774;&#xC6A9;&#xD560;&#xAC83;&#xC784;.  </p>
+<p>wget <a href="http://www.intestinate.com/pilfs/scripts/pilfs-bootscripts-20150610.tar.xz" target="_blank">http://www.intestinate.com/pilfs/scripts/pilfs-bootscripts-20150610.tar.xz</a></p>
+<p>Makefile &#xC218;&#xC815; (&#xC124;&#xCE58; &#xACBD;&#xB85C; &#xBCC0;&#xACBD;).<br>DESTDIR &#xB97C; ROOTFS&#xB85C; .</p>
+<hr>
+<pre><code class="lang-sh">make install-networkfix install-swapfix install-fake-hwclock install-switch-cpu-governor
+</code></pre>
+<blockquote>
+<p><a href="http://www.intestinate.com/pilfs/guide.html" target="_blank">http://www.intestinate.com/pilfs/guide.html</a>  10&#xBC88; &#xD56D;&#xBAA9; &#xCC38;&#xACE0;</p>
+</blockquote>
+<p>mkdir init.d rc0.d rc1.d rc2.d rc3.d rc4.d rc5.d rc6.d rcS.d
+cp /mnt/ramdisk_test/etc/rc.d/rcS.d/S20swap $ROOTFS/etc/rc.d/rcS.d/S20swap
+cp /mnt/ramdisk_test/etc/rc.d/rcS.d/S60swap $ROOTFS/etc/rc.d/rcS.d/S60swap</p>
+<p>inittab , fstab &#xC124;&#xC815;.  </p>
+<h1 id="2-&#xB2E4;&#xC2DC;&#xD558;&#xAE30;-minimum-root-filesystem-&#xAD6C;&#xCD95;">2 &#xB2E4;&#xC2DC;&#xD558;&#xAE30;: minimum root filesystem &#xAD6C;&#xCD95;</h1>
+<p>&#xCC38;&#xACE0;&#xB9C1;&#xD06C; -&gt; <a href="http://linuxguide.sourceforge.net/linux-minimal-filesystem.html" target="_blank">http://linuxguide.sourceforge.net/linux-minimal-filesystem.html</a><br>raspbian&#xC758; rootfile system &#xC5D0;&#xC11C; &#xCD5C;&#xC18C;&#xD55C;&#xC73C;&#xB85C; &#xBCF5;&#xC0AC;&#xD574;&#xC11C; &#xB9CC;&#xB4E4;&#xAE30;.</p>
+<h2 id="21-pilfs-base&#xC758;-rootfile-system-&#xC744;-&#xB9C8;&#xC6B4;&#xD2B8;&#xD558;&#xAE30;">2.1. pilfs base&#xC758; rootfile system &#xC744; &#xB9C8;&#xC6B4;&#xD2B8;&#xD558;&#xAE30;.</h2>
+<h2 id="22-sbininit-etcinittab-dev-&#xB97C;-devsdc2&#xB97C;-&#xB9C8;&#xC6B4;&#xD2B8;&#xD558;&#xACE0;-&#xBCF5;&#xC0AC;-&#xB531;-&#xC800;&#xAC83;&#xB9CC;-&#xB123;&#xACE0;-&#xBD80;&#xD305;">2.2. sbin/init etc/inittab dev/* &#xB97C; /dev/sdc2&#xB97C; &#xB9C8;&#xC6B4;&#xD2B8;&#xD558;&#xACE0; &#xBCF5;&#xC0AC;. &#xB531; &#xC800;&#xAC83;&#xB9CC; &#xB123;&#xACE0; &#xBD80;&#xD305;.</h2>
+<h2 id="23-ldd-sbininit&#xD588;&#xC744;&#xB54C;-&#xB2E4;&#xC774;&#xB098;&#xBBF9;-&#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xAC00;-&#xD544;&#xC694;&#xD558;&#xBA74;-&#xD574;&#xB2F9;&#xD558;&#xB294;-lib&#xB3C4;-&#xBCF5;&#xC0AC;&#xD574;&#xC57C;&#xD568;">2.3. ldd sbin/init&#xD588;&#xC744;&#xB54C; &#xB2E4;&#xC774;&#xB098;&#xBBF9; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xAC00; &#xD544;&#xC694;&#xD558;&#xBA74; &#xD574;&#xB2F9;&#xD558;&#xB294; /lib&#xB3C4; &#xBCF5;&#xC0AC;&#xD574;&#xC57C;&#xD568;.</h2>
+<pre><code>Pilfs&#xB85C; &#xBD80;&#xD305;&#xD574;&#xC11C;  
+</code></pre><pre><code class="lang-sh">$ ldd /sbin/init
+    linux-vdso.so.1
+    /usr/lib/libarmmem.so
+    libc.so.6 =&gt; /lib/libc.so.6
+    /lib/ld-linux-armhf.so.3
+</code></pre>
+<p>&#xC774;&#xB807;&#xAC8C; &#xB098;&#xC624;&#xBBC0;&#xB85C; &#xD574;&#xB2F9; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC; &#xBCF5;&#xC0AC;&#xD574;&#xC57C;&#xD568;.<br>(&#xC2EC;&#xBCFC;&#xB9AD;&#xB9C1;&#xD06C; &#xC774;&#xB984;&#xC774;&#xB791; &#xC6D0;&#xBCF8; &#xBAA8;&#xB450; &#xBCF5;&#xC0AC;&#xD574;&#xC57C;&#xD568;)  </p>
+<pre><code class="lang-sh">$ cp -apv libc.so.6 libc-2.22.so /home/jihuun/project/pilfs/minimum_fs/lib/
+$ cp -apv libarmmem.so /home/jihuun/project/pilfs/minimum_fs/usr/lib/
+$ cp -avp ld-2.22.so ld-linux-armhf.so.3 /home/jihuun/project/pilfs/minimum_fs/lib/
+</code></pre>
+<p>linux-vdso.so&#xB294; &#xBCF5;&#xC0AC;&#xD560; &#xD544;&#xC694;&#xC5C6;&#xC74C;. &#xC544;&#xB798;&#xCC38;&#xACE0;.  </p>
+<blockquote>
+<p>The lib linux-vdso.so ( as well as linux-gate.so) is not going to be found.
+It is a virtual Dynamically Shared Object and part of the kernel. You may
+want to take a look at this:
+<a href="http://www.trilithium.com/johan/2005/08/linux-gate/" target="_blank">http://www.trilithium.com/johan/2005/08/linux-gate/</a>  </p>
+</blockquote>
+<h2 id="24-&#xBD80;&#xD305;">2.4. &#xBD80;&#xD305;</h2>
+<p>init&#xC740; &#xB118;&#xC5B4;&#xAC10;.</p>
+<h2 id="25-inittab&#xC218;&#xC815;">2.5. inittab&#xC218;&#xC815;.</h2>
+<pre><code class="lang-sh"><span class="hljs-comment"># Begin /etc/inittab</span>
+
+id:3:initdefault:
+x:3::/bin/bash
+
+<span class="hljs-comment"># End /etc/inittab</span>
+</code></pre>
+<blockquote>
+<p>11.&#xBC88;&#xC5D0;&#xC11C; &#xBCF4;&#xACA0;&#xC9C0;&#xB9CC; &#xCC38;&#xACE0;&#xB9C1;&#xD06C;&#xC5D0;&#xC11C; &#xC18C;&#xAC1C;&#xD55C; &#xBC29;&#xBC95;&#xC5D4;  action field &#xAC00; &#xBE60;&#xC84C;&#xC74C;.-&gt; bash&#xC2E4;&#xD589; &#xC2E4;&#xD328;&#xD568;.  </p>
+</blockquote>
+<h2 id="26-&#xBD80;&#xD305;---kernel-panic-no-working-init-found">2.6. &#xBD80;&#xD305; -&gt; kernel panic no working init found..</h2>
+<p>-&gt; 3&#xBC88;(init)&#xC758; lib&#xBCF5;&#xC0AC;&#xB97C; &#xC548;&#xD574;&#xC11C; &#xADF8;&#xB7AC;&#xC5C8;&#xC74C;.<br>-&gt; &#xB2E4;&#xC2DC; &#xBD80;&#xD305;&#xD558;&#xBA74; Init&#xD1B5;&#xACFC;. &#xC544;&#xB798;&#xB85C;&#xADF8; &#xCC38;&#xACE0;  </p>
+<pre><code class="lang-log">...
+INIT: version 2.88 booting
+INIT: /etc/inittab[4]: missing action field
+INIT: Entering runlevel:3
+INIT: no more processes left in this runlevel
+</code></pre>
+<blockquote>
+<p>/bin/bash&#xAC00; &#xC5C6;&#xC5B4;&#xC11C; &#xB354;&#xC774;&#xC0C1; &#xC9C4;&#xD589;&#xC774; &#xC548;&#xB418;&#xB294;&#xB4EF;.  </p>
+</blockquote>
+<h2 id="27-binbash-&#xBCF5;&#xC0AC;">2.7. /bin/bash &#xBCF5;&#xC0AC;.</h2>
+<p>-&gt; &#xBD80;&#xD305;&#xD558;&#xBA74; &#xC704;&#xC640; &#xB85C;&#xADF8; &#xB611;&#xAC19;&#xC74C;.  </p>
+<h2 id="28-bash&#xC758;-library-&#xBCF5;&#xC0AC;">2.8. bash&#xC758; library &#xBCF5;&#xC0AC;.</h2>
+<p>pilfs&#xB85C; &#xBD80;&#xD305; &#xD6C4;.  </p>
+<pre><code class="lang-sh">$ ldd /bin/bash
+    linux-vdso.so.1
+    /usr/lib/libarmmem.so
+.    libreadline.so.6 =&gt; /lib/libreadline.so.6
+.    libhistory.so.6 =&gt; /lib/libhistory.so.6
+.    libncursesw.so.6 =&gt; /lib/libncursesw.so.6
+.    libdl.so.2 =&gt; /lib/libdl.so.2
+    libc.so.6 =&gt; /lib/libc.so.6
+    /lib/ld-linux-armhf.so.3
+</code></pre>
+<blockquote>
+<p>3&#xBC88;&#xC5D0;&#xC11C; &#xC548;&#xD55C;&#xAC70; &#xBCF5;&#xC0AC;.<br>(&#xC2EC;&#xBCFC;&#xB9AD;&#xB9C1;&#xD06C; &#xC774;&#xB984;&#xC774;&#xB791; &#xC6D0;&#xBCF8; &#xBAA8;&#xB450; &#xBCF5;&#xC0AC;&#xD574;&#xC57C;&#xD568;)  </p>
+<pre><code class="lang-sh">$ cp -avp libreadline.so.6 libreadline.so.6.3 /home/jihuun/project/pilfs/minimum_fs/lib/
+$ cp -avp libhistory.so.6 libhistory.so.6.3 /home/jihuun/project/pilfs/minimum_fs/lib/
+$ cp -avp libncursesw.so.6 libncursesw.so.6.0 /home/jihuun/project/pilfs/minimum_fs/lib/
+$ cp -avp libdl-2.22.so libdl.so.2 /home/jihuun/project/pilfs/minimum_fs/lib/
+</code></pre>
+</blockquote>
+<h2 id="29-&#xC7AC;&#xBD80;&#xD305;">2.9. &#xC7AC;&#xBD80;&#xD305;.</h2>
+<p>&#xC548;&#xB428;.  </p>
+<h2 id="210-fstab-&#xBCF5;&#xC0AC;">2.10. fstab &#xBCF5;&#xC0AC;.</h2>
+<p>&#xC548;&#xB428;.  </p>
+<blockquote>
+<p>&#xC2E4;&#xC81C;&#xB85C;&#xB294; fstab&#xD544;&#xC694;&#xC5C6;&#xC74C; -&gt;&#xC0AD;&#xC81C;  </p>
+</blockquote>
+<h2 id="211-&#xBB38;&#xC81C;&#xC218;&#xC815;-inittab-&#xC218;&#xC815;">2.11. &#xBB38;&#xC81C;&#xC218;&#xC815;. inittab &#xC218;&#xC815;.</h2>
+<p>&#xBD80;&#xD305;&#xB85C;&#xADF8;&#xC911;.<br>INIT: /etc/inittab[4]: missing action field<br>&#xC774;&#xAC8C; &#xBB38;&#xC81C;&#xC778;&#xB4EF;.  </p>
+<p>/etc/inittab &#xD30C;&#xC77C;&#xB0B4;&#xC6A9;&#xC911; action &#xC774; &#xBE60;&#xC9D0;.<br>x:3::/bin/bash  </p>
+<blockquote>
+<p>id:runlevels:action:process  </p>
+</blockquote>
+<p>action&#xC5D0; &#xC801;&#xC808;&#xD55C; &#xBA85;&#xB839; &#xCC44;&#xC6CC;&#xBCF4;&#xAE30;.<br>(&#xCC38;&#xACE0;)<a href="http://manpages.ubuntu.com/manpages/hardy/ko/man5/inittab.5.html" target="_blank">http://manpages.ubuntu.com/manpages/hardy/ko/man5/inittab.5.html</a>  </p>
+<ul>
+<li><strong>/etc/inittab &#xC218;&#xC815;</strong>  </li>
+</ul>
+<pre><code class="lang-patch"><span class="hljs-deletion">- x:3::/bin/bash  </span>
+<span class="hljs-addition">+ x:3:respawn:/bin/bash</span>
+</code></pre>
+<h2 id="212-&#xC7AC;&#xBD80;&#xD305;">2.12. &#xC7AC;&#xBD80;&#xD305;.</h2>
+<p>&#xC131;&#xACF5; -&gt; bash-4.3# &#xD654;&#xBA74;&#xC5D0; &#xB738;. </p>
+<p>&#xB2E4;&#xB9CC; &#xBD80;&#xD305;&#xB85C;&#xADF8;&#xC911;. &#xC544;&#xB798; &#xB85C;&#xADF8;&#xB294; &#xD655;&#xC778;&#xD544;&#xC694;.  </p>
+<pre><code class="lang-sh">...
+INIT: Entering runlevel: 3
+bash: cannot <span class="hljs-built_in">set</span> terminal process group (-1): Inappropriate ioctl <span class="hljs-keyword">for</span> device
+bash: no job control <span class="hljs-keyword">in</span> this shell
+bash-4,3<span class="hljs-comment">#</span>
+</code></pre>
+<h2 id="213-&#xCD5C;&#xC885;-&#xAD6C;&#xC131;&#xB41C;-&#xCD5C;&#xC18C;&#xD55C;&#xC758;-&#xD30C;&#xC77C;&#xB4E4;">2.13. &#xCD5C;&#xC885; &#xAD6C;&#xC131;&#xB41C; &#xCD5C;&#xC18C;&#xD55C;&#xC758; &#xD30C;&#xC77C;&#xB4E4;.</h2>
+<p><img src="images/min_filesystem.png" alt="pic"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../9_The_End.html" class="navigation navigation-prev " aria-label="Previous page: 9. The End">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../pakages.html" class="navigation navigation-next " aria-label="Next page: Appendix: pakages">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"10. LFS on RaspberryPI","level":"3.1","depth":1,"next":{"title":"Appendix: pakages","level":"4.1","depth":1,"path":"markdowns/pakages.md","ref":"markdowns/pakages.md","articles":[]},"previous":{"title":"9. The End","level":"2.13","depth":1,"path":"markdowns/9_The_End.md","ref":"markdowns/9_The_End.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"http://soopsaram.com/lfs"},"plugins":["ga","simple-page-toc","disqus","back-to-top-button","edit-link","github","livereload"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"jihuun"},"github":{"url":"https://github.com/jihuun/lfs"},"livereload":{},"simple-page-toc":{"maxDepth":2,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"ga":{"configuration":"auto","token":""},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit","base":"https://github.com/jihuun/lfs/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"markdowns/pilfs/pilfs.md","mtime":"2019-08-31T02:20:00.852Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-31T02:54:39.884Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

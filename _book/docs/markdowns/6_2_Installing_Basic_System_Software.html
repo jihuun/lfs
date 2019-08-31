@@ -339,47 +339,23 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <hr>
-<p>&#xBAA9;&#xCC28;</p>
+                                <h1 id="6-installing-basic-system-software-2">6. Installing Basic System Software (2)</h1>
 <!-- toc -->
 <ul>
 <li><a href="#67-linux-319-api-headers">6.7. Linux-3.19 API Headers</a></li>
 <li><a href="#68-man-pages-379">6.8. Man-pages-3.79</a></li>
-<li><a href="#69-glibc-221">6.9. Glibc-2.21</a><ul>
-<li><a href="#691-installation-of-glibc">6.9.1. Installation of Glibc</a></li>
-<li><a href="#692-configuring-glibc">6.9.2. Configuring Glibc</a></li>
-<li><a href="#693-configuring-the-dynamic-loader">6.9.3. Configuring the Dynamic Loader</a></li>
-<li><a href="#694-contents-of-glibc">6.9.4. Contents of Glibc</a></li>
-</ul>
-</li>
+<li><a href="#69-glibc-221">6.9. Glibc-2.21</a></li>
 <li><a href="#610-adjusting-the-toolchain">6.10. Adjusting the Toolchain</a></li>
-<li><a href="#611-zlib-128">6.11. Zlib-1.2.8</a><ul>
-<li><a href="#6111-installation-of-zlib">6.11.1. Installation of Zlib</a></li>
-<li><a href="#6112-contents-of-zlib">6.11.2. Contents of Zlib</a></li>
-</ul>
-</li>
-<li><a href="#612-file-522">6.12. File-5.22</a><ul>
-<li><a href="#6121-installation-of-file">6.12.1. Installation of File</a></li>
-<li><a href="#6122-contents-of-file">6.12.2. Contents of File</a></li>
-</ul>
-</li>
+<li><a href="#611-zlib-128">6.11. Zlib-1.2.8</a></li>
+<li><a href="#612-file-522">6.12. File-5.22</a></li>
 <li><a href="#613-binutils-225">6.13. Binutils-2.25</a></li>
 <li><a href="#614-gmp-600a">6.14. GMP-6.0.0a</a></li>
-<li><a href="#615-mpfr-312">6.15. MPFR-3.1.2</a><ul>
-<li><a href="#6151-installation-of-mpfr">6.15.1. Installation of MPFR</a></li>
-</ul>
-</li>
-<li><a href="#616-mpc-102">6.16. MPC-1.0.2</a><ul>
-<li><a href="#6161-installation-of-mpc">6.16.1. Installation of MPC</a></li>
-</ul>
-</li>
+<li><a href="#615-mpfr-312">6.15. MPFR-3.1.2</a></li>
+<li><a href="#616-mpc-102">6.16. MPC-1.0.2</a></li>
 <li><a href="#617-gcc-492">6.17. GCC-4.9.2</a></li>
 </ul>
 <!-- tocstop -->
-<hr>
-<p><a href="#67-linux-319-api-headers">6.7. Linux-3.19 API Headers  </a><br><a href="#68-man-pages-379">6.8. Man-pages-3.79  </a><br><a href="#69-glibc-221">6.9. Glibc-2.21  </a><br><a href="#69-glibc-221">6.9. Glibc-2.21  </a><br><a href="#610-adjusting-the-toolchain">6.10. Adjusting the Toolchain  </a><br><a href="#611-zlib-128">6.11. Zlib-1.2.8  </a><br><a href="#612-file-522">6.12. File-5.22  </a><br><a href="#613-binutils-225">6.13. Binutils-2.25  </a><br><a href="#614-gmp-600a">6.14. GMP-6.0.0a  </a><br><a href="#615-mpfr-312">6.15. MPFR-3.1.2  </a><br><a href="#616-mpc-102">6.16. MPC-1.0.2  </a><br><a href="#617-gcc-492">6.17. GCC-4.9.2  </a>  </p>
-<hr>
-<h1 id="67-linux-319-api-headers">6.7. Linux-3.19 API Headers</h1>
+<h2 id="67-linux-319-api-headers">6.7. Linux-3.19 API Headers</h2>
 <p>&#xC2DC;&#xC2A4;&#xD15C;&#xC758;C &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;(LFS&#xC758;Glibc)&#xAC00; &#xC0AC;&#xC6A9;&#xD558;&#xB294; API &#xB97C; &#xC704;&#xD574;&#xC11C;<br>&#xB9AC;&#xB205;&#xC2A4; &#xCEE4;&#xB110;&#xC18C;&#xC2A4;&#xC758; &#xD5E4;&#xB354;&#xD30C;&#xC77C;&#xC744; &#xC0AC;&#xC6A9;&#xD574;&#xC57C;&#xD55C;&#xB2E4;.  </p>
 <ul>
 <li><strong>&#xCEE4;&#xB110; &#xC18C;&#xC2A4;&#xC758; &#xC774;&#xC804; &#xC791;&#xC5C5; &#xB0B4;&#xC6A9; &#xC0AD;&#xC81C;</strong>    </li>
@@ -393,18 +369,15 @@
  $ find dest/include \( -name .install -o -name ..install.cmd \) -delete  
  $ cp -rv dest/include/* /usr/include
 </code></pre>
-<hr>
-<h1 id="68-man-pages-379">6.8. Man-pages-3.79</h1>
+<h2 id="68-man-pages-379">6.8. Man-pages-3.79</h2>
 <ul>
 <li><strong>man page &#xC124;&#xCE58;</strong>    </li>
 </ul>
 <pre><code class="lang-sh"> $ make install
 </code></pre>
-<hr>
-<h1 id="69-glibc-221">6.9. Glibc-2.21</h1>
+<h2 id="69-glibc-221">6.9. Glibc-2.21</h2>
 <p>Glibc &#xB294; &#xC544;&#xB798;&#xC758; &#xC77C;&#xC744; &#xD560; &#xC218; &#xC788;&#xB294; &#xAE30;&#xBCF8; C &#xB8E8;&#xD2F4;&#xC744; &#xC81C;&#xACF5;.<br>allocating memory, searching directories, opening and closing files,<br>reading and writing files, string handling, pattern matching, arithmetic &#xB4F1;.  </p>
-<hr>
-<h2 id="691-installation-of-glibc">6.9.1. Installation of Glibc</h2>
+<h3 id="691-installation-of-glibc">6.9.1. Installation of Glibc</h3>
 <ul>
 <li><strong>&#xD328;&#xCE58; &#xC801;&#xC6A9;</strong>    </li>
 </ul>
@@ -533,13 +506,12 @@ localedef -i zh_CN <span class="hljs-_">-f</span> GB18030 zh_CN.GB18030
 </ul>
 <pre><code class="lang-sh"> $ make localedata/install-locales
 </code></pre>
-<hr>
-<h2 id="692-configuring-glibc">6.9.2. Configuring Glibc</h2>
+<h3 id="692-configuring-glibc">6.9.2. Configuring Glibc</h3>
 <ul>
 <li><strong>/etc/nsswitch.conf&#xD30C;&#xC77C; &#xC0DD;&#xC131;</strong>    </li>
 </ul>
 <pre><code class="lang-sh"> $ cat &gt; /etc/nsswitch.conf &lt;&lt; <span class="hljs-string">&quot;EOF&quot;</span>  
-<span class="hljs-comment"># Begin /etc/nsswitch.conf  </span>
+<span class="hljs-comment">## Begin /etc/nsswitch.conf  </span>
 
 passwd: files  
 group: files  
@@ -553,7 +525,7 @@ services: files
 ethers: files  
 rpc: files  
 
-<span class="hljs-comment"># End /etc/nsswitch.conf  </span>
+<span class="hljs-comment">## End /etc/nsswitch.conf  </span>
 EOF
 </code></pre>
 <p><code>(&#xCC3E;&#xC544;&#xBCF4;&#xAE30;)</code> /etc/nsswitch.conf &#xC758; &#xC5ED;&#xD560;&#xC740;?  </p>
@@ -592,14 +564,13 @@ EOF
 <p><xxx> &#xB294; &#xC124;&#xCE58;&#xB41C; &#xC774;&#xB984;&#xC73C;&#xB85C; &#xBCC0;&#xACBD;    </xxx></p>
 </blockquote>
 <p><code>(&#xCC3E;&#xC544;&#xBCF4;&#xAE30;)</code> /etc/localtime&#xC758; &#xC5ED;&#xD560;&#xC740;?  </p>
-<hr>
-<h2 id="693-configuring-the-dynamic-loader">6.9.3. Configuring the Dynamic Loader</h2>
+<h3 id="693-configuring-the-dynamic-loader">6.9.3. Configuring the Dynamic Loader</h3>
 <p><code>(&#xCC3E;&#xC544;&#xBCF4;&#xAE30;)</code> dynamic loader &#xC640; dymaic linker&#xC758; &#xCC28;&#xC774;?<br> dynamic loader : &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC774; &#xC2E4;&#xD589;&#xB41C; &#xC774;&#xD6C4;&#xC5D0; &#xD544;&#xC694;&#xD55C;  &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xB098; &#xBC14;&#xC774;&#xB108;&#xB9AC;&#xB97C; &#xBA54;&#xBAA8;&#xB9AC;&#xC5D0; &#xC62C;&#xB824;&#xC8FC;&#xB294; &#xC5ED;&#xD560;?<br> dymaic linker: runtime&#xC5D0; &#xD544;&#xC694;&#xD55C; &#xACF5;&#xC720;&#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xB97C; &#xBA54;&#xBAA8;&#xB9AC;&#xC5D0; &#xC62C;&#xB824;&#xC8FC;&#xACE0; link&#xD574;&#xC8FC;&#xB294; &#xC6B4;&#xC601;&#xCCB4;&#xC81C;&#xC758; &#xD55C; &#xAE30;&#xB2A5;?<br> static linker: &#xCEF4;&#xD30C;&#xC77C; &#xD0C0;&#xC784;&#xC5D0; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC; &#xD3EC;&#xD568;?<br> &#xB2E4;&#xC2DC;&#xC870;&#xC0AC;..  </p>
 <ul>
 <li><strong>/etc/ld.so.conf &#xC0DD;&#xC131;</strong>    </li>
 </ul>
 <pre><code class="lang-sh"> $ cat &gt; /etc/ld.so.conf &lt;&lt; <span class="hljs-string">&quot;EOF&quot;</span>  
-<span class="hljs-comment"># Begin /etc/ld.so.conf  </span>
+<span class="hljs-comment">## Begin /etc/ld.so.conf  </span>
 /usr/<span class="hljs-built_in">local</span>/lib  
 /opt/lib  
 
@@ -612,17 +583,15 @@ EOF
 <li><strong>&#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC; path&#xCD94;&#xAC00;</strong>      </li>
 </ul>
 <pre><code class="lang-sh"> $ cat &gt;&gt; /etc/ld.so.conf &lt;&lt; <span class="hljs-string">&quot;EOF&quot;</span>  
-<span class="hljs-comment"># Add an include directory  </span>
+<span class="hljs-comment">## Add an include directory  </span>
 include /etc/ld.so.conf.d/*.conf  
 
  $ EOF  
  $ mkdir -pv /etc/ld.so.conf.d
 </code></pre>
-<hr>
-<h2 id="694-contents-of-glibc">6.9.4. Contents of Glibc</h2>
+<h3 id="694-contents-of-glibc">6.9.4. Contents of Glibc</h3>
 <p>&#xBE4C;&#xB4DC; &#xC0DD;&#xC131;&#xBB3C; &#xCC38;&#xACE0;. &#xB9CE;&#xC74C;.<br><a href="http://linuxfromscratch.org/lfs/view/stable/chapter06/glibc.html" target="_blank">http://linuxfromscratch.org/lfs/view/stable/chapter06/glibc.html</a>  </p>
-<hr>
-<h1 id="610-adjusting-the-toolchain">6.10. Adjusting the Toolchain</h1>
+<h2 id="610-adjusting-the-toolchain">6.10. Adjusting the Toolchain</h2>
 <p>C &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xAC00; &#xC124;&#xCE58; &#xB418;&#xC5C8;&#xC73C;&#xBBC0;&#xB85C; &#xC774;&#xC804;&#xC5D0; &#xC784;&#xC2DC;&#xB85C; &#xC0AC;&#xC6A9;&#xD588;&#xB358;(/tools) &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xC5D0;&#xC11C;<br>&#xC0C8; &#xACBD;&#xB85C;&#xB85C; path&#xC9C0;&#xC815;.  </p>
 <ul>
 <li><strong>linker &#xAD50;&#xCCB4;</strong>    </li>
@@ -669,7 +638,7 @@ include /etc/ld.so.conf.d/*.conf
 </code></pre>
 <blockquote>
 <p>&#xACB0;&#xACFC;&#xB294; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC544;&#xC57C;&#xD568;.    </p>
-<pre><code>#include &lt;...&gt; search starts here:  
+<pre><code>##include &lt;...&gt; search starts here:  
  /usr/include
 </code></pre></blockquote>
 <ul>
@@ -706,10 +675,8 @@ SEARCH_DIR(&quot;/lib&quot;);
 </ul>
 <pre><code class="lang-sh"> $ rm -v dummy.c a.out dummy.log
 </code></pre>
-<hr>
-<h1 id="611-zlib-128">6.11. Zlib-1.2.8</h1>
-<hr>
-<h2 id="6111-installation-of-zlib">6.11.1. Installation of Zlib</h2>
+<h2 id="611-zlib-128">6.11. Zlib-1.2.8</h2>
+<h3 id="6111-installation-of-zlib">6.11.1. Installation of Zlib</h3>
 <p>&#xBA87; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xC555;&#xCD95;/&#xD574;&#xC81C; &#xB8E8;&#xD2F4;&#xC744; &#xD3EC;&#xD568;&#xD568;.  </p>
 <ul>
 <li><strong>Prepare Zlib for compilation</strong>    </li>
@@ -743,14 +710,11 @@ SEARCH_DIR(&quot;/lib&quot;);
 <blockquote>
 <p>&#xADF8;&#xB9AC;&#xACE0; &#xACB0;&#xACFC; &#xD30C;&#xC77C;&#xC778; .so&#xD30C;&#xC77C;&#xB3C4; /usr/lib/&#xC73C;&#xB85C; &#xB9C1;&#xD06C;&#xC2DC;&#xD0B4;.<br><code>(&#xCC3E;&#xC544;&#xBCF4;&#xAE30;)</code>  /usr/lib  /lib &#xCC28;&#xC774;?  </p>
 </blockquote>
-<hr>
-<h2 id="6112-contents-of-zlib">6.11.2. Contents of Zlib</h2>
+<h3 id="6112-contents-of-zlib">6.11.2. Contents of Zlib</h3>
 <p>&#xC124;&#xCE58;&#xB418;&#xB294; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;<br>libz.{a,so}  </p>
 <p><code>(&#xCC3E;&#xC544;&#xBCF4;&#xAE30;)</code>  libz&#xB780;?<br>Contains compression and decompression functions used by some programs  </p>
-<hr>
-<h1 id="612-file-522">6.12. File-5.22</h1>
-<hr>
-<h2 id="6121-installation-of-file">6.12.1. Installation of File</h2>
+<h2 id="612-file-522">6.12. File-5.22</h2>
+<h3 id="6121-installation-of-file">6.12.1. Installation of File</h3>
 <ul>
 <li><strong>Prepare File for compilation</strong>    </li>
 </ul>
@@ -771,11 +735,9 @@ SEARCH_DIR(&quot;/lib&quot;);
 </ul>
 <pre><code class="lang-sh"> $ make install
 </code></pre>
-<hr>
-<h2 id="6122-contents-of-file">6.12.2. Contents of File</h2>
+<h3 id="6122-contents-of-file">6.12.2. Contents of File</h3>
 <p>Installed programs: file<br>Installed library: libmagic.so  </p>
-<hr>
-<h1 id="613-binutils-225">6.13. Binutils-2.25</h1>
+<h2 id="613-binutils-225">6.13. Binutils-2.25</h2>
 <p>&#xC624;&#xBE0C;&#xC81D;&#xD2B8; &#xD30C;&#xC77C;&#xC744; &#xB2E4;&#xB8E8;&#xAE30;&#xC704;&#xD55C; linker, assembler, other tool&#xB4E4;&#xC744; &#xD3EC;&#xD568;.  </p>
 <p>Verify that the PTYs are working properly inside the chroot environment<br>by performing a simple test:  </p>
 <ul>
@@ -820,8 +782,7 @@ Ask your system administrator to create more.
 <pre><code class="lang-sh"> $ make tooldir=/usr install
 </code></pre>
 <p><code>(&#xCC3E;&#xC544;&#xBCF4;&#xAE30;)</code> &#xC5EC;&#xAE30;&#xC11C; &#xC124;&#xCE58;&#xD55C; &#xB9C1;&#xCEE4;&#xB791; &#xC704;&#xC5D0;&#xC11C; &#xC124;&#xCE58;&#xD55C; dynamic &#xB9C1;&#xCEE4;&#xB791; &#xBB50;&#xAC00; &#xB2E4;&#xB984;?<br>dynamic loader?  </p>
-<hr>
-<h1 id="614-gmp-600a">6.14. GMP-6.0.0a</h1>
+<h2 id="614-gmp-600a">6.14. GMP-6.0.0a</h2>
 <p>GMP&#xD328;&#xD0A4;&#xC9C0;&#xB294; math&#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xB97C; &#xD3EC;&#xD568;&#xD568;.  </p>
 <ul>
 <li><strong>Prepare GMP for compilation:</strong>    </li>
@@ -853,10 +814,9 @@ Ask your system administrator to create more.
 <pre><code class="lang-sh"> $ make install  
  $ make install-html
 </code></pre>
-<hr>
-<h1 id="615-mpfr-312">6.15. MPFR-3.1.2</h1>
+<h2 id="615-mpfr-312">6.15. MPFR-3.1.2</h2>
 <p>MPFR&#xD328;&#xD0A4;&#xC9C0;&#xB294; functions for multiple precision math &#xB97C; &#xD3EC;&#xD568;.  </p>
-<h2 id="6151-installation-of-mpfr">6.15.1. Installation of MPFR</h2>
+<h3 id="6151-installation-of-mpfr">6.15.1. Installation of MPFR</h3>
 <ul>
 <li><strong>&#xBC84;&#xADF8; &#xD328;&#xCE58; &#xC801;&#xC6A9;</strong>    </li>
 </ul>
@@ -887,11 +847,9 @@ Ask your system administrator to create more.
  $ make install-html
 </code></pre>
 <p> $   </p>
-<hr>
-<h1 id="616-mpc-102">6.16. MPC-1.0.2</h1>
+<h2 id="616-mpc-102">6.16. MPC-1.0.2</h2>
 <p>&#xBCF5;&#xC7A1;&#xD55C; math function&#xC744; &#xD3EC;&#xD568;&#xD558;&#xB294; &#xD328;&#xD0A4;&#xC9C0;  </p>
-<hr>
-<h2 id="6161-installation-of-mpc">6.16.1. Installation of MPC</h2>
+<h3 id="6161-installation-of-mpc">6.16.1. Installation of MPC</h3>
 <ul>
 <li><strong>Prepare MPC for compilation</strong>    </li>
 </ul>
@@ -914,8 +872,7 @@ Ask your system administrator to create more.
 <pre><code class="lang-sh"> $ make install  
  $ make install-html
 </code></pre>
-<hr>
-<h1 id="617-gcc-492">6.17. GCC-4.9.2</h1>
+<h2 id="617-gcc-492">6.17. GCC-4.9.2</h2>
 <p>gcc &#xD328;&#xD0A4;&#xC9C0;&#xB294; C, C++ &#xCEF4;&#xD30C;&#xC77C;&#xB7EC;&#xB97C; &#xD3EC;&#xD568;&#xD558;&#xB294; GNU &#xCEF4;&#xD30C;&#xC77C;&#xB7EC; &#xBAA8;&#xC74C;&#xC774;&#xB2E4;.  </p>
 <ul>
 <li><strong>&#xBE4C;&#xB4DC; &#xB514;&#xB809;&#xD1A0;&#xB9AC; &#xC0DD;&#xC131;</strong>    </li>
@@ -1174,7 +1131,7 @@ SEARCH_DIR(&quot;/usr/lib&quot;);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6.2. Installing Basic System Software","level":"1.9","depth":1,"next":{"title":"6.3. Installing Basic System Software","level":"1.10","depth":1,"path":"markdowns/6_3_Installing_Basic_System_Software.md","ref":"markdowns/6_3_Installing_Basic_System_Software.md","articles":[]},"previous":{"title":"6.1. Installing Basic System Software","level":"1.8","depth":1,"path":"markdowns/6_1_Installing_Basic_System_Software.md","ref":"markdowns/6_1_Installing_Basic_System_Software.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"http://soopsaram.com/lfs"},"plugins":["ga","simple-page-toc","disqus","back-to-top-button","edit-link","github","livereload"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"jihuun"},"github":{"url":"https://github.com/jihuun/lfs"},"livereload":{},"simple-page-toc":{"maxDepth":2,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"ga":{"configuration":"auto","token":""},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit","base":"https://github.com/jihuun/lfs/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"markdowns/6_2_Installing_Basic_System_Software.md","mtime":"2019-08-30T12:24:23.351Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-30T12:25:12.496Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6.2. Installing Basic System Software","level":"1.9","depth":1,"next":{"title":"6.3. Installing Basic System Software","level":"1.10","depth":1,"path":"markdowns/6_3_Installing_Basic_System_Software.md","ref":"markdowns/6_3_Installing_Basic_System_Software.md","articles":[]},"previous":{"title":"6.1. Installing Basic System Software","level":"1.8","depth":1,"path":"markdowns/6_1_Installing_Basic_System_Software.md","ref":"markdowns/6_1_Installing_Basic_System_Software.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"http://soopsaram.com/lfs"},"plugins":["ga","simple-page-toc","disqus","back-to-top-button","edit-link","github","livereload"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"jihuun"},"github":{"url":"https://github.com/jihuun/lfs"},"livereload":{},"simple-page-toc":{"maxDepth":2,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"ga":{"configuration":"auto","token":""},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit","base":"https://github.com/jihuun/lfs/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"markdowns/6_2_Installing_Basic_System_Software.md","mtime":"2019-08-30T12:45:14.638Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-30T12:55:53.674Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

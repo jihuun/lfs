@@ -53,9 +53,7 @@ wget --input-file=wget-list --continue --directory-prefix=$LFS/sources
 ```
 > md5sum 명령 : 올바른 패키지를 받았고 다음진행하기전에 사용가능한지 확인하는 용도로 사용.  
 >> ``(찾아보기)`` md5란?  
-@규원 : (Message-Digest algorithm 5) 128bit 암호화 해시 함수 프로그램이 원본
-그대로인지 확인하는 무결성 검사 1996년 MD5d의 설계상 결함이 발견되어
-암호학자들은 ShA-1와 같이 안전한 알고리즘 사용 권장
+(Message-Digest algorithm 5) 128bit 암호화 해시 함수 프로그램이 원본 그대로인지 확인하는 무결성 검사 1996년 MD5d의 설계상 결함이 발견되어 암호학자들은 ShA-1와 같이 안전한 알고리즘 사용 권장
 
 
 
